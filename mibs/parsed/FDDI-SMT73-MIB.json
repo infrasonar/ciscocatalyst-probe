@@ -1,0 +1,1650 @@
+{
+  "IMPORTS": [
+    [
+      "RFC1155-SMI",
+      [
+        "Counter"
+      ]
+    ],
+    [
+      "RFC1213-MIB",
+      [
+        "transmission"
+      ]
+    ],
+    [
+      "RFC-1212",
+      [
+        "OBJECT-TYPE"
+      ]
+    ]
+  ],
+  "fddi": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "transmission",
+      15
+    ]
+  },
+  "fddimib": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fddi",
+      73
+    ]
+  },
+  "FddiTimeNano": {
+    "tp": "INTEGER"
+  },
+  "FddiTimeMilli": {
+    "tp": "INTEGER"
+  },
+  "FddiResourceId": {
+    "tp": "INTEGER"
+  },
+  "FddiSMTStationIdType": {
+    "tp": "OCTET STRING"
+  },
+  "FddiMACLongAddressType": {
+    "tp": "OCTET STRING"
+  },
+  "fddimibSMT": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fddimib",
+      1
+    ]
+  },
+  "fddimibMAC": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fddimib",
+      2
+    ]
+  },
+  "fddimibMACCounters": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fddimib",
+      3
+    ]
+  },
+  "fddimibPATH": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fddimib",
+      4
+    ]
+  },
+  "fddimibPORT": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "fddimib",
+      5
+    ]
+  },
+  "fddimibSMTNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMT",
+      1
+    ]
+  },
+  "fddimibSMTTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FddimibSMTEntry"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMT",
+      2
+    ]
+  },
+  "fddimibSMTEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddimibSMTEntry"
+    },
+    "index": [
+      "fddimibSMTIndex"
+    ],
+    "value": [
+      "fddimibSMTTable",
+      1
+    ]
+  },
+  "FddimibSMTEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fddimibSMTIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      1
+    ]
+  },
+  "fddimibSMTStationId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiSMTStationIdType"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      2
+    ]
+  },
+  "fddimibSMTOpVersionId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      3
+    ]
+  },
+  "fddimibSMTHiVersionId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      4
+    ]
+  },
+  "fddimibSMTLoVersionId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      5
+    ]
+  },
+  "fddimibSMTUserData": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      6
+    ]
+  },
+  "fddimibSMTMIBVersionId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      7
+    ]
+  },
+  "fddimibSMTMACCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      8
+    ]
+  },
+  "fddimibSMTNonMasterCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      9
+    ]
+  },
+  "fddimibSMTMasterCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      10
+    ]
+  },
+  "fddimibSMTAvailablePaths": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      11
+    ]
+  },
+  "fddimibSMTConfigCapabilities": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      12
+    ]
+  },
+  "fddimibSMTConfigPolicy": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      13
+    ]
+  },
+  "fddimibSMTConnectionPolicy": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      14
+    ]
+  },
+  "fddimibSMTTNotify": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      15
+    ]
+  },
+  "fddimibSMTStatRptPolicy": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      16
+    ]
+  },
+  "fddimibSMTTraceMaxExpiration": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiTimeMilli"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      17
+    ]
+  },
+  "fddimibSMTBypassPresent": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      18
+    ]
+  },
+  "fddimibSMTECMState": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "ec0",
+        "2": "ec1",
+        "3": "ec2",
+        "4": "ec3",
+        "5": "ec4",
+        "6": "ec5",
+        "7": "ec6",
+        "8": "ec7"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      19
+    ]
+  },
+  "fddimibSMTCFState": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "cf0",
+        "2": "cf1",
+        "3": "cf2",
+        "4": "cf3",
+        "5": "cf4",
+        "6": "cf5",
+        "7": "cf6",
+        "8": "cf7",
+        "9": "cf8",
+        "10": "cf9",
+        "11": "cf10",
+        "12": "cf11",
+        "13": "cf12"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      20
+    ]
+  },
+  "fddimibSMTRemoteDisconnectFlag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      21
+    ]
+  },
+  "fddimibSMTStationStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "concatenated",
+        "2": "separated",
+        "3": "thru"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      22
+    ]
+  },
+  "fddimibSMTPeerWrapFlag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      23
+    ]
+  },
+  "fddimibSMTTimeStamp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiTimeMilli"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      24
+    ]
+  },
+  "fddimibSMTTransitionTimeStamp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiTimeMilli"
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      25
+    ]
+  },
+  "fddimibSMTStationAction": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "connect",
+        "3": "disconnect",
+        "4": "path-Test",
+        "5": "self-Test",
+        "6": "disable-a",
+        "7": "disable-b",
+        "8": "disable-m"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibSMTEntry",
+      26
+    ]
+  },
+  "fddimibMACNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibMAC",
+      1
+    ]
+  },
+  "fddimibMACTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FddimibMACEntry"
+    },
+    "index": null,
+    "value": [
+      "fddimibMAC",
+      2
+    ]
+  },
+  "fddimibMACEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddimibMACEntry"
+    },
+    "index": [
+      "fddimibMACSMTIndex",
+      "fddimibMACIndex"
+    ],
+    "value": [
+      "fddimibMACTable",
+      1
+    ]
+  },
+  "FddimibMACEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fddimibMACSMTIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      1
+    ]
+  },
+  "fddimibMACIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      2
+    ]
+  },
+  "fddimibMACIfIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      3
+    ]
+  },
+  "fddimibMACFrameStatusFunctions": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      4
+    ]
+  },
+  "fddimibMACTMaxCapability": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiTimeNano"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      5
+    ]
+  },
+  "fddimibMACTVXCapability": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiTimeNano"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      6
+    ]
+  },
+  "fddimibMACAvailablePaths": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      7
+    ]
+  },
+  "fddimibMACCurrentPath": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "isolated",
+        "2": "local",
+        "3": "secondary",
+        "4": "primary",
+        "5": "concatenated",
+        "6": "thru"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      8
+    ]
+  },
+  "fddimibMACUpstreamNbr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiMACLongAddressType"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      9
+    ]
+  },
+  "fddimibMACDownstreamNbr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiMACLongAddressType"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      10
+    ]
+  },
+  "fddimibMACOldUpstreamNbr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiMACLongAddressType"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      11
+    ]
+  },
+  "fddimibMACOldDownstreamNbr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiMACLongAddressType"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      12
+    ]
+  },
+  "fddimibMACDupAddressTest": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "none",
+        "2": "pass",
+        "3": "fail"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      13
+    ]
+  },
+  "fddimibMACRequestedPaths": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      14
+    ]
+  },
+  "fddimibMACDownstreamPORTType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "a",
+        "2": "b",
+        "3": "s",
+        "4": "m",
+        "5": "none"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      15
+    ]
+  },
+  "fddimibMACSMTAddress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiMACLongAddressType"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      16
+    ]
+  },
+  "fddimibMACTReq": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiTimeNano"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      17
+    ]
+  },
+  "fddimibMACTNeg": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiTimeNano"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      18
+    ]
+  },
+  "fddimibMACTMax": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiTimeNano"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      19
+    ]
+  },
+  "fddimibMACTvxValue": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiTimeNano"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      20
+    ]
+  },
+  "fddimibMACFrameCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      21
+    ]
+  },
+  "fddimibMACCopiedCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      22
+    ]
+  },
+  "fddimibMACTransmitCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      23
+    ]
+  },
+  "fddimibMACErrorCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      24
+    ]
+  },
+  "fddimibMACLostCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      25
+    ]
+  },
+  "fddimibMACFrameErrorThreshold": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      26
+    ]
+  },
+  "fddimibMACFrameErrorRatio": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      27
+    ]
+  },
+  "fddimibMACRMTState": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "rm0",
+        "2": "rm1",
+        "3": "rm2",
+        "4": "rm3",
+        "5": "rm4",
+        "6": "rm5",
+        "7": "rm6",
+        "8": "rm7"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      28
+    ]
+  },
+  "fddimibMACDaFlag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      29
+    ]
+  },
+  "fddimibMACUnaDaFlag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      30
+    ]
+  },
+  "fddimibMACFrameErrorFlag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      31
+    ]
+  },
+  "fddimibMACMAUnitdataAvailable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      32
+    ]
+  },
+  "fddimibMACHardwarePresent": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      33
+    ]
+  },
+  "fddimibMACMAUnitdataEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibMACEntry",
+      34
+    ]
+  },
+  "fddimibMACCountersTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FddimibMACCountersEntry"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACCounters",
+      1
+    ]
+  },
+  "fddimibMACCountersEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddimibMACCountersEntry"
+    },
+    "index": [
+      "fddimibMACSMTIndex",
+      "fddimibMACIndex"
+    ],
+    "value": [
+      "fddimibMACCountersTable",
+      1
+    ]
+  },
+  "FddimibMACCountersEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fddimibMACTokenCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACCountersEntry",
+      1
+    ]
+  },
+  "fddimibMACTvxExpiredCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACCountersEntry",
+      2
+    ]
+  },
+  "fddimibMACNotCopiedCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACCountersEntry",
+      3
+    ]
+  },
+  "fddimibMACLateCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACCountersEntry",
+      4
+    ]
+  },
+  "fddimibMACRingOpCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACCountersEntry",
+      5
+    ]
+  },
+  "fddimibMACNotCopiedRatio": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACCountersEntry",
+      6
+    ]
+  },
+  "fddimibMACNotCopiedFlag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibMACCountersEntry",
+      7
+    ]
+  },
+  "fddimibMACNotCopiedThreshold": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibMACCountersEntry",
+      8
+    ]
+  },
+  "fddimibPATHNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPATH",
+      1
+    ]
+  },
+  "fddimibPATHTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FddimibPATHEntry"
+    },
+    "index": null,
+    "value": [
+      "fddimibPATH",
+      2
+    ]
+  },
+  "fddimibPATHEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddimibPATHEntry"
+    },
+    "index": [
+      "fddimibPATHSMTIndex",
+      "fddimibPATHIndex"
+    ],
+    "value": [
+      "fddimibPATHTable",
+      1
+    ]
+  },
+  "FddimibPATHEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fddimibPATHSMTIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPATHEntry",
+      1
+    ]
+  },
+  "fddimibPATHIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPATHEntry",
+      2
+    ]
+  },
+  "fddimibPATHTVXLowerBound": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiTimeNano"
+    },
+    "index": null,
+    "value": [
+      "fddimibPATHEntry",
+      3
+    ]
+  },
+  "fddimibPATHTMaxLowerBound": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiTimeNano"
+    },
+    "index": null,
+    "value": [
+      "fddimibPATHEntry",
+      4
+    ]
+  },
+  "fddimibPATHMaxTReq": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiTimeNano"
+    },
+    "index": null,
+    "value": [
+      "fddimibPATHEntry",
+      5
+    ]
+  },
+  "fddimibPATHConfigTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FddimibPATHConfigEntry"
+    },
+    "index": null,
+    "value": [
+      "fddimibPATH",
+      3
+    ]
+  },
+  "fddimibPATHConfigEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddimibPATHConfigEntry"
+    },
+    "index": [
+      "fddimibPATHConfigSMTIndex",
+      "fddimibPATHConfigPATHIndex",
+      "fddimibPATHConfigTokenOrder"
+    ],
+    "value": [
+      "fddimibPATHConfigTable",
+      1
+    ]
+  },
+  "FddimibPATHConfigEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fddimibPATHConfigSMTIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPATHConfigEntry",
+      1
+    ]
+  },
+  "fddimibPATHConfigPATHIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPATHConfigEntry",
+      2
+    ]
+  },
+  "fddimibPATHConfigTokenOrder": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPATHConfigEntry",
+      3
+    ]
+  },
+  "fddimibPATHConfigResourceType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "2": "mac",
+        "4": "port"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibPATHConfigEntry",
+      4
+    ]
+  },
+  "fddimibPATHConfigResourceIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPATHConfigEntry",
+      5
+    ]
+  },
+  "fddimibPATHConfigCurrentPath": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "isolated",
+        "2": "local",
+        "3": "secondary",
+        "4": "primary",
+        "5": "concatenated",
+        "6": "thru"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibPATHConfigEntry",
+      6
+    ]
+  },
+  "fddimibPORTNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORT",
+      1
+    ]
+  },
+  "fddimibPORTTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FddimibPORTEntry"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORT",
+      2
+    ]
+  },
+  "fddimibPORTEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddimibPORTEntry"
+    },
+    "index": [
+      "fddimibPORTSMTIndex",
+      "fddimibPORTIndex"
+    ],
+    "value": [
+      "fddimibPORTTable",
+      1
+    ]
+  },
+  "FddimibPORTEntry": {
+    "tp": "SEQUENCE"
+  },
+  "fddimibPORTSMTIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      1
+    ]
+  },
+  "fddimibPORTIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      2
+    ]
+  },
+  "fddimibPORTMyType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "a",
+        "2": "b",
+        "3": "s",
+        "4": "m",
+        "5": "none"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      3
+    ]
+  },
+  "fddimibPORTNeighborType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "a",
+        "2": "b",
+        "3": "s",
+        "4": "m",
+        "5": "none"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      4
+    ]
+  },
+  "fddimibPORTConnectionPolicies": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      5
+    ]
+  },
+  "fddimibPORTMACIndicated": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "tVal9FalseRVal9False",
+        "2": "tVal9FalseRVal9True",
+        "3": "tVal9TrueRVal9False",
+        "4": "tVal9TrueRVal9True"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      6
+    ]
+  },
+  "fddimibPORTCurrentPath": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "ce0",
+        "2": "ce1",
+        "3": "ce2",
+        "4": "ce3",
+        "5": "ce4",
+        "6": "ce5"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      7
+    ]
+  },
+  "fddimibPORTRequestedPaths": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      8
+    ]
+  },
+  "fddimibPORTMACPlacement": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FddiResourceId"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      9
+    ]
+  },
+  "fddimibPORTAvailablePaths": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      10
+    ]
+  },
+  "fddimibPORTPMDClass": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "multimode",
+        "2": "single-mode1",
+        "3": "single-mode2",
+        "4": "sonet",
+        "5": "low-cost-fiber",
+        "6": "twisted-pair",
+        "7": "unknown",
+        "8": "unspecified"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      11
+    ]
+  },
+  "fddimibPORTConnectionCapabilities": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      12
+    ]
+  },
+  "fddimibPORTBSFlag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      13
+    ]
+  },
+  "fddimibPORTLCTFailCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      14
+    ]
+  },
+  "fddimibPORTLerEstimate": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      15
+    ]
+  },
+  "fddimibPORTLemRejectCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      16
+    ]
+  },
+  "fddimibPORTLemCts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      17
+    ]
+  },
+  "fddimibPORTLerCutoff": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      18
+    ]
+  },
+  "fddimibPORTLerAlarm": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      19
+    ]
+  },
+  "fddimibPORTConnectState": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "disabled",
+        "2": "connecting",
+        "3": "standby",
+        "4": "active"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      20
+    ]
+  },
+  "fddimibPORTPCMState": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "pc0",
+        "2": "pc1",
+        "3": "pc2",
+        "4": "pc3",
+        "5": "pc4",
+        "6": "pc5",
+        "7": "pc6",
+        "8": "pc7",
+        "9": "pc8",
+        "10": "pc9"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      21
+    ]
+  },
+  "fddimibPORTPCWithhold": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "none",
+        "2": "m-m",
+        "3": "otherincompatible",
+        "4": "pathnotavailable"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      22
+    ]
+  },
+  "fddimibPORTLerFlag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      23
+    ]
+  },
+  "fddimibPORTHardwarePresent": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      24
+    ]
+  },
+  "fddimibPORTAction": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "maintPORT",
+        "3": "enablePORT",
+        "4": "disablePORT",
+        "5": "startPORT",
+        "6": "stopPORT"
+      }
+    },
+    "index": null,
+    "value": [
+      "fddimibPORTEntry",
+      25
+    ]
+  }
+}

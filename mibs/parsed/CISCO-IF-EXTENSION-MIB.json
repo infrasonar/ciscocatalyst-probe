@@ -1,0 +1,1333 @@
+{
+  "IMPORTS": [
+    [
+      "SNMPv2-SMI",
+      [
+        "MODULE-IDENTITY",
+        "OBJECT-TYPE",
+        "Counter32",
+        "Counter64",
+        "Gauge32",
+        "Unsigned32",
+        "Integer32",
+        "NOTIFICATION-TYPE"
+      ]
+    ],
+    [
+      "SNMPv2-CONF",
+      [
+        "MODULE-COMPLIANCE",
+        "OBJECT-GROUP",
+        "NOTIFICATION-GROUP"
+      ]
+    ],
+    [
+      "SNMPv2-TC",
+      [
+        "TruthValue",
+        "TimeStamp",
+        "DisplayString",
+        "TEXTUAL-CONVENTION"
+      ]
+    ],
+    [
+      "IF-MIB",
+      [
+        "ifIndex",
+        "InterfaceIndexOrZero",
+        "ifName",
+        "ifType",
+        "ifAdminStatus",
+        "ifOperStatus"
+      ]
+    ],
+    [
+      "ENTITY-MIB",
+      [
+        "entPhysicalIndex"
+      ]
+    ],
+    [
+      "SNMP-FRAMEWORK-MIB",
+      [
+        "SnmpAdminString"
+      ]
+    ],
+    [
+      "CISCO-TC",
+      [
+        "IfOperStatusReason"
+      ]
+    ],
+    [
+      "CISCO-SMI",
+      [
+        "ciscoMgmt"
+      ]
+    ]
+  ],
+  "ciscoIfExtensionMIB": {
+    "tp": "MODULE-IDENTITY",
+    "value": [
+      "ciscoMgmt",
+      276
+    ]
+  },
+  "ciscoIfExtensionMIBNotifications": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoIfExtensionMIB",
+      0
+    ]
+  },
+  "ciscoIfExtensionMIBObjects": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoIfExtensionMIB",
+      1
+    ]
+  },
+  "ciscoIfExtensionMIBConformance": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoIfExtensionMIB",
+      2
+    ]
+  },
+  "ciscoIfExtensionStats": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoIfExtensionMIBObjects",
+      1
+    ]
+  },
+  "ciscoIfExtSystemConfig": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoIfExtensionMIBObjects",
+      2
+    ]
+  },
+  "ciscoIfExtDot1qCustomEtherType": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoIfExtensionMIBObjects",
+      3
+    ]
+  },
+  "ciscoIfExtUtilization": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoIfExtensionMIBObjects",
+      4
+    ]
+  },
+  "ciscoIfExtDot1dBaseMapping": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoIfExtensionMIBObjects",
+      5
+    ]
+  },
+  "ciscoIfExtIfNameMapping": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoIfExtensionMIBObjects",
+      6
+    ]
+  },
+  "InterfaceIndexList": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "display_hint": null
+  },
+  "InterfaceOperModeList": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "display_hint": null
+  },
+  "InterfaceOperCauseList": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "display_hint": null
+  },
+  "InterfaceOwnershipList": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "display_hint": null
+  },
+  "IfIndexPersistenceState": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "disable",
+        "2": "enable",
+        "3": "global"
+      }
+    },
+    "display_hint": null
+  },
+  "cieIfPacketStatsTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF CieIfPacketStatsEntry"
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtensionStats",
+      1
+    ]
+  },
+  "cieIfPacketStatsEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CieIfPacketStatsEntry"
+    },
+    "index": [
+      "ifIndex"
+    ],
+    "value": [
+      "cieIfPacketStatsTable",
+      1
+    ]
+  },
+  "CieIfPacketStatsEntry": {
+    "tp": "SEQUENCE"
+  },
+  "cieIfLastInTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Gauge32"
+    },
+    "index": null,
+    "value": [
+      "cieIfPacketStatsEntry",
+      1
+    ]
+  },
+  "cieIfLastOutTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Gauge32"
+    },
+    "index": null,
+    "value": [
+      "cieIfPacketStatsEntry",
+      2
+    ]
+  },
+  "cieIfLastOutHangTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Gauge32"
+    },
+    "index": null,
+    "value": [
+      "cieIfPacketStatsEntry",
+      3
+    ]
+  },
+  "cieIfInRuntsErrs": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "cieIfPacketStatsEntry",
+      4
+    ]
+  },
+  "cieIfInGiantsErrs": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "cieIfPacketStatsEntry",
+      5
+    ]
+  },
+  "cieIfInFramingErrs": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "cieIfPacketStatsEntry",
+      6
+    ]
+  },
+  "cieIfInOverrunErrs": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "cieIfPacketStatsEntry",
+      7
+    ]
+  },
+  "cieIfInIgnored": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "cieIfPacketStatsEntry",
+      8
+    ]
+  },
+  "cieIfInAbortErrs": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "cieIfPacketStatsEntry",
+      9
+    ]
+  },
+  "cieIfInputQueueDrops": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "cieIfPacketStatsEntry",
+      10
+    ]
+  },
+  "cieIfOutputQueueDrops": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "cieIfPacketStatsEntry",
+      11
+    ]
+  },
+  "cieIfPacketDiscontinuityTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeStamp"
+    },
+    "index": null,
+    "value": [
+      "cieIfPacketStatsEntry",
+      12
+    ]
+  },
+  "cieIfInterfaceTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF CieIfInterfaceEntry"
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtensionStats",
+      2
+    ]
+  },
+  "cieIfInterfaceEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CieIfInterfaceEntry"
+    },
+    "index": [
+      "ifIndex"
+    ],
+    "value": [
+      "cieIfInterfaceTable",
+      1
+    ]
+  },
+  "CieIfInterfaceEntry": {
+    "tp": "SEQUENCE"
+  },
+  "cieIfResetCount": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      1
+    ]
+  },
+  "cieIfKeepAliveEnabled": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      2
+    ]
+  },
+  "cieIfStateChangeReason": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      3
+    ]
+  },
+  "cieIfCarrierTransitionCount": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      4
+    ]
+  },
+  "cieIfInterfaceDiscontinuityTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeStamp"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      5
+    ]
+  },
+  "cieIfDhcpMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      6
+    ]
+  },
+  "cieIfMtu": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      7
+    ]
+  },
+  "cieIfContextName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      8
+    ]
+  },
+  "cieIfOperStatusCause": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IfOperStatusReason"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      9
+    ]
+  },
+  "cieIfOperStatusCauseDescr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      10
+    ]
+  },
+  "cieIfSpeedReceive": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Gauge32"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      11
+    ]
+  },
+  "cieIfHighSpeedReceive": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Gauge32"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      12
+    ]
+  },
+  "cieIfOwner": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      13
+    ]
+  },
+  "cieIfSharedConfig": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "notApplicable",
+        "2": "ownerDedicated",
+        "3": "ownerShared",
+        "4": "sharedOnly"
+      }
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      14
+    ]
+  },
+  "cieIfSpeedGroupConfig": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "notApplicable",
+        "2": "tenG",
+        "3": "oneTwoFourEightG",
+        "4": "twoFourEightSixteenG"
+      }
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      15
+    ]
+  },
+  "cieIfTransceiverFrequencyConfig": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "notApplicable",
+        "2": "fibreChannel",
+        "3": "ethernet"
+      }
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      16
+    ]
+  },
+  "cieIfFillPatternConfig": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "arbff8G",
+        "2": "idle8G"
+      }
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      17
+    ]
+  },
+  "cieIfIgnoreBitErrorsConfig": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      18
+    ]
+  },
+  "cieIfIgnoreInterruptThresholdConfig": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "cieIfInterfaceEntry",
+      19
+    ]
+  },
+  "cieIfStatusListTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF CieIfStatusListEntry"
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtensionStats",
+      3
+    ]
+  },
+  "cieIfStatusListEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CieIfStatusListEntry"
+    },
+    "index": [
+      "entPhysicalIndex",
+      "cieIfStatusListIndex"
+    ],
+    "value": [
+      "cieIfStatusListTable",
+      1
+    ]
+  },
+  "CieIfStatusListEntry": {
+    "tp": "SEQUENCE"
+  },
+  "cieIfStatusListIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "cieIfStatusListEntry",
+      1
+    ]
+  },
+  "cieInterfacesIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "InterfaceIndexList"
+    },
+    "index": null,
+    "value": [
+      "cieIfStatusListEntry",
+      2
+    ]
+  },
+  "cieInterfacesOperMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "InterfaceOperModeList"
+    },
+    "index": null,
+    "value": [
+      "cieIfStatusListEntry",
+      3
+    ]
+  },
+  "cieInterfacesOperCause": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "InterfaceOperCauseList"
+    },
+    "index": null,
+    "value": [
+      "cieIfStatusListEntry",
+      4
+    ]
+  },
+  "cieInterfaceOwnershipBitmap": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "InterfaceOwnershipList"
+    },
+    "index": null,
+    "value": [
+      "cieIfStatusListEntry",
+      5
+    ]
+  },
+  "cieIfVlStatsTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF CieIfVlStatsEntry"
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtensionStats",
+      4
+    ]
+  },
+  "cieIfVlStatsEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CieIfVlStatsEntry"
+    },
+    "index": [
+      "ifIndex"
+    ],
+    "value": [
+      "cieIfVlStatsTable",
+      1
+    ]
+  },
+  "CieIfVlStatsEntry": {
+    "tp": "SEQUENCE"
+  },
+  "cieIfNoDropVlInPkts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "cieIfVlStatsEntry",
+      1
+    ]
+  },
+  "cieIfNoDropVlInOctets": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "cieIfVlStatsEntry",
+      2
+    ]
+  },
+  "cieIfNoDropVlOutPkts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "cieIfVlStatsEntry",
+      3
+    ]
+  },
+  "cieIfNoDropVlOutOctets": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "cieIfVlStatsEntry",
+      4
+    ]
+  },
+  "cieIfDropVlInPkts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "cieIfVlStatsEntry",
+      5
+    ]
+  },
+  "cieIfDropVlInOctets": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "cieIfVlStatsEntry",
+      6
+    ]
+  },
+  "cieIfDropVlOutPkts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "cieIfVlStatsEntry",
+      7
+    ]
+  },
+  "cieIfDropVlOutOctets": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "cieIfVlStatsEntry",
+      8
+    ]
+  },
+  "cieSystemMtu": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtSystemConfig",
+      1
+    ]
+  },
+  "cieLinkUpDownEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "standard",
+        "1": "cisco"
+      }
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtSystemConfig",
+      2
+    ]
+  },
+  "cieStandardLinkUpDownVarbinds": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "standard",
+        "2": "additional",
+        "3": "other"
+      }
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtSystemConfig",
+      3
+    ]
+  },
+  "cieIfIndexPersistence": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtSystemConfig",
+      4
+    ]
+  },
+  "cieIfIndexPersistenceTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF CieIfIndexPersistenceEntry"
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtSystemConfig",
+      5
+    ]
+  },
+  "cieIfIndexPersistenceEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CieIfIndexPersistenceEntry"
+    },
+    "index": [
+      "ifIndex"
+    ],
+    "value": [
+      "cieIfIndexPersistenceTable",
+      1
+    ]
+  },
+  "CieIfIndexPersistenceEntry": {
+    "tp": "SEQUENCE"
+  },
+  "cieIfIndexPersistenceEnabled": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "cieIfIndexPersistenceEntry",
+      1
+    ]
+  },
+  "cieIfIndexPersistenceControl": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IfIndexPersistenceState"
+    },
+    "index": null,
+    "value": [
+      "cieIfIndexPersistenceEntry",
+      2
+    ]
+  },
+  "cieDelayedLinkUpDownNotifEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtSystemConfig",
+      6
+    ]
+  },
+  "cieDelayedLinkUpDownNotifDelay": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtSystemConfig",
+      7
+    ]
+  },
+  "cieIfIndexGlobalPersistence": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IfIndexPersistenceState"
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtSystemConfig",
+      8
+    ]
+  },
+  "cieLinkUpDownConfig": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "standardLinkUp",
+        "1": "standardLinkDown",
+        "2": "additionalLinkUp",
+        "3": "additionalLinkDown",
+        "4": "ciscoLinkUp",
+        "5": "ciscoLinkDown"
+      }
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtSystemConfig",
+      9
+    ]
+  },
+  "cieIfDot1qCustomEtherTypeTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF CieIfDot1qCustomEtherTypeEntry"
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtDot1qCustomEtherType",
+      1
+    ]
+  },
+  "cieIfDot1qCustomEtherTypeEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CieIfDot1qCustomEtherTypeEntry"
+    },
+    "index": [
+      "ifIndex"
+    ],
+    "value": [
+      "cieIfDot1qCustomEtherTypeTable",
+      1
+    ]
+  },
+  "CieIfDot1qCustomEtherTypeEntry": {
+    "tp": "SEQUENCE"
+  },
+  "cieIfDot1qCustomAdminEtherType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "cieIfDot1qCustomEtherTypeEntry",
+      1
+    ]
+  },
+  "cieIfDot1qCustomOperEtherType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "cieIfDot1qCustomEtherTypeEntry",
+      2
+    ]
+  },
+  "cieIfUtilTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF CieIfUtilEntry"
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtUtilization",
+      1
+    ]
+  },
+  "cieIfUtilEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CieIfUtilEntry"
+    },
+    "index": [
+      "ifIndex"
+    ],
+    "value": [
+      "cieIfUtilTable",
+      1
+    ]
+  },
+  "CieIfUtilEntry": {
+    "tp": "SEQUENCE"
+  },
+  "cieIfInPktRate": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "cieIfUtilEntry",
+      1
+    ]
+  },
+  "cieIfInOctetRate": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "cieIfUtilEntry",
+      2
+    ]
+  },
+  "cieIfOutPktRate": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "cieIfUtilEntry",
+      3
+    ]
+  },
+  "cieIfOutOctetRate": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "cieIfUtilEntry",
+      4
+    ]
+  },
+  "cieIfInterval": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "cieIfUtilEntry",
+      5
+    ]
+  },
+  "cieIfDot1dBaseMappingTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF CieIfDot1dBaseMappingEntry"
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtDot1dBaseMapping",
+      1
+    ]
+  },
+  "cieIfDot1dBaseMappingEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CieIfDot1dBaseMappingEntry"
+    },
+    "index": [
+      "ifIndex"
+    ],
+    "value": [
+      "cieIfDot1dBaseMappingTable",
+      1
+    ]
+  },
+  "CieIfDot1dBaseMappingEntry": {
+    "tp": "SEQUENCE"
+  },
+  "cieIfDot1dBaseMappingPort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "cieIfDot1dBaseMappingEntry",
+      1
+    ]
+  },
+  "cieIfNameMappingTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF CieIfNameMappingEntry"
+    },
+    "index": null,
+    "value": [
+      "ciscoIfExtIfNameMapping",
+      1
+    ]
+  },
+  "cieIfNameMappingEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CieIfNameMappingEntry"
+    },
+    "index": [
+      "cieIfName"
+    ],
+    "value": [
+      "cieIfNameMappingTable",
+      1
+    ]
+  },
+  "CieIfNameMappingEntry": {
+    "tp": "SEQUENCE"
+  },
+  "cieIfName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "cieIfNameMappingEntry",
+      1
+    ]
+  },
+  "cieIfIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "InterfaceIndexOrZero"
+    },
+    "index": null,
+    "value": [
+      "cieIfNameMappingEntry",
+      2
+    ]
+  },
+  "ciscoIfExtensionMIBCompliances": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoIfExtensionMIBConformance",
+      1
+    ]
+  },
+  "ciscoIfExtensionMIBGroups": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoIfExtensionMIBConformance",
+      2
+    ]
+  },
+  "ciscoIfExtensionTablePacketGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      1
+    ]
+  },
+  "ciscoIfExtensionTableIntfGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      2
+    ]
+  },
+  "ciscoIfExtensionTableIntfGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      3
+    ]
+  },
+  "ciscoIfExtensionSystemGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      4
+    ]
+  },
+  "ciscoIfExtDot1qEtherTypeGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      5
+    ]
+  },
+  "ciscoIfExtUtilizationGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      6
+    ]
+  },
+  "ciscoIfExtDot1dBaseMappingGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      7
+    ]
+  },
+  "ciscoIfExtIfNameMappingGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      8
+    ]
+  },
+  "ciscoIfExtensionTableIntfGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      9
+    ]
+  },
+  "cieIfStatusListGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      10
+    ]
+  },
+  "cieLinkUpDownNotifEnableGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      11
+    ]
+  },
+  "ciscoIfExtensionAsymmetricalSpeedGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      13
+    ]
+  },
+  "ciscoIfExtUtilIntervalGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      14
+    ]
+  },
+  "cieIfIndexPersistenceGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      15
+    ]
+  },
+  "cieDelayedLinkUpDownNotifNotifEnableGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      16
+    ]
+  },
+  "cieIfIndexPersistenceControlGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      18
+    ]
+  },
+  "ciscoIfExtensionTableIntfGroup3": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      19
+    ]
+  },
+  "cieIfStatusListGroupSup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      20
+    ]
+  },
+  "cieIfVlStatsGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      21
+    ]
+  },
+  "ciscoIfExtensionTableIntfGroup3SupR01": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      22
+    ]
+  },
+  "cieLinkUpDownNotifConfigGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      23
+    ]
+  },
+  "ciscoIfExtensionTableIntfGroup3SupR02": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoIfExtensionMIBGroups",
+      24
+    ]
+  }
+}

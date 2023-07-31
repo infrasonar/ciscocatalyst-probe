@@ -1,0 +1,2417 @@
+{
+  "IMPORTS": [
+    [
+      "SNMPv2-SMI",
+      [
+        "MODULE-IDENTITY",
+        "OBJECT-TYPE",
+        "NOTIFICATION-TYPE",
+        "Counter32",
+        "IpAddress",
+        "Gauge32",
+        "Integer32",
+        "Unsigned32"
+      ]
+    ],
+    [
+      "SNMPv2-CONF",
+      [
+        "MODULE-COMPLIANCE",
+        "OBJECT-GROUP",
+        "NOTIFICATION-GROUP"
+      ]
+    ],
+    [
+      "SNMPv2-TC",
+      [
+        "TEXTUAL-CONVENTION",
+        "RowStatus",
+        "DisplayString",
+        "DateAndTime",
+        "TruthValue",
+        "TestAndIncr",
+        "TimeStamp"
+      ]
+    ],
+    [
+      "IF-MIB",
+      [
+        "InterfaceIndex",
+        "ifIndex",
+        "InterfaceIndexOrZero"
+      ]
+    ],
+    [
+      "INET-ADDRESS-MIB",
+      [
+        "InetAddress",
+        "InetAddressType"
+      ]
+    ],
+    [
+      "RMON-MIB",
+      [
+        "OwnerString"
+      ]
+    ],
+    [
+      "SNMP-FRAMEWORK-MIB",
+      [
+        "SnmpAdminString"
+      ]
+    ],
+    [
+      "CISCO-TC",
+      [
+        "Cisco2KVlanList"
+      ]
+    ],
+    [
+      "CISCO-SMI",
+      [
+        "ciscoMgmt"
+      ]
+    ]
+  ],
+  "ciscoVtpMIB": {
+    "tp": "MODULE-IDENTITY",
+    "value": [
+      "ciscoMgmt",
+      46
+    ]
+  },
+  "vtpMIBObjects": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoVtpMIB",
+      1
+    ]
+  },
+  "VlanIndex": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "display_hint": null
+  },
+  "ManagementDomainIndex": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "display_hint": null
+  },
+  "VlanType": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "ethernet",
+        "2": "fddi",
+        "3": "tokenRing",
+        "4": "fddiNet",
+        "5": "trNet",
+        "6": "deprecated"
+      }
+    },
+    "display_hint": null
+  },
+  "VlanTypeExt": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "vtpmanageable",
+        "1": "internal",
+        "2": "reserved",
+        "3": "rspan",
+        "4": "dynamicGvrp"
+      }
+    },
+    "display_hint": null
+  },
+  "vtpStatus": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vtpMIBObjects",
+      1
+    ]
+  },
+  "vtpVersion": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "one",
+        "2": "two",
+        "3": "none",
+        "4": "three"
+      }
+    },
+    "index": null,
+    "value": [
+      "vtpStatus",
+      1
+    ]
+  },
+  "vtpMaxVlanStorage": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "vtpStatus",
+      2
+    ]
+  },
+  "vtpNotificationsEnabled": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "vtpStatus",
+      3
+    ]
+  },
+  "vtpVlanCreatedNotifEnabled": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "vtpStatus",
+      4
+    ]
+  },
+  "vtpVlanDeletedNotifEnabled": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "vtpStatus",
+      5
+    ]
+  },
+  "vlanManagementDomains": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vtpMIBObjects",
+      2
+    ]
+  },
+  "managementDomainTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF ManagementDomainEntry"
+    },
+    "index": null,
+    "value": [
+      "vlanManagementDomains",
+      1
+    ]
+  },
+  "managementDomainEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "ManagementDomainEntry"
+    },
+    "index": [
+      "managementDomainIndex"
+    ],
+    "value": [
+      "managementDomainTable",
+      1
+    ]
+  },
+  "ManagementDomainEntry": {
+    "tp": "SEQUENCE"
+  },
+  "managementDomainIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "ManagementDomainIndex"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      1
+    ]
+  },
+  "managementDomainName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      2
+    ]
+  },
+  "managementDomainLocalMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "client",
+        "2": "server",
+        "3": "transparent",
+        "4": "off"
+      }
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      3
+    ]
+  },
+  "managementDomainConfigRevNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Gauge32"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      4
+    ]
+  },
+  "managementDomainLastUpdater": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      5
+    ]
+  },
+  "managementDomainLastChange": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DateAndTime"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      6
+    ]
+  },
+  "managementDomainRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "RowStatus"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      7
+    ]
+  },
+  "managementDomainTftpServer": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      8
+    ]
+  },
+  "managementDomainTftpPathname": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      9
+    ]
+  },
+  "managementDomainPruningState": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      10
+    ]
+  },
+  "managementDomainVersionInUse": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "version1",
+        "2": "version2",
+        "3": "none",
+        "4": "version3"
+      }
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      11
+    ]
+  },
+  "managementDomainPruningStateOper": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      12
+    ]
+  },
+  "managementDomainAdminSrcIf": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      13
+    ]
+  },
+  "managementDomainSourceOnlyMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      14
+    ]
+  },
+  "managementDomainOperSrcIf": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      15
+    ]
+  },
+  "managementDomainConfigFile": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      16
+    ]
+  },
+  "managementDomainLocalUpdaterType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "InetAddressType"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      17
+    ]
+  },
+  "managementDomainLocalUpdater": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "InetAddress"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      18
+    ]
+  },
+  "managementDomainDeviceID": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "managementDomainEntry",
+      19
+    ]
+  },
+  "vlanInfo": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vtpMIBObjects",
+      3
+    ]
+  },
+  "vtpVlanTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VtpVlanEntry"
+    },
+    "index": null,
+    "value": [
+      "vlanInfo",
+      1
+    ]
+  },
+  "vtpVlanEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VtpVlanEntry"
+    },
+    "index": [
+      "managementDomainIndex",
+      "vtpVlanIndex"
+    ],
+    "value": [
+      "vtpVlanTable",
+      1
+    ]
+  },
+  "VtpVlanEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vtpVlanIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      1
+    ]
+  },
+  "vtpVlanState": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "operational",
+        "2": "suspended",
+        "3": "mtuTooBigForDevice",
+        "4": "mtuTooBigForTrunk"
+      }
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      2
+    ]
+  },
+  "vtpVlanType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanType"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      3
+    ]
+  },
+  "vtpVlanName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      4
+    ]
+  },
+  "vtpVlanMtu": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      5
+    ]
+  },
+  "vtpVlanDot10Said": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      6
+    ]
+  },
+  "vtpVlanRingNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      7
+    ]
+  },
+  "vtpVlanBridgeNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      8
+    ]
+  },
+  "vtpVlanStpType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "ieee",
+        "2": "ibm",
+        "3": "hybrid"
+      }
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      9
+    ]
+  },
+  "vtpVlanParentVlan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      10
+    ]
+  },
+  "vtpVlanTranslationalVlan1": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      11
+    ]
+  },
+  "vtpVlanTranslationalVlan2": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      12
+    ]
+  },
+  "vtpVlanBridgeType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "srt",
+        "2": "srb"
+      }
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      13
+    ]
+  },
+  "vtpVlanAreHopCount": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      14
+    ]
+  },
+  "vtpVlanSteHopCount": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      15
+    ]
+  },
+  "vtpVlanIsCRFBackup": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      16
+    ]
+  },
+  "vtpVlanTypeExt": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanTypeExt"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      17
+    ]
+  },
+  "vtpVlanIfIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "InterfaceIndexOrZero"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEntry",
+      18
+    ]
+  },
+  "internalVlanInfo": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vlanInfo",
+      2
+    ]
+  },
+  "vtpInternalVlanAllocPolicy": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "ascending",
+        "2": "descending"
+      }
+    },
+    "index": null,
+    "value": [
+      "internalVlanInfo",
+      1
+    ]
+  },
+  "vtpInternalVlanTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VtpInternalVlanEntry"
+    },
+    "index": null,
+    "value": [
+      "internalVlanInfo",
+      2
+    ]
+  },
+  "vtpInternalVlanEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VtpInternalVlanEntry"
+    },
+    "index": [
+      "managementDomainIndex",
+      "vtpVlanIndex"
+    ],
+    "value": [
+      "vtpInternalVlanTable",
+      1
+    ]
+  },
+  "VtpInternalVlanEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vtpInternalVlanOwner": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "vtpInternalVlanEntry",
+      1
+    ]
+  },
+  "vlanEdit": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vtpMIBObjects",
+      4
+    ]
+  },
+  "vtpEditControlTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VtpEditControlEntry"
+    },
+    "index": null,
+    "value": [
+      "vlanEdit",
+      1
+    ]
+  },
+  "vtpEditControlEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VtpEditControlEntry"
+    },
+    "index": "managementDomainEntry",
+    "value": [
+      "vtpEditControlTable",
+      1
+    ]
+  },
+  "VtpEditControlEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vtpVlanEditOperation": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "none",
+        "2": "copy",
+        "3": "apply",
+        "4": "release",
+        "5": "restartTimer"
+      }
+    },
+    "index": null,
+    "value": [
+      "vtpEditControlEntry",
+      1
+    ]
+  },
+  "vtpVlanApplyStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "inProgress",
+        "2": "succeeded",
+        "3": "configNumberError",
+        "4": "inconsistentEdit",
+        "5": "tooBig",
+        "6": "localNVStoreFail",
+        "7": "remoteNVStoreFail",
+        "8": "editBufferEmpty",
+        "9": "someOtherError",
+        "10": "notPrimaryServer"
+      }
+    },
+    "index": null,
+    "value": [
+      "vtpEditControlEntry",
+      2
+    ]
+  },
+  "vtpVlanEditBufferOwner": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OwnerString"
+    },
+    "index": null,
+    "value": [
+      "vtpEditControlEntry",
+      3
+    ]
+  },
+  "vtpVlanEditConfigRevNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Gauge32"
+    },
+    "index": null,
+    "value": [
+      "vtpEditControlEntry",
+      4
+    ]
+  },
+  "vtpVlanEditModifiedVlan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "vtpEditControlEntry",
+      5
+    ]
+  },
+  "vtpVlanEditTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VtpVlanEditEntry"
+    },
+    "index": null,
+    "value": [
+      "vlanEdit",
+      2
+    ]
+  },
+  "vtpVlanEditEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VtpVlanEditEntry"
+    },
+    "index": [
+      "managementDomainIndex",
+      "vtpVlanEditIndex"
+    ],
+    "value": [
+      "vtpVlanEditTable",
+      1
+    ]
+  },
+  "VtpVlanEditEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vtpVlanEditIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      1
+    ]
+  },
+  "vtpVlanEditState": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "operational",
+        "2": "suspended"
+      }
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      2
+    ]
+  },
+  "vtpVlanEditType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanType"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      3
+    ]
+  },
+  "vtpVlanEditName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      4
+    ]
+  },
+  "vtpVlanEditMtu": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      5
+    ]
+  },
+  "vtpVlanEditDot10Said": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      6
+    ]
+  },
+  "vtpVlanEditRingNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      7
+    ]
+  },
+  "vtpVlanEditBridgeNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      8
+    ]
+  },
+  "vtpVlanEditStpType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "ieee",
+        "2": "ibm",
+        "3": "auto"
+      }
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      9
+    ]
+  },
+  "vtpVlanEditParentVlan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      10
+    ]
+  },
+  "vtpVlanEditRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "RowStatus"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      11
+    ]
+  },
+  "vtpVlanEditTranslationalVlan1": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      12
+    ]
+  },
+  "vtpVlanEditTranslationalVlan2": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      13
+    ]
+  },
+  "vtpVlanEditBridgeType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "srt",
+        "2": "srb"
+      }
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      14
+    ]
+  },
+  "vtpVlanEditAreHopCount": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      15
+    ]
+  },
+  "vtpVlanEditSteHopCount": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      16
+    ]
+  },
+  "vtpVlanEditIsCRFBackup": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      17
+    ]
+  },
+  "vtpVlanEditTypeExt": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanTypeExt"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      18
+    ]
+  },
+  "vtpVlanEditTypeExt2": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanTypeExt"
+    },
+    "index": null,
+    "value": [
+      "vtpVlanEditEntry",
+      19
+    ]
+  },
+  "vtpVlanLocalShutdownTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VtpVlanLocalShutdownEntry"
+    },
+    "index": null,
+    "value": [
+      "vlanEdit",
+      3
+    ]
+  },
+  "vtpVlanLocalShutdownEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VtpVlanLocalShutdownEntry"
+    },
+    "index": [
+      "managementDomainIndex",
+      "vtpVlanIndex"
+    ],
+    "value": [
+      "vtpVlanLocalShutdownTable",
+      1
+    ]
+  },
+  "VtpVlanLocalShutdownEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vtpVlanLocalShutdown": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "up",
+        "2": "down"
+      }
+    },
+    "index": null,
+    "value": [
+      "vtpVlanLocalShutdownEntry",
+      1
+    ]
+  },
+  "vtpStats": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vtpMIBObjects",
+      5
+    ]
+  },
+  "vtpStatsTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VtpStatsEntry"
+    },
+    "index": null,
+    "value": [
+      "vtpStats",
+      1
+    ]
+  },
+  "vtpStatsEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VtpStatsEntry"
+    },
+    "index": "managementDomainEntry",
+    "value": [
+      "vtpStatsTable",
+      1
+    ]
+  },
+  "VtpStatsEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vtpInSummaryAdverts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "vtpStatsEntry",
+      1
+    ]
+  },
+  "vtpInSubsetAdverts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "vtpStatsEntry",
+      2
+    ]
+  },
+  "vtpInAdvertRequests": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "vtpStatsEntry",
+      3
+    ]
+  },
+  "vtpOutSummaryAdverts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "vtpStatsEntry",
+      4
+    ]
+  },
+  "vtpOutSubsetAdverts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "vtpStatsEntry",
+      5
+    ]
+  },
+  "vtpOutAdvertRequests": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "vtpStatsEntry",
+      6
+    ]
+  },
+  "vtpConfigRevNumberErrors": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "vtpStatsEntry",
+      7
+    ]
+  },
+  "vtpConfigDigestErrors": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "vtpStatsEntry",
+      8
+    ]
+  },
+  "vlanTrunkPorts": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vtpMIBObjects",
+      6
+    ]
+  },
+  "vlanTrunkPortTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VlanTrunkPortEntry"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPorts",
+      1
+    ]
+  },
+  "vlanTrunkPortEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanTrunkPortEntry"
+    },
+    "index": [
+      "vlanTrunkPortIfIndex"
+    ],
+    "value": [
+      "vlanTrunkPortTable",
+      1
+    ]
+  },
+  "VlanTrunkPortEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vlanTrunkPortIfIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "InterfaceIndex"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      1
+    ]
+  },
+  "vlanTrunkPortManagementDomain": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "ManagementDomainIndex"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      2
+    ]
+  },
+  "vlanTrunkPortEncapsulationType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "isl",
+        "2": "dot10",
+        "3": "lane",
+        "4": "dot1Q",
+        "5": "negotiate"
+      }
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      3
+    ]
+  },
+  "vlanTrunkPortVlansEnabled": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      4
+    ]
+  },
+  "vlanTrunkPortNativeVlan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      5
+    ]
+  },
+  "vlanTrunkPortRowStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "RowStatus"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      6
+    ]
+  },
+  "vlanTrunkPortInJoins": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      7
+    ]
+  },
+  "vlanTrunkPortOutJoins": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      8
+    ]
+  },
+  "vlanTrunkPortOldAdverts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      9
+    ]
+  },
+  "vlanTrunkPortVlansPruningEligible": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      10
+    ]
+  },
+  "vlanTrunkPortVlansXmitJoined": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      11
+    ]
+  },
+  "vlanTrunkPortVlansRcvJoined": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      12
+    ]
+  },
+  "vlanTrunkPortDynamicState": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "on",
+        "2": "off",
+        "3": "desirable",
+        "4": "auto",
+        "5": "onNoNegotiate"
+      }
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      13
+    ]
+  },
+  "vlanTrunkPortDynamicStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "trunking",
+        "2": "notTrunking"
+      }
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      14
+    ]
+  },
+  "vlanTrunkPortVtpEnabled": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      15
+    ]
+  },
+  "vlanTrunkPortEncapsulationOperType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "isl",
+        "2": "dot10",
+        "3": "lane",
+        "4": "dot1Q",
+        "5": "negotiating",
+        "6": "notApplicable"
+      }
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      16
+    ]
+  },
+  "vlanTrunkPortVlansEnabled2k": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      17
+    ]
+  },
+  "vlanTrunkPortVlansEnabled3k": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      18
+    ]
+  },
+  "vlanTrunkPortVlansEnabled4k": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      19
+    ]
+  },
+  "vtpVlansPruningEligible2k": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      20
+    ]
+  },
+  "vtpVlansPruningEligible3k": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      21
+    ]
+  },
+  "vtpVlansPruningEligible4k": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      22
+    ]
+  },
+  "vlanTrunkPortVlansXmitJoined2k": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      23
+    ]
+  },
+  "vlanTrunkPortVlansXmitJoined3k": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      24
+    ]
+  },
+  "vlanTrunkPortVlansXmitJoined4k": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      25
+    ]
+  },
+  "vlanTrunkPortVlansRcvJoined2k": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      26
+    ]
+  },
+  "vlanTrunkPortVlansRcvJoined3k": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      27
+    ]
+  },
+  "vlanTrunkPortVlansRcvJoined4k": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      28
+    ]
+  },
+  "vlanTrunkPortDot1qTunnel": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "trunk",
+        "2": "access",
+        "3": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      29
+    ]
+  },
+  "vlanTrunkPortVlansActiveFirst2k": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Cisco2KVlanList"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      30
+    ]
+  },
+  "vlanTrunkPortVlansActiveSecond2k": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Cisco2KVlanList"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPortEntry",
+      31
+    ]
+  },
+  "vlanTrunkPortSetSerialNo": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TestAndIncr"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPorts",
+      2
+    ]
+  },
+  "vlanTrunkPortsDot1qTag": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkPorts",
+      3
+    ]
+  },
+  "vtpDiscover": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vtpMIBObjects",
+      7
+    ]
+  },
+  "vtpDiscoverTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VtpDiscoverEntry"
+    },
+    "index": null,
+    "value": [
+      "vtpDiscover",
+      1
+    ]
+  },
+  "vtpDiscoverEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VtpDiscoverEntry"
+    },
+    "index": [
+      "managementDomainIndex"
+    ],
+    "value": [
+      "vtpDiscoverTable",
+      1
+    ]
+  },
+  "VtpDiscoverEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vtpDiscoverAction": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "discover",
+        "2": "noOperation",
+        "3": "purgeResult"
+      }
+    },
+    "index": null,
+    "value": [
+      "vtpDiscoverEntry",
+      1
+    ]
+  },
+  "vtpDiscoverStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "inProgress",
+        "2": "succeeded",
+        "3": "resourceUnavailable",
+        "4": "someOtherError"
+      }
+    },
+    "index": null,
+    "value": [
+      "vtpDiscoverEntry",
+      2
+    ]
+  },
+  "vtpLastDiscoverTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeStamp"
+    },
+    "index": null,
+    "value": [
+      "vtpDiscoverEntry",
+      3
+    ]
+  },
+  "vtpDiscoverResultTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VtpDiscoverResultEntry"
+    },
+    "index": null,
+    "value": [
+      "vtpDiscover",
+      2
+    ]
+  },
+  "vtpDiscoverResultEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VtpDiscoverResultEntry"
+    },
+    "index": [
+      "managementDomainIndex",
+      "vtpDiscoverResultIndex"
+    ],
+    "value": [
+      "vtpDiscoverResultTable",
+      1
+    ]
+  },
+  "VtpDiscoverResultEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vtpDiscoverResultIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "vtpDiscoverResultEntry",
+      1
+    ]
+  },
+  "vtpDiscoverResultDatabaseName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "vtpDiscoverResultEntry",
+      2
+    ]
+  },
+  "vtpDiscoverResultConflicting": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "vtpDiscoverResultEntry",
+      3
+    ]
+  },
+  "vtpDiscoverResultDeviceId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "vtpDiscoverResultEntry",
+      4
+    ]
+  },
+  "vtpDiscoverResultPrimaryServer": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "vtpDiscoverResultEntry",
+      5
+    ]
+  },
+  "vtpDiscoverResultRevNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Gauge32"
+    },
+    "index": null,
+    "value": [
+      "vtpDiscoverResultEntry",
+      6
+    ]
+  },
+  "vtpDiscoverResultSystemName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "vtpDiscoverResultEntry",
+      7
+    ]
+  },
+  "vtpDatabase": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vtpMIBObjects",
+      8
+    ]
+  },
+  "vtpDatabaseTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VtpDatabaseEntry"
+    },
+    "index": null,
+    "value": [
+      "vtpDatabase",
+      1
+    ]
+  },
+  "vtpDatabaseEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VtpDatabaseEntry"
+    },
+    "index": [
+      "managementDomainIndex",
+      "vtpDatabaseIndex"
+    ],
+    "value": [
+      "vtpDatabaseTable",
+      1
+    ]
+  },
+  "VtpDatabaseEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vtpDatabaseIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "vtpDatabaseEntry",
+      1
+    ]
+  },
+  "vtpDatabaseName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "vtpDatabaseEntry",
+      2
+    ]
+  },
+  "vtpDatabaseLocalMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "client",
+        "2": "server",
+        "3": "transparent",
+        "4": "off"
+      }
+    },
+    "index": null,
+    "value": [
+      "vtpDatabaseEntry",
+      3
+    ]
+  },
+  "vtpDatabaseRevNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Gauge32"
+    },
+    "index": null,
+    "value": [
+      "vtpDatabaseEntry",
+      4
+    ]
+  },
+  "vtpDatabasePrimaryServer": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "vtpDatabaseEntry",
+      5
+    ]
+  },
+  "vtpDatabasePrimaryServerId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "vtpDatabaseEntry",
+      6
+    ]
+  },
+  "vtpDatabaseTakeOverPrimary": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "vtpDatabaseEntry",
+      7
+    ]
+  },
+  "vtpDatabaseTakeOverPassword": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "vtpDatabaseEntry",
+      8
+    ]
+  },
+  "vtpAuthentication": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vtpMIBObjects",
+      9
+    ]
+  },
+  "vtpAuthenticationTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VtpAuthEntry"
+    },
+    "index": null,
+    "value": [
+      "vtpAuthentication",
+      1
+    ]
+  },
+  "vtpAuthEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VtpAuthEntry"
+    },
+    "index": [
+      "managementDomainIndex"
+    ],
+    "value": [
+      "vtpAuthenticationTable",
+      1
+    ]
+  },
+  "VtpAuthEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vtpAuthPassword": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SnmpAdminString"
+    },
+    "index": null,
+    "value": [
+      "vtpAuthEntry",
+      1
+    ]
+  },
+  "vtpAuthPasswordType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "plaintext",
+        "2": "hidden"
+      }
+    },
+    "index": null,
+    "value": [
+      "vtpAuthEntry",
+      2
+    ]
+  },
+  "vtpAuthSecretKey": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vtpAuthEntry",
+      3
+    ]
+  },
+  "vlanStatistics": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vtpMIBObjects",
+      10
+    ]
+  },
+  "vlanStatsVlans": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "vlanStatistics",
+      1
+    ]
+  },
+  "vlanStatsExtendedVlans": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "vlanStatistics",
+      2
+    ]
+  },
+  "vlanStatsInternalVlans": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "vlanStatistics",
+      3
+    ]
+  },
+  "vlanStatsFreeVlans": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "vlanStatistics",
+      4
+    ]
+  },
+  "vtpNotifications": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoVtpMIB",
+      2
+    ]
+  },
+  "vtpNotificationsPrefix": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vtpNotifications",
+      0
+    ]
+  },
+  "vtpNotificationsObjects": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vtpNotifications",
+      1
+    ]
+  },
+  "vtpVlanPortLocalSegment": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "index": null,
+    "value": [
+      "vtpNotificationsObjects",
+      1
+    ]
+  },
+  "vtpMIBConformance": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoVtpMIB",
+      3
+    ]
+  },
+  "vtpMIBCompliances": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vtpMIBConformance",
+      1
+    ]
+  },
+  "vtpMIBGroups": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "vtpMIBConformance",
+      2
+    ]
+  },
+  "vtpBasicGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      1
+    ]
+  },
+  "vtpVlanInfoGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      13
+    ]
+  },
+  "vtpVlanInfoEditGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      14
+    ]
+  },
+  "vtpStatsGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      4
+    ]
+  },
+  "vtpTrunkPortGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      5
+    ]
+  },
+  "vtpTrunkPortGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      11
+    ]
+  },
+  "vtpTrunkPortGroup3": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      15
+    ]
+  },
+  "vtpTrunkPruningGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      7
+    ]
+  },
+  "vtpTrunkPruningGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      10
+    ]
+  },
+  "vtpVersion2BasicGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      12
+    ]
+  },
+  "vtp4kVlanGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      16
+    ]
+  },
+  "vtpDot1qTunnelGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      17
+    ]
+  },
+  "vtpVlanIfIndexGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      18
+    ]
+  },
+  "vtpVlanInfoEditGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      19
+    ]
+  },
+  "vtp4kVlanGroupRev1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      20
+    ]
+  },
+  "vtpNotificationObjectsGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      21
+    ]
+  },
+  "vtpDot1qTunnelGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      22
+    ]
+  },
+  "vtpVlanNotifEnabledGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      24
+    ]
+  },
+  "vtpDiscoverGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      27
+    ]
+  },
+  "vtpDatabaseGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      28
+    ]
+  },
+  "vtpAuthGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      29
+    ]
+  },
+  "vtpInternalVlanGrp": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      32
+    ]
+  },
+  "vlanStatsGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      33
+    ]
+  },
+  "vtpTrunkPruningGroup3": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      36
+    ]
+  },
+  "vlanTrunkPortActiveVlansGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      38
+    ]
+  },
+  "vtpSourceInterfaceGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      39
+    ]
+  },
+  "vtpConfigFileGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      40
+    ]
+  },
+  "vtpVlanLocalShutdownGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      41
+    ]
+  },
+  "vtpLocalUpdaterGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      42
+    ]
+  },
+  "vtpDeviceIdGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "vtpMIBGroups",
+      43
+    ]
+  }
+}

@@ -1,0 +1,9540 @@
+{
+  "IMPORTS": [
+    [
+      "SNMPv2-SMI",
+      [
+        "MODULE-IDENTITY",
+        "OBJECT-TYPE",
+        "IpAddress",
+        "TimeTicks",
+        "Counter32",
+        "Counter64",
+        "Unsigned32",
+        "NOTIFICATION-TYPE"
+      ]
+    ],
+    [
+      "SNMPv2-TC",
+      [
+        "DisplayString",
+        "RowStatus",
+        "TruthValue",
+        "MacAddress",
+        "TEXTUAL-CONVENTION"
+      ]
+    ],
+    [
+      "FDDI-SMT73-MIB",
+      [
+        "fddimibPORTSMTIndex",
+        "fddimibPORTIndex"
+      ]
+    ],
+    [
+      "IF-MIB",
+      [
+        "OwnerString",
+        "ifName",
+        "ifIndex"
+      ]
+    ],
+    [
+      "SNMPv2-CONF",
+      [
+        "MODULE-COMPLIANCE",
+        "OBJECT-GROUP",
+        "NOTIFICATION-GROUP"
+      ]
+    ],
+    [
+      "CISCO-SMI",
+      [
+        "workgroup"
+      ]
+    ],
+    [
+      "TOKEN-RING-RMON-MIB",
+      [
+        "ringStationMacAddress"
+      ]
+    ],
+    [
+      "ENTITY-MIB",
+      [
+        "PhysicalIndex"
+      ]
+    ],
+    [
+      "CISCO-VTP-MIB",
+      [
+        "VlanIndex"
+      ]
+    ]
+  ],
+  "ciscoStackMIB": {
+    "tp": "MODULE-IDENTITY",
+    "value": [
+      "workgroup",
+      1
+    ]
+  },
+  "adapterCard": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      2
+    ]
+  },
+  "wsc1000sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      3
+    ]
+  },
+  "wsc1100sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      4
+    ]
+  },
+  "wsc1200sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      5
+    ]
+  },
+  "wsc1400sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      6
+    ]
+  },
+  "wsc5000sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      7
+    ]
+  },
+  "wsc1600sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      8
+    ]
+  },
+  "cpw1600sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      9
+    ]
+  },
+  "wsc3000sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      10
+    ]
+  },
+  "wsc2900sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      12
+    ]
+  },
+  "cpw2200sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      13
+    ]
+  },
+  "esStack": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      14
+    ]
+  },
+  "wsc3200sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      15
+    ]
+  },
+  "cpw1900sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      16
+    ]
+  },
+  "wsc5500sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      17
+    ]
+  },
+  "wsc1900sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      18
+    ]
+  },
+  "cpw1220sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      19
+    ]
+  },
+  "wsc2820sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      20
+    ]
+  },
+  "cpw1420sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      21
+    ]
+  },
+  "dcd": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      22
+    ]
+  },
+  "wsc3100sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      23
+    ]
+  },
+  "cpw1800sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      24
+    ]
+  },
+  "cpw1601sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      25
+    ]
+  },
+  "wsc3001sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      26
+    ]
+  },
+  "cpw1220csysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      27
+    ]
+  },
+  "wsc1900csysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      28
+    ]
+  },
+  "wsc5002sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      29
+    ]
+  },
+  "cpw1220isysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      30
+    ]
+  },
+  "wsc1900isysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      31
+    ]
+  },
+  "tsStack": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      32
+    ]
+  },
+  "wsc3900sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      33
+    ]
+  },
+  "wsc5505sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      34
+    ]
+  },
+  "wsc2926sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      35
+    ]
+  },
+  "wsc5509sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      36
+    ]
+  },
+  "wsc3920sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      37
+    ]
+  },
+  "wsc6006sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      38
+    ]
+  },
+  "wsc6009sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      39
+    ]
+  },
+  "wsc4003sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      40
+    ]
+  },
+  "wsc4912gsysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      41
+    ]
+  },
+  "wsc2948gsysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      42
+    ]
+  },
+  "wsc6509sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      44
+    ]
+  },
+  "wsc6506sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      45
+    ]
+  },
+  "wsc4006sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      46
+    ]
+  },
+  "wsc6509nebsysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      47
+    ]
+  },
+  "wsc6knamsysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      48
+    ]
+  },
+  "wsc2980gsysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      49
+    ]
+  },
+  "wsc6513sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      50
+    ]
+  },
+  "wsc2980gasysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      51
+    ]
+  },
+  "cisco7603sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      53
+    ]
+  },
+  "cisco7606sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      54
+    ]
+  },
+  "cisco7609sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      55
+    ]
+  },
+  "wsc6503sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      56
+    ]
+  },
+  "wsc4503sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      58
+    ]
+  },
+  "wsc4506sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      59
+    ]
+  },
+  "cisco7613sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      60
+    ]
+  },
+  "wsc6509nebasysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      61
+    ]
+  },
+  "wsc2948ggetxsysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      62
+    ]
+  },
+  "cisco7604sysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      63
+    ]
+  },
+  "wsc6504esysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      64
+    ]
+  },
+  "wsc1900LiteFxsysID": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      175
+    ]
+  },
+  "systemGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      1
+    ]
+  },
+  "chassisGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      2
+    ]
+  },
+  "moduleGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      3
+    ]
+  },
+  "portGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      4
+    ]
+  },
+  "tftpGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      5
+    ]
+  },
+  "brouterGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      6
+    ]
+  },
+  "filterGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      7
+    ]
+  },
+  "monitorGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      8
+    ]
+  },
+  "vlanGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      9
+    ]
+  },
+  "securityGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      10
+    ]
+  },
+  "tokenRingGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      11
+    ]
+  },
+  "multicastGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      12
+    ]
+  },
+  "dnsGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      13
+    ]
+  },
+  "syslogGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      14
+    ]
+  },
+  "ntpGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      15
+    ]
+  },
+  "tacacsGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      16
+    ]
+  },
+  "ipPermitListGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      17
+    ]
+  },
+  "portChannelGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      18
+    ]
+  },
+  "portCpbGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      19
+    ]
+  },
+  "portTopNGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      20
+    ]
+  },
+  "mdgGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      21
+    ]
+  },
+  "radiusGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      22
+    ]
+  },
+  "traceRouteGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      24
+    ]
+  },
+  "fileCopyGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      25
+    ]
+  },
+  "voiceGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      26
+    ]
+  },
+  "portJumboFrameGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      27
+    ]
+  },
+  "switchAccelerationGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      28
+    ]
+  },
+  "configGrp": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      29
+    ]
+  },
+  "VendorIdType": {
+    "tp": "TEXTUAL-CONVENTION",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "display_hint": null
+  },
+  "sysMgmtType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "snmpV1",
+        "3": "smux",
+        "4": "snmpV2V1",
+        "5": "snmpV2cV1",
+        "6": "snmpV3V2cV1"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      1
+    ]
+  },
+  "sysIpAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      2
+    ]
+  },
+  "sysNetMask": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      3
+    ]
+  },
+  "sysBroadcast": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      4
+    ]
+  },
+  "sysTrapReceiverTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SysTrapReceiverEntry"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      5
+    ]
+  },
+  "sysTrapReceiverEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SysTrapReceiverEntry"
+    },
+    "index": [
+      "sysTrapReceiverAddr"
+    ],
+    "value": [
+      "sysTrapReceiverTable",
+      1
+    ]
+  },
+  "SysTrapReceiverEntry": {
+    "tp": "SEQUENCE"
+  },
+  "sysTrapReceiverType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "valid",
+        "2": "invalid"
+      }
+    },
+    "index": null,
+    "value": [
+      "sysTrapReceiverEntry",
+      1
+    ]
+  },
+  "sysTrapReceiverAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "sysTrapReceiverEntry",
+      2
+    ]
+  },
+  "sysTrapReceiverComm": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "sysTrapReceiverEntry",
+      3
+    ]
+  },
+  "sysCommunityTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SysCommunityEntry"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      6
+    ]
+  },
+  "sysCommunityEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SysCommunityEntry"
+    },
+    "index": [
+      "sysCommunityAccess"
+    ],
+    "value": [
+      "sysCommunityTable",
+      1
+    ]
+  },
+  "SysCommunityEntry": {
+    "tp": "SEQUENCE"
+  },
+  "sysCommunityAccess": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "readOnly",
+        "3": "readWrite",
+        "4": "readWriteAll"
+      }
+    },
+    "index": null,
+    "value": [
+      "sysCommunityEntry",
+      1
+    ]
+  },
+  "sysCommunityString": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "sysCommunityEntry",
+      2
+    ]
+  },
+  "sysAttachType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "dualAttach",
+        "3": "singleAttach",
+        "4": "nullAttach",
+        "5": "dualPrio"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      7
+    ]
+  },
+  "sysTraffic": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      8
+    ]
+  },
+  "sysReset": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "reset",
+        "3": "resetMinDown"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      9
+    ]
+  },
+  "sysBaudRate": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "600": "b600",
+        "1200": "b1200",
+        "2400": "b2400",
+        "4800": "b4800",
+        "9600": "b9600",
+        "19200": "b19200",
+        "38400": "b38400"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      10
+    ]
+  },
+  "sysInsertMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "standard",
+        "3": "scheduled",
+        "4": "graceful"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      11
+    ]
+  },
+  "sysClearMacTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeTicks"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      12
+    ]
+  },
+  "sysClearPortTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeTicks"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      13
+    ]
+  },
+  "sysFddiRingTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SysFddiRingEntry"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      14
+    ]
+  },
+  "sysFddiRingEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SysFddiRingEntry"
+    },
+    "index": [
+      "sysFddiRingSMTIndex",
+      "sysFddiRingAddress"
+    ],
+    "value": [
+      "sysFddiRingTable",
+      1
+    ]
+  },
+  "SysFddiRingEntry": {
+    "tp": "SEQUENCE"
+  },
+  "sysFddiRingSMTIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "sysFddiRingEntry",
+      1
+    ]
+  },
+  "sysFddiRingAddress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "MacAddress"
+    },
+    "index": null,
+    "value": [
+      "sysFddiRingEntry",
+      2
+    ]
+  },
+  "sysFddiRingNext": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "MacAddress"
+    },
+    "index": null,
+    "value": [
+      "sysFddiRingEntry",
+      3
+    ]
+  },
+  "sysEnableModem": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      15
+    ]
+  },
+  "sysEnableRedirects": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      16
+    ]
+  },
+  "sysEnableRmon": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      17
+    ]
+  },
+  "sysArpAgingTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      18
+    ]
+  },
+  "sysTrafficPeak": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      19
+    ]
+  },
+  "sysTrafficPeakTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeTicks"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      20
+    ]
+  },
+  "sysCommunityRwa": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      21
+    ]
+  },
+  "sysCommunityRw": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      22
+    ]
+  },
+  "sysCommunityRo": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      23
+    ]
+  },
+  "sysEnableChassisTraps": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      24
+    ]
+  },
+  "sysEnableModuleTraps": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      25
+    ]
+  },
+  "sysEnableBridgeTraps": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled",
+        "3": "enabledForNewRootOnly",
+        "4": "enabledForTopoChangeOnly"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      26
+    ]
+  },
+  "sysIpVlan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      27
+    ]
+  },
+  "sysConfigChangeTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeTicks"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      28
+    ]
+  },
+  "sysEnableRepeaterTraps": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      29
+    ]
+  },
+  "sysBannerMotd": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      30
+    ]
+  },
+  "sysEnableIpPermitTraps": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      31
+    ]
+  },
+  "sysTrafficMeterTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SysTrafficMeterEntry"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      32
+    ]
+  },
+  "sysTrafficMeterEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SysTrafficMeterEntry"
+    },
+    "index": [
+      "sysTrafficMeterType"
+    ],
+    "value": [
+      "sysTrafficMeterTable",
+      1
+    ]
+  },
+  "SysTrafficMeterEntry": {
+    "tp": "SEQUENCE"
+  },
+  "sysTrafficMeterType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "systemSwitchingBus",
+        "2": "switchingBusA",
+        "3": "switchingBusB",
+        "4": "switchingBusC"
+      }
+    },
+    "index": null,
+    "value": [
+      "sysTrafficMeterEntry",
+      1
+    ]
+  },
+  "sysTrafficMeter": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "sysTrafficMeterEntry",
+      2
+    ]
+  },
+  "sysTrafficMeterPeak": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "sysTrafficMeterEntry",
+      3
+    ]
+  },
+  "sysTrafficMeterPeakTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeTicks"
+    },
+    "index": null,
+    "value": [
+      "sysTrafficMeterEntry",
+      4
+    ]
+  },
+  "sysEnableVmpsTraps": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      33
+    ]
+  },
+  "sysConfigChangeInfo": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      34
+    ]
+  },
+  "sysEnableConfigTraps": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      35
+    ]
+  },
+  "sysConfigRegister": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      36
+    ]
+  },
+  "sysBootVariable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      37
+    ]
+  },
+  "sysBootedImage": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      38
+    ]
+  },
+  "sysEnableEntityTrap": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      39
+    ]
+  },
+  "sysEnableStpxTrap": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled",
+        "3": "enabledForInconOnly",
+        "4": "enabledForRootOnly",
+        "5": "enabledForLoopOnly",
+        "6": "enabledForInconRootOnly",
+        "7": "enabledForInconLoopOnly",
+        "8": "enabledForRootLoopOnly"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      40
+    ]
+  },
+  "sysExtendedRmonVlanModeEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      41
+    ]
+  },
+  "sysExtendedRmonNetflowPassword": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      42
+    ]
+  },
+  "sysExtendedRmonNetflowEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      43
+    ]
+  },
+  "sysExtendedRmonVlanAgentEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      44
+    ]
+  },
+  "sysExtendedRmonEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled",
+        "3": "noNAMPresent"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      45
+    ]
+  },
+  "sysConsolePrimaryLoginAuthentication": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "tacacs",
+        "2": "radius",
+        "3": "local"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      46
+    ]
+  },
+  "sysConsolePrimaryEnableAuthentication": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "tacacs",
+        "2": "radius",
+        "3": "local"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      47
+    ]
+  },
+  "sysTelnetPrimaryLoginAuthentication": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "tacacs",
+        "2": "radius",
+        "3": "local"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      48
+    ]
+  },
+  "sysTelnetPrimaryEnableAuthentication": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "tacacs",
+        "2": "radius",
+        "3": "local"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      49
+    ]
+  },
+  "sysStartupConfigSource": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "flashFileRecurring",
+        "2": "flashFileNonRecurring"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      50
+    ]
+  },
+  "sysStartupConfigSourceFile": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      51
+    ]
+  },
+  "sysConfigSupervisorModuleNo": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      52
+    ]
+  },
+  "sysStandbyPortEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      53
+    ]
+  },
+  "sysPortFastBpduGuard": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      54
+    ]
+  },
+  "sysErrDisableTimeoutEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "other",
+        "1": "udld",
+        "2": "duplexMismatch",
+        "3": "bpduPortGuard",
+        "4": "channelMisconfig",
+        "5": "crossBarFallBack",
+        "6": "gl2ptIngressLoop",
+        "7": "gl2ptThresholdExceed",
+        "8": "bcastSuppression",
+        "9": "arpInspectionRate",
+        "10": "noStaticInlinePwr",
+        "11": "camMonitor",
+        "12": "gl2ptCdpThresholdExceed",
+        "13": "gl2ptStpThresholdExceed",
+        "14": "gl2ptVtpThresholdExceed",
+        "15": "linkRxCrc",
+        "16": "linkTxCrc",
+        "17": "linkInErrors",
+        "18": "packetBufferError",
+        "19": "ethernetOam",
+        "20": "gl2ptEoamThresholdExceed"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      55
+    ]
+  },
+  "sysErrDisableTimeoutInterval": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      56
+    ]
+  },
+  "sysTrafficMonitorHighWaterMark": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      57
+    ]
+  },
+  "sysHighAvailabilityEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      58
+    ]
+  },
+  "sysHighAvailabilityVersioningEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      59
+    ]
+  },
+  "sysHighAvailabilityOperStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "running",
+        "2": "notRunning"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      60
+    ]
+  },
+  "sysHighAvailabilityNotRunningReason": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      61
+    ]
+  },
+  "sysExtendedRmonNetflowModuleMask": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "module1",
+        "1": "module2",
+        "2": "module3",
+        "3": "module4",
+        "4": "module5",
+        "5": "module6",
+        "6": "module7",
+        "7": "module8",
+        "8": "module9",
+        "9": "module10",
+        "10": "module11",
+        "11": "module12",
+        "12": "module13",
+        "13": "module14",
+        "14": "module15",
+        "15": "module16"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      62
+    ]
+  },
+  "sshPublicKeySize": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      63
+    ]
+  },
+  "sysMaxRmonMemory": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      64
+    ]
+  },
+  "sysMacReductionAdminEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      65
+    ]
+  },
+  "sysMacReductionOperEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      66
+    ]
+  },
+  "sysStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "ok",
+        "3": "minorFault",
+        "4": "majorFault"
+      }
+    },
+    "index": null,
+    "value": [
+      "systemGrp",
+      67
+    ]
+  },
+  "chassisSysType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "3": "wsc1000",
+        "4": "wsc1001",
+        "5": "wsc1100",
+        "6": "wsc5000",
+        "7": "wsc2900",
+        "8": "wsc5500",
+        "9": "wsc5002",
+        "10": "wsc5505",
+        "11": "wsc1200",
+        "12": "wsc1400",
+        "13": "wsc2926",
+        "14": "wsc5509",
+        "15": "wsc6006",
+        "16": "wsc6009",
+        "17": "wsc4003",
+        "18": "wsc5500e",
+        "19": "wsc4912g",
+        "20": "wsc2948g",
+        "22": "wsc6509",
+        "23": "wsc6506",
+        "24": "wsc4006",
+        "25": "wsc6509NEB",
+        "26": "wsc2980g",
+        "27": "wsc6513",
+        "28": "wsc2980ga",
+        "30": "cisco7603",
+        "31": "cisco7606",
+        "32": "cisco7609",
+        "33": "wsc6503",
+        "34": "wsc6509NEBA",
+        "35": "wsc4507",
+        "36": "wsc4503",
+        "37": "wsc4506",
+        "38": "wsc65509",
+        "40": "cisco7613",
+        "41": "wsc2948ggetx",
+        "42": "cisco7604",
+        "43": "wsc6504e",
+        "45": "mec6524gs8s",
+        "48": "mec6524gt8s",
+        "51": "wsc6509ve",
+        "52": "cisco7603s",
+        "54": "c6880xle",
+        "55": "c6807xl",
+        "56": "c6880x"
+      }
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      1
+    ]
+  },
+  "chassisBkplType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "fddi",
+        "3": "fddiEthernet",
+        "4": "giga",
+        "5": "giga3",
+        "6": "giga3E",
+        "7": "giga12",
+        "8": "giga16",
+        "9": "giga40"
+      }
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      2
+    ]
+  },
+  "chassisPs1Type": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "none",
+        "3": "w50",
+        "4": "w200",
+        "5": "w600",
+        "6": "w80",
+        "7": "w130",
+        "8": "wsc5008",
+        "9": "wsc5008a",
+        "10": "w175",
+        "11": "wsc5068",
+        "12": "wsc5508",
+        "13": "wsc5568",
+        "14": "wsc5508a",
+        "15": "w155",
+        "16": "w175pfc",
+        "17": "w175dc",
+        "18": "wsc5008b",
+        "19": "wsc5008c",
+        "20": "wsc5068b",
+        "21": "wscac1000",
+        "22": "wscac1300",
+        "23": "wscdc1000",
+        "24": "wscdc1360",
+        "25": "wsx4008",
+        "26": "wsc5518",
+        "27": "wsc5598",
+        "28": "w120",
+        "29": "externalPS",
+        "30": "wscac2500w",
+        "31": "wscdc2500w",
+        "32": "wsx4008dc",
+        "33": "wscac4000w",
+        "34": "pwr4000dc",
+        "35": "pwr950ac",
+        "36": "pwr950dc",
+        "37": "pwr1900ac",
+        "38": "pwr1900dc",
+        "39": "pwr1900ac6",
+        "42": "wsx4008ac650w",
+        "43": "wsx4008dc650w",
+        "44": "wscac3000w",
+        "46": "pwrc451000ac",
+        "47": "pwrc452800acv",
+        "48": "pwrc451300acv",
+        "49": "pwrc451400dcp",
+        "50": "wscdc3000w",
+        "51": "pwr1400ac",
+        "52": "w156",
+        "53": "wscac6000w",
+        "54": "pwr2700ac",
+        "55": "pwr2700dc",
+        "58": "wscac8700we",
+        "59": "pwr2700ac4",
+        "60": "pwr2700dc4",
+        "63": "pwr400dc",
+        "64": "pwr400ac",
+        "105": "pwr6000dc",
+        "106": "pwr1500dc",
+        "150": "c6880x3kwac",
+        "151": "c6880x3kwdc",
+        "152": "c6800xl3kwac"
+      }
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      3
+    ]
+  },
+  "chassisPs1Status": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "ok",
+        "3": "minorFault",
+        "4": "majorFault"
+      }
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      4
+    ]
+  },
+  "chassisPs1TestResult": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      5
+    ]
+  },
+  "chassisPs2Type": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "none",
+        "3": "w50",
+        "4": "w200",
+        "5": "w600",
+        "6": "w80",
+        "7": "w130",
+        "8": "wsc5008",
+        "9": "wsc5008a",
+        "10": "w175",
+        "11": "wsc5068",
+        "12": "wsc5508",
+        "13": "wsc5568",
+        "14": "wsc5508a",
+        "15": "w155",
+        "16": "w175pfc",
+        "17": "w175dc",
+        "18": "wsc5008b",
+        "19": "wsc5008c",
+        "20": "wsc5068b",
+        "21": "wscac1000",
+        "22": "wscac1300",
+        "23": "wscdc1000",
+        "24": "wscdc1360",
+        "25": "wsx4008",
+        "26": "wsc5518",
+        "27": "wsc5598",
+        "28": "w120",
+        "29": "externalPS",
+        "30": "wscac2500w",
+        "31": "wscdc2500w",
+        "32": "wsx4008dc",
+        "33": "wscac4000w",
+        "34": "pwr4000dc",
+        "35": "pwr950ac",
+        "36": "pwr950dc",
+        "37": "pwr1900ac",
+        "38": "pwr1900dc",
+        "39": "pwr1900ac6",
+        "42": "wsx4008ac650w",
+        "43": "wsx4008dc650w",
+        "44": "wscac3000w",
+        "46": "pwrc451000ac",
+        "47": "pwrc452800acv",
+        "48": "pwrc451300acv",
+        "49": "pwrc451400dcp",
+        "50": "wscdc3000w",
+        "51": "pwr1400ac",
+        "52": "w156",
+        "53": "wscac6000w",
+        "54": "pwr2700ac",
+        "55": "pwr2700dc",
+        "58": "wscac8700we",
+        "59": "pwr2700ac4",
+        "60": "pwr2700dc4",
+        "63": "pwr400dc",
+        "64": "pwr400ac",
+        "105": "pwr6000dc",
+        "106": "pwr1500dc",
+        "150": "c6880x3kwac",
+        "151": "c6880x3kwdc",
+        "152": "c6800xl3kwac"
+      }
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      6
+    ]
+  },
+  "chassisPs2Status": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "ok",
+        "3": "minorFault",
+        "4": "majorFault"
+      }
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      7
+    ]
+  },
+  "chassisPs2TestResult": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      8
+    ]
+  },
+  "chassisFanStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "ok",
+        "3": "minorFault",
+        "4": "majorFault"
+      }
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      9
+    ]
+  },
+  "chassisFanTestResult": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      10
+    ]
+  },
+  "chassisMinorAlarm": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "off",
+        "2": "on"
+      }
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      11
+    ]
+  },
+  "chassisMajorAlarm": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "off",
+        "2": "on"
+      }
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      12
+    ]
+  },
+  "chassisTempAlarm": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "off",
+        "2": "on",
+        "3": "critical"
+      }
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      13
+    ]
+  },
+  "chassisNumSlots": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      14
+    ]
+  },
+  "chassisSlotConfig": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      15
+    ]
+  },
+  "chassisModel": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      16
+    ]
+  },
+  "chassisSerialNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      17
+    ]
+  },
+  "chassisComponentTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF ChassisComponentEntry"
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      18
+    ]
+  },
+  "chassisComponentEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "ChassisComponentEntry"
+    },
+    "index": [
+      "chassisComponentIndex"
+    ],
+    "value": [
+      "chassisComponentTable",
+      1
+    ]
+  },
+  "ChassisComponentEntry": {
+    "tp": "SEQUENCE"
+  },
+  "chassisComponentIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "chassisComponentEntry",
+      1
+    ]
+  },
+  "chassisComponentType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "unknown",
+        "2": "wsc6000cl",
+        "3": "wsc6000vtt",
+        "4": "wsc6000tempSensor",
+        "5": "wsc6513Clock",
+        "6": "clk7600",
+        "7": "ws9SlotFan",
+        "8": "fanMod9",
+        "10": "wsc6506eFan",
+        "11": "wsc6509eFan",
+        "13": "wsc6503eFan",
+        "14": "wsc6000vtte",
+        "15": "fanMod4Hs",
+        "16": "fan6524",
+        "17": "fanMod6Shs",
+        "18": "fanMod9Shs",
+        "19": "fanMod9St",
+        "20": "wsc6509veFan",
+        "21": "fanMod3Hs",
+        "25": "c6880xFan",
+        "26": "c6807xlFan",
+        "27": "c6800xl33vcon"
+      }
+    },
+    "index": null,
+    "value": [
+      "chassisComponentEntry",
+      2
+    ]
+  },
+  "chassisComponentSerialNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "chassisComponentEntry",
+      3
+    ]
+  },
+  "chassisComponentHwVersion": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "chassisComponentEntry",
+      4
+    ]
+  },
+  "chassisComponentModel": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "chassisComponentEntry",
+      5
+    ]
+  },
+  "chassisSerialNumberString": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      19
+    ]
+  },
+  "chassisPs3Type": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "none",
+        "25": "wsx4008",
+        "32": "wsx4008dc",
+        "42": "wsx4008ac650w",
+        "43": "wsx4008dc650w"
+      }
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      20
+    ]
+  },
+  "chassisPs3Status": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "ok",
+        "3": "minorFault",
+        "4": "majorFault"
+      }
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      21
+    ]
+  },
+  "chassisPs3TestResult": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      22
+    ]
+  },
+  "chassisPEMInstalled": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "chassisGrp",
+      23
+    ]
+  },
+  "moduleTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF ModuleEntry"
+    },
+    "index": null,
+    "value": [
+      "moduleGrp",
+      1
+    ]
+  },
+  "moduleEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "ModuleEntry"
+    },
+    "index": [
+      "moduleIndex"
+    ],
+    "value": [
+      "moduleTable",
+      1
+    ]
+  },
+  "ModuleEntry": {
+    "tp": "SEQUENCE"
+  },
+  "moduleIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      1
+    ]
+  },
+  "moduleType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "empty",
+        "3": "wsc1000",
+        "4": "wsc1001",
+        "5": "wsc1100",
+        "11": "wsc1200",
+        "12": "wsc1400",
+        "13": "wsx1441",
+        "14": "wsx1444",
+        "15": "wsx1450",
+        "16": "wsx1483",
+        "17": "wsx1454",
+        "18": "wsx1455",
+        "19": "wsx1431",
+        "20": "wsx1465",
+        "21": "wsx1436",
+        "22": "wsx1434",
+        "23": "wsx5009",
+        "24": "wsx5013",
+        "25": "wsx5011",
+        "26": "wsx5010",
+        "27": "wsx5113",
+        "28": "wsx5101",
+        "29": "wsx5103",
+        "30": "wsx5104",
+        "32": "wsx5155",
+        "33": "wsx5154",
+        "34": "wsx5153",
+        "35": "wsx5111",
+        "36": "wsx5213",
+        "37": "wsx5020",
+        "38": "wsx5006",
+        "39": "wsx5005",
+        "40": "wsx5509",
+        "41": "wsx5506",
+        "42": "wsx5505",
+        "43": "wsx5156",
+        "44": "wsx5157",
+        "45": "wsx5158",
+        "46": "wsx5030",
+        "47": "wsx5114",
+        "48": "wsx5223",
+        "49": "wsx5224",
+        "50": "wsx5012",
+        "52": "wsx5302",
+        "53": "wsx5213a",
+        "54": "wsx5380",
+        "55": "wsx5201",
+        "56": "wsx5203",
+        "57": "wsx5530",
+        "61": "wsx5161",
+        "62": "wsx5162",
+        "65": "wsx5165",
+        "66": "wsx5166",
+        "67": "wsx5031",
+        "68": "wsx5410",
+        "69": "wsx5403",
+        "73": "wsx5201r",
+        "74": "wsx5225r",
+        "75": "wsx5014",
+        "76": "wsx5015",
+        "77": "wsx5236",
+        "78": "wsx5540",
+        "79": "wsx5234",
+        "81": "wsx5012a",
+        "82": "wsx5167",
+        "83": "wsx5239",
+        "84": "wsx5168",
+        "85": "wsx5305",
+        "87": "wsx5550",
+        "88": "wsf5541",
+        "91": "wsx5534",
+        "92": "wsx5536",
+        "96": "wsx5237",
+        "200": "wsx6ksup12ge",
+        "201": "wsx6408gbic",
+        "202": "wsx6224mmmt",
+        "203": "wsx6248rj45",
+        "204": "wsx6248tel",
+        "206": "wsx6302msm",
+        "207": "wsf6kmsfc",
+        "208": "wsx6024flmt",
+        "209": "wsx6101oc12mmf",
+        "210": "wsx6101oc12smf",
+        "211": "wsx6416gemt",
+        "212": "wsx61822pa",
+        "213": "osm2oc12AtmMM",
+        "214": "osm2oc12AtmSI",
+        "216": "osm4oc12PosMM",
+        "217": "osm4oc12PosSI",
+        "218": "osm4oc12PosSL",
+        "219": "wsx6ksup1a2ge",
+        "220": "wsx6302amsm",
+        "221": "wsx6416gbic",
+        "222": "wsx6224ammmt",
+        "223": "wsx6380nam",
+        "224": "wsx6248arj45",
+        "225": "wsx6248atel",
+        "226": "wsx6408agbic",
+        "229": "wsx6608t1",
+        "230": "wsx6608e1",
+        "231": "wsx6624fxs",
+        "233": "wsx6316getx",
+        "234": "wsf6kmsfc2",
+        "235": "wsx6324mmmt",
+        "236": "wsx6348rj45",
+        "237": "wsx6ksup22ge",
+        "238": "wsx6324sm",
+        "239": "wsx6516gbic",
+        "240": "osm4geWanGbic",
+        "241": "osm1oc48PosSS",
+        "242": "osm1oc48PosSI",
+        "243": "osm1oc48PosSL",
+        "244": "wsx6381ids",
+        "245": "wsc6500sfm",
+        "246": "osm16oc3PosMM",
+        "247": "osm16oc3PosSI",
+        "248": "osm16oc3PosSL",
+        "249": "osm2oc12PosMM",
+        "250": "osm2oc12PosSI",
+        "251": "osm2oc12PosSL",
+        "252": "wsx650210ge",
+        "253": "osm8oc3PosMM",
+        "254": "osm8oc3PosSI",
+        "255": "osm8oc3PosSL",
+        "258": "wsx6548rj45",
+        "259": "wsx6524mmmt",
+        "260": "wsx6066SlbApc",
+        "261": "wsx6516getx",
+        "265": "osm2oc48OneDptSS",
+        "266": "osm2oc48OneDptSI",
+        "267": "osm2oc48OneDptSL",
+        "268": "osm2oc48OneDptSSDual",
+        "269": "osm2oc48OneDptSIDual",
+        "270": "osm2oc48OneDptSLDual",
+        "271": "wsx6816gbic",
+        "272": "osm4choc12T3MM",
+        "273": "osm4choc12T3SI",
+        "274": "osm8choc12T3MM",
+        "275": "osm8choc12T3SI",
+        "276": "osm1choc48T3SS",
+        "277": "osm2choc48T3SS",
+        "278": "wsx6500sfm2",
+        "279": "osm1choc48T3SI",
+        "280": "osm2choc48T3SI",
+        "281": "wsx6348rj21",
+        "282": "wsx6548rj21",
+        "284": "wsSvcCmm",
+        "285": "wsx650110gex4",
+        "286": "osm4oc3PosSI",
+        "289": "osm4oc3PosMM",
+        "290": "wsSvcIdsm2",
+        "291": "wsSvcNam2",
+        "292": "wsSvcFwm1",
+        "293": "wsSvcCe1",
+        "294": "wsSvcSsl1",
+        "295": "osm8choc3DS0SI",
+        "296": "osm4choc3DS0SI",
+        "297": "osm1choc12T1SI",
+        "300": "wsx4012",
+        "301": "wsx4148rj",
+        "302": "wsx4232gbrj",
+        "303": "wsx4306gb",
+        "304": "wsx4418gb",
+        "305": "wsx44162gbtx",
+        "306": "wsx4912gb",
+        "307": "wsx2948gbrj",
+        "309": "wsx2948",
+        "310": "wsx4912",
+        "311": "wsx4424sxmt",
+        "312": "wsx4232rjxx",
+        "313": "wsx4148rj21",
+        "317": "wsx4124fxmt",
+        "318": "wsx4013",
+        "319": "wsx4232l3",
+        "320": "wsx4604gwy",
+        "321": "wsx44122Gbtx",
+        "322": "wsx2980",
+        "323": "wsx2980rj",
+        "324": "wsx2980gbrj",
+        "325": "wsx4019",
+        "326": "wsx4148rj45v",
+        "330": "wsx4424gbrj45",
+        "331": "wsx4148fxmt",
+        "332": "wsx4448gblx",
+        "334": "wsx4448gbrj45",
+        "337": "wsx4148lxmt",
+        "339": "wsx4548gbrj45",
+        "340": "wsx4548gbrj45v",
+        "341": "wsx4248rj21v",
+        "342": "wsx4302gb",
+        "343": "wsx4248rj45v",
+        "345": "wsx2948ggetx",
+        "346": "wsx2948ggetxgbrj",
+        "502": "wsx6516aGbic",
+        "503": "wsx6148getx",
+        "506": "wsx6148x2rj45",
+        "507": "wsx6196rj21",
+        "509": "wssup32ge3b",
+        "510": "wssup3210ge3b",
+        "511": "mec6524gs8s",
+        "512": "mec6524gt8s",
+        "515": "wssup32pge",
+        "516": "wssup32p10ge",
+        "597": "wssvcpisa32",
+        "598": "me6524msfc2a",
+        "599": "wsf6kmsfc2a",
+        "600": "osm12ct3T1",
+        "601": "osm12t3e3",
+        "602": "osm24t3e3",
+        "603": "osm4GeWanGbicPlus",
+        "604": "osm1choc12T3SI",
+        "605": "osm2choc12T3SI",
+        "606": "osm2oc12AtmMMPlus",
+        "607": "osm2oc12AtmSIPlus",
+        "608": "osm2oc12PosMMPlus",
+        "609": "osm2oc12PosSIPlus",
+        "610": "osm16oc3PosSIPlus",
+        "611": "osm1oc48PosSSPlus",
+        "612": "osm1oc48PosSIPlus",
+        "613": "osm1oc48PosSLPlus",
+        "614": "osm4oc3PosSIPlus",
+        "615": "osm8oc3PosSLPlus",
+        "616": "osm8oc3PosSIPlus",
+        "617": "osm4oc12PosSIPlus",
+        "618": "c7600Es4Tg3cxl",
+        "620": "c7600Es2Tg3cxl",
+        "625": "c76EsXt4Tg3cxl",
+        "626": "c76EsXt2Tg3cxl",
+        "627": "c7600Es4Tg3c",
+        "629": "c7600Es2Tg3c",
+        "633": "c76EsXt4Tg3c",
+        "634": "c76EsXt2Tg3c",
+        "903": "wsSvcIpSec1",
+        "910": "wsSvcMwam1",
+        "911": "wsSvcCsg1",
+        "912": "wsx6148rj45v",
+        "913": "wsx6148rj21v",
+        "914": "wsSvcNam1",
+        "915": "wsx6548getx",
+        "919": "wsSvcPsd1",
+        "920": "wsx6066SlbSk9",
+        "921": "wsx6148agetx",
+        "923": "wsx6148arj45",
+        "924": "wsSvcWlan1k9",
+        "925": "wsSvcAon1k9",
+        "926": "ace106500k9",
+        "927": "wsSvcWebVpnk9",
+        "928": "wsx6148FeSfp",
+        "929": "wsSvcAdm1k9",
+        "930": "wsSvcAgm1k9",
+        "936": "ace046500k9",
+        "940": "wsSvcSamiBb",
+        "946": "wsSvcWism2k9",
+        "947": "wsSvcAsaSm1",
+        "949": "wsSvcNam3k9",
+        "950": "wsSvcAsaSm1k7",
+        "951": "wsSvcVse1k9",
+        "1001": "wssup720",
+        "1002": "wssup720base",
+        "1004": "m7600Sip600",
+        "1007": "wsx6748getx",
+        "1008": "wsx670410ge",
+        "1009": "wsx6748sfp",
+        "1010": "wsx6724sfp",
+        "1016": "wsx670810ge",
+        "1021": "vss72010g",
+        "1023": "wsx6708a10ge",
+        "1027": "wsx671610ge",
+        "1031": "vssup2t10g",
+        "1032": "wsx6148ege45at",
+        "1033": "wsx671610t",
+        "1034": "wsx690810g",
+        "1035": "wsx690440g",
+        "1036": "wsx6148egetx",
+        "1037": "wsx6848tx",
+        "1039": "wsx6848sfp",
+        "1040": "wsx6824sfp",
+        "1042": "wsx681610ge",
+        "1043": "wsx681610t",
+        "1101": "wsx65822pa",
+        "1102": "m7600Sip200",
+        "1103": "m7600Sip400",
+        "1104": "c7600ssc400",
+        "1105": "c7600ssc600",
+        "1106": "esm2x10ge",
+        "1301": "c6800ia48td",
+        "1304": "c6800ia48fpd",
+        "1400": "c6880x16p10g",
+        "1401": "c6880x",
+        "1402": "c6880xle16p10g",
+        "1403": "c6880xle",
+        "1800": "rsp720",
+        "1801": "rsp720base",
+        "1805": "c7600msfc4"
+      }
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      2
+    ]
+  },
+  "moduleSerialNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      3
+    ]
+  },
+  "moduleHwHiVersion": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      4
+    ]
+  },
+  "moduleHwLoVersion": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      5
+    ]
+  },
+  "moduleFwHiVersion": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      6
+    ]
+  },
+  "moduleFwLoVersion": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      7
+    ]
+  },
+  "moduleSwHiVersion": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      8
+    ]
+  },
+  "moduleSwLoVersion": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      9
+    ]
+  },
+  "moduleStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "ok",
+        "3": "minorFault",
+        "4": "majorFault"
+      }
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      10
+    ]
+  },
+  "moduleTestResult": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      11
+    ]
+  },
+  "moduleAction": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "reset",
+        "3": "enable",
+        "4": "disable"
+      }
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      12
+    ]
+  },
+  "moduleName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      13
+    ]
+  },
+  "moduleNumPorts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      14
+    ]
+  },
+  "modulePortStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      15
+    ]
+  },
+  "moduleSubType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "empty",
+        "3": "wsf5510",
+        "4": "wsf5511",
+        "6": "wsx5304",
+        "7": "wsf5520",
+        "8": "wsf5521",
+        "9": "wsf5531",
+        "100": "wsf6020",
+        "101": "wsf6020a",
+        "102": "wsf6kpfc",
+        "103": "wsf6kpfc2",
+        "104": "wsf6kvpwr",
+        "105": "wsf6kdfc",
+        "106": "wsf6kpfc2a",
+        "107": "wsf6kdfca",
+        "200": "vsp300dfc",
+        "201": "wsf6kpfc3a",
+        "202": "wsf6kdfc3a",
+        "203": "wsf6700dfc3a",
+        "205": "wsf6kdfc3bxl",
+        "206": "wsf6kpfc3bxl",
+        "207": "wsf6700dfc3bxl",
+        "208": "wsf6700cfc",
+        "213": "m7600pfc3c",
+        "216": "wsf6kpfc3b",
+        "217": "wsf6700dfc3b",
+        "218": "wsf6700dfc3c",
+        "221": "wsf6700dfc3cxl",
+        "223": "wsf6kdfc3b",
+        "224": "mec6524pfc3c",
+        "225": "sip600earl",
+        "226": "vsf6kpfc3cxl",
+        "227": "vsf6kpfc3c",
+        "228": "c7600esmdfc3cxl",
+        "229": "vsf6kpfc4",
+        "230": "c7600esmdfc3c",
+        "231": "wsf6kdfc4exl",
+        "232": "c7600Es3cxl",
+        "233": "c7600Es3c",
+        "234": "wsf6kdfc4e",
+        "235": "vsf6kpfc4xl",
+        "236": "wsf6kdfc4axl",
+        "237": "wsf6kdfc4a",
+        "238": "c6880xpfc",
+        "239": "c6880xlepfc",
+        "240": "c6880xdfc",
+        "241": "c6880xledfc"
+      }
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      16
+    ]
+  },
+  "moduleModel": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      17
+    ]
+  },
+  "moduleHwVersion": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      18
+    ]
+  },
+  "moduleFwVersion": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      19
+    ]
+  },
+  "moduleSwVersion": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      20
+    ]
+  },
+  "moduleStandbyStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "active",
+        "3": "standby",
+        "4": "error"
+      }
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      21
+    ]
+  },
+  "moduleIPAddress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      22
+    ]
+  },
+  "moduleIPAddressVlan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      23
+    ]
+  },
+  "moduleSubType2": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "empty",
+        "3": "wsu5531",
+        "5": "wsu5533",
+        "6": "wsu5534",
+        "7": "wsu5535",
+        "8": "wsu5536",
+        "9": "wsu5537",
+        "10": "wsu5538",
+        "11": "wsu5539",
+        "102": "wsg6488",
+        "103": "wsg6489",
+        "104": "wsg6483",
+        "105": "wsg6485",
+        "106": "wsf6kFe48af",
+        "107": "wsf6kGe48af",
+        "108": "wsf6kVpwrGe",
+        "109": "wsf6kFe48x2af",
+        "207": "wsf6kmsfc",
+        "234": "wsf6kmsfc2",
+        "314": "wsu4504fxmt",
+        "315": "wsu4502gb",
+        "402": "wssvcidsupg",
+        "403": "wssvccmm6e1",
+        "404": "wssvccmm6t1",
+        "405": "wssvccmm24fxs",
+        "406": "wssvccmmact",
+        "410": "aceModExpnDc",
+        "411": "wsSvcAppProc1",
+        "597": "wssvcpisa32",
+        "598": "me6524msfc2a",
+        "599": "wsf6kmsfc2a",
+        "618": "c7600Es4Tg",
+        "620": "c7600Es2Tg",
+        "625": "c7600EsItu4TgLk",
+        "626": "c7600EsItu2TgLk",
+        "1001": "wssup720",
+        "1005": "vsf6kmsfc5",
+        "1026": "vsf6kmsfc3",
+        "1701": "esm2x10ge",
+        "1805": "c7600msfc4"
+      }
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      24
+    ]
+  },
+  "moduleSlotNum": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      25
+    ]
+  },
+  "moduleSerialNumberString": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      26
+    ]
+  },
+  "moduleEntPhysicalIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "PhysicalIndex"
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      27
+    ]
+  },
+  "moduleAdditionalStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "fruInstalled",
+        "1": "powerDenied",
+        "2": "faulty"
+      }
+    },
+    "index": null,
+    "value": [
+      "moduleEntry",
+      28
+    ]
+  },
+  "portTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF PortEntry"
+    },
+    "index": null,
+    "value": [
+      "portGrp",
+      1
+    ]
+  },
+  "portEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "PortEntry"
+    },
+    "index": [
+      "portModuleIndex",
+      "portIndex"
+    ],
+    "value": [
+      "portTable",
+      1
+    ]
+  },
+  "PortEntry": {
+    "tp": "SEQUENCE"
+  },
+  "portModuleIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      1
+    ]
+  },
+  "portIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      2
+    ]
+  },
+  "portCrossIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      3
+    ]
+  },
+  "portName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      4
+    ]
+  },
+  "portType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "cddi",
+        "3": "fddi",
+        "4": "tppmd",
+        "5": "mlt3",
+        "6": "sddi",
+        "7": "smf",
+        "8": "e10BaseT",
+        "9": "e10BaseF",
+        "10": "scf",
+        "11": "e100BaseTX",
+        "12": "e100BaseT4",
+        "13": "e100BaseF",
+        "14": "atmOc3mmf",
+        "15": "atmOc3smf",
+        "16": "atmOc3utp",
+        "17": "e100BaseFsm",
+        "18": "e10a100BaseTX",
+        "19": "mii",
+        "20": "vlanRouter",
+        "21": "remoteRouter",
+        "22": "tokenring",
+        "23": "atmOc12mmf",
+        "24": "atmOc12smf",
+        "25": "atmDs3",
+        "26": "tokenringMmf",
+        "27": "e1000BaseLX",
+        "28": "e1000BaseSX",
+        "29": "e1000BaseCX",
+        "30": "networkAnalysis",
+        "31": "e1000Empty",
+        "32": "e1000BaseLH",
+        "33": "e1000BaseT",
+        "34": "e1000UnsupportedGbic",
+        "35": "e1000BaseZX",
+        "36": "depi2",
+        "37": "t1",
+        "38": "e1",
+        "39": "fxs",
+        "40": "fxo",
+        "41": "transcoding",
+        "42": "conferencing",
+        "43": "atmOc12mm",
+        "44": "atmOc12smi",
+        "45": "atmOc12sml",
+        "46": "posOc12mm",
+        "47": "posOc12smi",
+        "48": "posOc12sml",
+        "49": "posOc48sms",
+        "50": "posOc48smi",
+        "51": "posOc48sml",
+        "52": "posOc3mm",
+        "53": "posOc3smi",
+        "54": "posOc3sml",
+        "55": "intrusionDetect",
+        "56": "e10GBaseCPX",
+        "57": "e10GBaseLX4",
+        "59": "e10GBaseEX4",
+        "60": "e10GEmpty",
+        "61": "e10a100a1000BaseT",
+        "62": "dptOc48mm",
+        "63": "dptOc48smi",
+        "64": "dptOc48sml",
+        "65": "e10GBaseLR",
+        "66": "chOc12smi",
+        "67": "chOc12mm",
+        "68": "chOc48ss",
+        "69": "chOc48smi",
+        "70": "e10GBaseSX4",
+        "71": "e10GBaseER",
+        "72": "contentEngine",
+        "73": "ssl",
+        "74": "firewall",
+        "75": "vpnIpSec",
+        "76": "ct3",
+        "77": "e1000BaseCwdm1470",
+        "78": "e1000BaseCwdm1490",
+        "79": "e1000BaseCwdm1510",
+        "80": "e1000BaseCwdm1530",
+        "81": "e1000BaseCwdm1550",
+        "82": "e1000BaseCwdm1570",
+        "83": "e1000BaseCwdm1590",
+        "84": "e1000BaseCwdm1610",
+        "85": "e1000BaseBT",
+        "86": "e1000BaseUnapproved",
+        "87": "chOc3smi",
+        "88": "mcr",
+        "89": "coe",
+        "90": "mwa",
+        "91": "psd",
+        "92": "e100BaseLX",
+        "93": "e10GBaseSR",
+        "94": "e10GBaseCX4",
+        "95": "e10GBaseWdm1550",
+        "96": "e10GBaseEdc1310",
+        "97": "e10GBaseSW",
+        "98": "e10GBaseLW",
+        "99": "e10GBaseEW",
+        "100": "lwa",
+        "101": "aons",
+        "102": "sslVpn",
+        "103": "e100BaseEmpty",
+        "104": "adsm",
+        "105": "agsm",
+        "106": "aces",
+        "109": "intrusionProtect",
+        "110": "e1000BaseSvc",
+        "111": "e10GBaseSvc",
+        "113": "e40GBaseEmpty",
+        "1000": "e1000BaseUnknown",
+        "1001": "e10GBaseUnknown",
+        "1002": "e10GBaseUnapproved",
+        "1003": "e1000BaseWdmRxOnly",
+        "1004": "e1000BaseDwdm3033",
+        "1005": "e1000BaseDwdm3112",
+        "1006": "e1000BaseDwdm3190",
+        "1007": "e1000BaseDwdm3268",
+        "1008": "e1000BaseDwdm3425",
+        "1009": "e1000BaseDwdm3504",
+        "1010": "e1000BaseDwdm3582",
+        "1011": "e1000BaseDwdm3661",
+        "1012": "e1000BaseDwdm3819",
+        "1013": "e1000BaseDwdm3898",
+        "1014": "e1000BaseDwdm3977",
+        "1015": "e1000BaseDwdm4056",
+        "1016": "e1000BaseDwdm4214",
+        "1017": "e1000BaseDwdm4294",
+        "1018": "e1000BaseDwdm4373",
+        "1019": "e1000BaseDwdm4453",
+        "1020": "e1000BaseDwdm4612",
+        "1021": "e1000BaseDwdm4692",
+        "1022": "e1000BaseDwdm4772",
+        "1023": "e1000BaseDwdm4851",
+        "1024": "e1000BaseDwdm5012",
+        "1025": "e1000BaseDwdm5092",
+        "1026": "e1000BaseDwdm5172",
+        "1027": "e1000BaseDwdm5252",
+        "1028": "e1000BaseDwdm5413",
+        "1029": "e1000BaseDwdm5494",
+        "1030": "e1000BaseDwdm5575",
+        "1031": "e1000BaseDwdm5655",
+        "1032": "e1000BaseDwdm5817",
+        "1033": "e1000BaseDwdm5898",
+        "1034": "e1000BaseDwdm5979",
+        "1035": "e1000BaseDwdm6061",
+        "1036": "e10GBaseWdmRxOnly",
+        "1037": "e10GBaseDwdm3033",
+        "1038": "e10GBaseDwdm3112",
+        "1039": "e10GBaseDwdm3190",
+        "1040": "e10GBaseDwdm3268",
+        "1041": "e10GBaseDwdm3425",
+        "1042": "e10GBaseDwdm3504",
+        "1043": "e10GBaseDwdm3582",
+        "1044": "e10GBaseDwdm3661",
+        "1045": "e10GBaseDwdm3819",
+        "1046": "e10GBaseDwdm3898",
+        "1047": "e10GBaseDwdm3977",
+        "1048": "e10GBaseDwdm4056",
+        "1049": "e10GBaseDwdm4214",
+        "1050": "e10GBaseDwdm4294",
+        "1051": "e10GBaseDwdm4373",
+        "1052": "e10GBaseDwdm4453",
+        "1053": "e10GBaseDwdm4612",
+        "1054": "e10GBaseDwdm4692",
+        "1055": "e10GBaseDwdm4772",
+        "1056": "e10GBaseDwdm4851",
+        "1057": "e10GBaseDwdm5012",
+        "1058": "e10GBaseDwdm5092",
+        "1059": "e10GBaseDwdm5172",
+        "1060": "e10GBaseDwdm5252",
+        "1061": "e10GBaseDwdm5413",
+        "1062": "e10GBaseDwdm5494",
+        "1063": "e10GBaseDwdm5575",
+        "1064": "e10GBaseDwdm5655",
+        "1065": "e10GBaseDwdm5817",
+        "1066": "e10GBaseDwdm5898",
+        "1067": "e10GBaseDwdm5979",
+        "1068": "e10GBaseDwdm6061",
+        "1069": "e1000BaseBX10D",
+        "1070": "e1000BaseBX10U",
+        "1071": "e100BaseUnknown",
+        "1072": "e100BaseUnapproved",
+        "1073": "e100BaseSX",
+        "1074": "e100BaseBX10D",
+        "1075": "e100BaseBX10U",
+        "1076": "e10GBaseBad",
+        "1077": "e10GBaseZR",
+        "1078": "e100BaseEX",
+        "1079": "e100BaseZX",
+        "1080": "e10GBaseLRM",
+        "1081": "e10GBaseTPluggable",
+        "1082": "e10GBaseCU1M",
+        "1083": "e10GBaseCU3M",
+        "1084": "e10GBaseCU5M",
+        "1085": "e10GBaseCU7M",
+        "1086": "e10GBaseCUdot3M",
+        "1087": "e10GBaseCU2M",
+        "1088": "e10GBaseCU4M",
+        "1089": "e10GBaseCU6M",
+        "1090": "e10GBaseUSR",
+        "1091": "e10GBaseLRMSM",
+        "1092": "e1000BaseDwdm3346",
+        "1093": "e1000BaseDwdm3739",
+        "1094": "e1000BaseDwdm4134",
+        "1095": "e1000BaseDwdm4532",
+        "1096": "e1000BaseDwdm4931",
+        "1097": "e1000BaseDwdm5332",
+        "1098": "e1000BaseDwdm5736",
+        "1099": "e1000BaseDwdm6141",
+        "1100": "e40GBaseLR",
+        "1101": "e40GBaseSR",
+        "1102": "e40GBaseUnapproved",
+        "1104": "e10GBaseDwdm3347",
+        "1105": "e10GBaseDwdm3740",
+        "1106": "e10GBaseDwdm4135",
+        "1107": "e10GBaseDwdm4532",
+        "1108": "e10GBaseDwdm4932",
+        "1109": "e10GBaseDwdm5333",
+        "1110": "e10GBaseDwdm5736",
+        "1111": "e10GBaseDwdm6141",
+        "1112": "e10GBaseACU7M",
+        "1113": "e10GBaseACU10M",
+        "1114": "e1000BaseEXSMD",
+        "1115": "e1000BaseZXSMD",
+        "1116": "e1000BaseTE",
+        "1117": "e1000BaseSXMMD",
+        "1118": "e1000BaseLHSMD",
+        "1119": "e100BaseFXGE"
+      }
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      5
+    ]
+  },
+  "portOperStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "ok",
+        "3": "minorFault",
+        "4": "majorFault"
+      }
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      6
+    ]
+  },
+  "portCrossGroupIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      7
+    ]
+  },
+  "portAdditionalStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      8
+    ]
+  },
+  "portAdminSpeed": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "autoDetect",
+        "2": "autoDetect10100",
+        "4000000": "s4000000",
+        "10000000": "s10000000",
+        "16000000": "s16000000",
+        "45000000": "s45000000",
+        "64000000": "s64000000",
+        "100000000": "s100000000",
+        "155000000": "s155000000",
+        "400000000": "s400000000",
+        "622000000": "s622000000",
+        "1000000000": "s1000000000",
+        "1544000": "s1544000",
+        "2000000": "s2000000",
+        "2048000": "s2048000",
+        "64000": "s64000",
+        "10": "s10G"
+      }
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      9
+    ]
+  },
+  "portDuplex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "half",
+        "2": "full",
+        "3": "disagree",
+        "4": "auto"
+      }
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      10
+    ]
+  },
+  "portIfIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      11
+    ]
+  },
+  "portSpantreeFastStart": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      12
+    ]
+  },
+  "portAdminRxFlowControl": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "on",
+        "2": "off",
+        "3": "desired"
+      }
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      13
+    ]
+  },
+  "portOperRxFlowControl": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "on",
+        "2": "off",
+        "3": "disagree"
+      }
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      14
+    ]
+  },
+  "portAdminTxFlowControl": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "on",
+        "2": "off",
+        "3": "desired"
+      }
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      15
+    ]
+  },
+  "portOperTxFlowControl": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "on",
+        "2": "off",
+        "3": "disagree"
+      }
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      16
+    ]
+  },
+  "portMacControlTransmitFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      17
+    ]
+  },
+  "portMacControlReceiveFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      18
+    ]
+  },
+  "portMacControlPauseTransmitFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      19
+    ]
+  },
+  "portMacControlPauseReceiveFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      20
+    ]
+  },
+  "portMacControlUnknownProtocolFrames": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      21
+    ]
+  },
+  "portLinkFaultStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "noFault",
+        "2": "nearEndFault",
+        "3": "nearEndConfigFail",
+        "4": "farEndDisable",
+        "5": "farEndFault",
+        "6": "farEndConfigFail",
+        "7": "notApplicable"
+      }
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      22
+    ]
+  },
+  "portAdditionalOperStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "other",
+        "1": "connected",
+        "2": "standby",
+        "3": "faulty",
+        "4": "notConnected",
+        "5": "inactive",
+        "6": "shutdown",
+        "7": "dripDis",
+        "8": "disabled",
+        "9": "monitor",
+        "10": "errdisable",
+        "11": "linkFaulty",
+        "12": "onHook",
+        "13": "offHook",
+        "14": "reflector"
+      }
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      23
+    ]
+  },
+  "portInlinePowerDetect": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      24
+    ]
+  },
+  "portEntPhysicalIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "PhysicalIndex"
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      25
+    ]
+  },
+  "portErrDisableTimeOutEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "portEntry",
+      26
+    ]
+  },
+  "tftpHost": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "tftpGrp",
+      1
+    ]
+  },
+  "tftpFile": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "tftpGrp",
+      2
+    ]
+  },
+  "tftpModule": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "tftpGrp",
+      3
+    ]
+  },
+  "tftpAction": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "downloadConfig",
+        "3": "uploadConfig",
+        "4": "downloadSw",
+        "5": "uploadSw",
+        "6": "downloadFw",
+        "7": "uploadFw"
+      }
+    },
+    "index": null,
+    "value": [
+      "tftpGrp",
+      4
+    ]
+  },
+  "tftpResult": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "inProgress",
+        "2": "success",
+        "3": "noResponse",
+        "4": "tooManyRetries",
+        "5": "noBuffers",
+        "6": "noProcesses",
+        "7": "badChecksum",
+        "8": "badLength",
+        "9": "badFlash",
+        "10": "serverError",
+        "11": "userCanceled",
+        "12": "wrongCode",
+        "13": "fileNotFound",
+        "14": "invalidTftpHost",
+        "15": "invalidTftpModule",
+        "16": "accessViolation",
+        "17": "unknownStatus",
+        "18": "invalidStorageDevice",
+        "19": "insufficientSpaceOnStorageDevice",
+        "20": "insufficientDramSize",
+        "21": "incompatibleImage"
+      }
+    },
+    "index": null,
+    "value": [
+      "tftpGrp",
+      5
+    ]
+  },
+  "brouterEnableRip": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      1
+    ]
+  },
+  "brouterEnableSpantree": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      2
+    ]
+  },
+  "brouterEnableGiantCheck": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      3
+    ]
+  },
+  "brouterEnableIpFragmentation": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      4
+    ]
+  },
+  "brouterEnableUnreachables": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      5
+    ]
+  },
+  "brouterCamAgingTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      6
+    ]
+  },
+  "brouterCamMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "filtering",
+        "2": "forwarding"
+      }
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      7
+    ]
+  },
+  "brouterIpxSnapToEther": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "snap",
+        "2": "ethernetII",
+        "3": "iso8023",
+        "4": "raw8023"
+      }
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      8
+    ]
+  },
+  "brouterIpx8023RawToFddi": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "snap",
+        "5": "iso8022",
+        "6": "fddiRaw"
+      }
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      9
+    ]
+  },
+  "brouterEthernetReceiveMax": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      10
+    ]
+  },
+  "brouterEthernetTransmitMax": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      11
+    ]
+  },
+  "brouterFddiReceiveMax": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      12
+    ]
+  },
+  "brouterFddiTransmitMax": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      13
+    ]
+  },
+  "brouterPortTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF BrouterPortEntry"
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      14
+    ]
+  },
+  "brouterPortEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BrouterPortEntry"
+    },
+    "index": [
+      "brouterPortModule",
+      "brouterPort"
+    ],
+    "value": [
+      "brouterPortTable",
+      1
+    ]
+  },
+  "BrouterPortEntry": {
+    "tp": "SEQUENCE"
+  },
+  "brouterPortModule": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "brouterPortEntry",
+      1
+    ]
+  },
+  "brouterPort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "brouterPortEntry",
+      2
+    ]
+  },
+  "brouterPortIpVlan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "brouterPortEntry",
+      3
+    ]
+  },
+  "brouterPortIpAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "brouterPortEntry",
+      4
+    ]
+  },
+  "brouterPortNetMask": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "brouterPortEntry",
+      5
+    ]
+  },
+  "brouterPortBroadcast": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "brouterPortEntry",
+      6
+    ]
+  },
+  "brouterPortBridgeVlan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "brouterPortEntry",
+      7
+    ]
+  },
+  "brouterPortIpHelpers": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "brouterPortEntry",
+      8
+    ]
+  },
+  "brouterIpx8022ToEther": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "snap",
+        "2": "ethernetII",
+        "3": "iso8023",
+        "4": "raw8023"
+      }
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      15
+    ]
+  },
+  "brouterEnableTransitEncapsulation": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      16
+    ]
+  },
+  "brouterEnableFddiCheck": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      17
+    ]
+  },
+  "brouterEnableAPaRT": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "brouterGrp",
+      18
+    ]
+  },
+  "filterMacTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FilterMacEntry"
+    },
+    "index": null,
+    "value": [
+      "filterGrp",
+      1
+    ]
+  },
+  "filterMacEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FilterMacEntry"
+    },
+    "index": [
+      "filterMacModule",
+      "filterMacPort",
+      "filterMacAddress"
+    ],
+    "value": [
+      "filterMacTable",
+      1
+    ]
+  },
+  "FilterMacEntry": {
+    "tp": "SEQUENCE"
+  },
+  "filterMacModule": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterMacEntry",
+      1
+    ]
+  },
+  "filterMacPort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterMacEntry",
+      2
+    ]
+  },
+  "filterMacAddress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "MacAddress"
+    },
+    "index": null,
+    "value": [
+      "filterMacEntry",
+      3
+    ]
+  },
+  "filterMacType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "deny",
+        "2": "invalid",
+        "3": "permit",
+        "4": "permitSrc",
+        "5": "permitDst",
+        "6": "denySrc",
+        "7": "denyDst",
+        "8": "denySrcLearn"
+      }
+    },
+    "index": null,
+    "value": [
+      "filterMacEntry",
+      4
+    ]
+  },
+  "filterVendorTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FilterVendorEntry"
+    },
+    "index": null,
+    "value": [
+      "filterGrp",
+      2
+    ]
+  },
+  "filterVendorEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FilterVendorEntry"
+    },
+    "index": [
+      "filterVendorModule",
+      "filterVendorPort",
+      "filterVendorId"
+    ],
+    "value": [
+      "filterVendorTable",
+      1
+    ]
+  },
+  "FilterVendorEntry": {
+    "tp": "SEQUENCE"
+  },
+  "filterVendorModule": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterVendorEntry",
+      1
+    ]
+  },
+  "filterVendorPort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterVendorEntry",
+      2
+    ]
+  },
+  "filterVendorId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VendorIdType"
+    },
+    "index": null,
+    "value": [
+      "filterVendorEntry",
+      3
+    ]
+  },
+  "filterVendorType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "deny",
+        "2": "invalid",
+        "3": "permit"
+      }
+    },
+    "index": null,
+    "value": [
+      "filterVendorEntry",
+      4
+    ]
+  },
+  "filterProtocolTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FilterProtocolEntry"
+    },
+    "index": null,
+    "value": [
+      "filterGrp",
+      3
+    ]
+  },
+  "filterProtocolEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FilterProtocolEntry"
+    },
+    "index": [
+      "filterProtocolModule",
+      "filterProtocolPort",
+      "filterProtocolValue"
+    ],
+    "value": [
+      "filterProtocolTable",
+      1
+    ]
+  },
+  "FilterProtocolEntry": {
+    "tp": "SEQUENCE"
+  },
+  "filterProtocolModule": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterProtocolEntry",
+      1
+    ]
+  },
+  "filterProtocolPort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterProtocolEntry",
+      2
+    ]
+  },
+  "filterProtocolValue": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterProtocolEntry",
+      3
+    ]
+  },
+  "filterProtocolType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "deny",
+        "2": "invalid",
+        "3": "permit"
+      }
+    },
+    "index": null,
+    "value": [
+      "filterProtocolEntry",
+      4
+    ]
+  },
+  "filterTestTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FilterTestEntry"
+    },
+    "index": null,
+    "value": [
+      "filterGrp",
+      4
+    ]
+  },
+  "filterTestEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FilterTestEntry"
+    },
+    "index": [
+      "filterTestModule",
+      "filterTestPort",
+      "filterTestIndex"
+    ],
+    "value": [
+      "filterTestTable",
+      1
+    ]
+  },
+  "FilterTestEntry": {
+    "tp": "SEQUENCE"
+  },
+  "filterTestModule": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterTestEntry",
+      1
+    ]
+  },
+  "filterTestPort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterTestEntry",
+      2
+    ]
+  },
+  "filterTestIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterTestEntry",
+      3
+    ]
+  },
+  "filterTestType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "valid",
+        "2": "invalid"
+      }
+    },
+    "index": null,
+    "value": [
+      "filterTestEntry",
+      4
+    ]
+  },
+  "filterTestOffset": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterTestEntry",
+      5
+    ]
+  },
+  "filterTestValue": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterTestEntry",
+      6
+    ]
+  },
+  "filterTestMask": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterTestEntry",
+      7
+    ]
+  },
+  "filterPortTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF FilterPortEntry"
+    },
+    "index": null,
+    "value": [
+      "filterGrp",
+      5
+    ]
+  },
+  "filterPortEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "FilterPortEntry"
+    },
+    "index": [
+      "filterPortModule",
+      "filterPort"
+    ],
+    "value": [
+      "filterPortTable",
+      1
+    ]
+  },
+  "FilterPortEntry": {
+    "tp": "SEQUENCE"
+  },
+  "filterPortModule": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterPortEntry",
+      1
+    ]
+  },
+  "filterPort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterPortEntry",
+      2
+    ]
+  },
+  "filterPortComplex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "filterPortEntry",
+      3
+    ]
+  },
+  "filterPortBroadcastThrottle": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterPortEntry",
+      4
+    ]
+  },
+  "filterPortBroadcastThreshold": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterPortEntry",
+      5
+    ]
+  },
+  "filterPortBroadcastDiscards": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "filterPortEntry",
+      6
+    ]
+  },
+  "filterPortBroadcastThresholdFraction": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "filterPortEntry",
+      7
+    ]
+  },
+  "filterPortSuppressionOption": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "multicast",
+        "1": "unicast",
+        "2": "broadcast"
+      }
+    },
+    "index": null,
+    "value": [
+      "filterPortEntry",
+      8
+    ]
+  },
+  "filterPortSuppressionViolation": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "dropPackets",
+        "2": "errdisable"
+      }
+    },
+    "index": null,
+    "value": [
+      "filterPortEntry",
+      9
+    ]
+  },
+  "monitorSourceModule": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "monitorGrp",
+      1
+    ]
+  },
+  "monitorSourcePort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "monitorGrp",
+      2
+    ]
+  },
+  "monitorDestinationModule": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "monitorGrp",
+      3
+    ]
+  },
+  "monitorDestinationPort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "monitorGrp",
+      4
+    ]
+  },
+  "monitorDirection": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "transmit",
+        "2": "receive",
+        "3": "transmitAndReceive"
+      }
+    },
+    "index": null,
+    "value": [
+      "monitorGrp",
+      5
+    ]
+  },
+  "monitorEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "monitorGrp",
+      6
+    ]
+  },
+  "monitorAdminSourcePorts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "monitorGrp",
+      7
+    ]
+  },
+  "monitorOperSourcePorts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "monitorGrp",
+      8
+    ]
+  },
+  "vlanTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VlanEntry"
+    },
+    "index": null,
+    "value": [
+      "vlanGrp",
+      2
+    ]
+  },
+  "vlanEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanEntry"
+    },
+    "index": [
+      "vlanIndex"
+    ],
+    "value": [
+      "vlanTable",
+      1
+    ]
+  },
+  "VlanEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vlanIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "vlanEntry",
+      1
+    ]
+  },
+  "vlanSpantreeEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled",
+        "3": "notApplicable"
+      }
+    },
+    "index": null,
+    "value": [
+      "vlanEntry",
+      2
+    ]
+  },
+  "vlanIfIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "vlanEntry",
+      3
+    ]
+  },
+  "vlanPortTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VlanPortEntry"
+    },
+    "index": null,
+    "value": [
+      "vlanGrp",
+      3
+    ]
+  },
+  "vlanPortEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanPortEntry"
+    },
+    "index": [
+      "vlanPortModule",
+      "vlanPort"
+    ],
+    "value": [
+      "vlanPortTable",
+      1
+    ]
+  },
+  "VlanPortEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vlanPortModule": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "vlanPortEntry",
+      1
+    ]
+  },
+  "vlanPort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "vlanPortEntry",
+      2
+    ]
+  },
+  "vlanPortVlan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "vlanPortEntry",
+      3
+    ]
+  },
+  "vlanPortIslVlansAllowed": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanPortEntry",
+      5
+    ]
+  },
+  "vlanPortSwitchLevel": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "normal",
+        "2": "high",
+        "3": "notApplicable"
+      }
+    },
+    "index": null,
+    "value": [
+      "vlanPortEntry",
+      6
+    ]
+  },
+  "vlanPortIslAdminStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "on",
+        "2": "off",
+        "3": "desirable",
+        "4": "auto",
+        "5": "onNoNegotiate"
+      }
+    },
+    "index": null,
+    "value": [
+      "vlanPortEntry",
+      7
+    ]
+  },
+  "vlanPortIslOperStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "trunking",
+        "2": "notTrunking"
+      }
+    },
+    "index": null,
+    "value": [
+      "vlanPortEntry",
+      8
+    ]
+  },
+  "vlanPortIslPriorityVlans": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "vlanPortEntry",
+      9
+    ]
+  },
+  "vlanPortAdminStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "static",
+        "2": "dynamic"
+      }
+    },
+    "index": null,
+    "value": [
+      "vlanPortEntry",
+      10
+    ]
+  },
+  "vlanPortOperStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "inactive",
+        "2": "active",
+        "3": "shutdown",
+        "4": "vlanActiveFault"
+      }
+    },
+    "index": null,
+    "value": [
+      "vlanPortEntry",
+      11
+    ]
+  },
+  "vlanPortAuxiliaryVlan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "vlanPortEntry",
+      12
+    ]
+  },
+  "vmpsTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VmpsEntry"
+    },
+    "index": null,
+    "value": [
+      "vlanGrp",
+      4
+    ]
+  },
+  "vmpsEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VmpsEntry"
+    },
+    "index": [
+      "vmpsAddr"
+    ],
+    "value": [
+      "vmpsTable",
+      1
+    ]
+  },
+  "VmpsEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vmpsAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "vmpsEntry",
+      1
+    ]
+  },
+  "vmpsType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "primary",
+        "3": "other"
+      }
+    },
+    "index": null,
+    "value": [
+      "vmpsEntry",
+      2
+    ]
+  },
+  "vmpsAction": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "inProgress",
+        "3": "success",
+        "4": "noResponse",
+        "5": "noPrimaryVmps",
+        "6": "noDynamicPort",
+        "7": "noHostConnected",
+        "8": "reconfirm"
+      }
+    },
+    "index": null,
+    "value": [
+      "vlanGrp",
+      5
+    ]
+  },
+  "vmpsAccessed": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "vlanGrp",
+      6
+    ]
+  },
+  "vlanTrunkMappingMax": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "vlanGrp",
+      7
+    ]
+  },
+  "vlanTrunkMappingTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VlanTrunkMappingEntry"
+    },
+    "index": null,
+    "value": [
+      "vlanGrp",
+      8
+    ]
+  },
+  "vlanTrunkMappingEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanTrunkMappingEntry"
+    },
+    "index": [
+      "vlanTrunkMappingFromVlan"
+    ],
+    "value": [
+      "vlanTrunkMappingTable",
+      1
+    ]
+  },
+  "VlanTrunkMappingEntry": {
+    "tp": "SEQUENCE"
+  },
+  "vlanTrunkMappingFromVlan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkMappingEntry",
+      1
+    ]
+  },
+  "vlanTrunkMappingToVlan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkMappingEntry",
+      2
+    ]
+  },
+  "vlanTrunkMappingType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "reservedToNonReserved",
+        "2": "dot1qToisl"
+      }
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkMappingEntry",
+      3
+    ]
+  },
+  "vlanTrunkMappingOper": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkMappingEntry",
+      4
+    ]
+  },
+  "vlanTrunkMappingStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "RowStatus"
+    },
+    "index": null,
+    "value": [
+      "vlanTrunkMappingEntry",
+      5
+    ]
+  },
+  "portSecurityTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF PortSecurityEntry"
+    },
+    "index": null,
+    "value": [
+      "securityGrp",
+      1
+    ]
+  },
+  "portSecurityEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "PortSecurityEntry"
+    },
+    "index": [
+      "portSecurityModuleIndex",
+      "portSecurityPortIndex"
+    ],
+    "value": [
+      "portSecurityTable",
+      1
+    ]
+  },
+  "PortSecurityEntry": {
+    "tp": "SEQUENCE"
+  },
+  "portSecurityModuleIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portSecurityEntry",
+      1
+    ]
+  },
+  "portSecurityPortIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portSecurityEntry",
+      2
+    ]
+  },
+  "portSecurityAdminStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "portSecurityEntry",
+      3
+    ]
+  },
+  "portSecurityOperStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "notShutdown",
+        "2": "shutdown"
+      }
+    },
+    "index": null,
+    "value": [
+      "portSecurityEntry",
+      4
+    ]
+  },
+  "portSecurityLastSrcAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "portSecurityEntry",
+      5
+    ]
+  },
+  "portSecuritySecureSrcAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "portSecurityEntry",
+      6
+    ]
+  },
+  "portSecurityMaxSrcAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portSecurityEntry",
+      7
+    ]
+  },
+  "portSecurityAgingTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portSecurityEntry",
+      8
+    ]
+  },
+  "portSecurityShutdownTimeOut": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portSecurityEntry",
+      9
+    ]
+  },
+  "portSecurityViolationPolicy": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "restrict",
+        "2": "shutdown"
+      }
+    },
+    "index": null,
+    "value": [
+      "portSecurityEntry",
+      10
+    ]
+  },
+  "portSecurityExtTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF PortSecurityExtEntry"
+    },
+    "index": null,
+    "value": [
+      "securityGrp",
+      2
+    ]
+  },
+  "portSecurityExtEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "PortSecurityExtEntry"
+    },
+    "index": [
+      "portSecurityExtModuleIndex",
+      "portSecurityExtPortIndex",
+      "portSecurityExtSecureSrcAddr"
+    ],
+    "value": [
+      "portSecurityExtTable",
+      1
+    ]
+  },
+  "PortSecurityExtEntry": {
+    "tp": "SEQUENCE"
+  },
+  "portSecurityExtModuleIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portSecurityExtEntry",
+      1
+    ]
+  },
+  "portSecurityExtPortIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portSecurityExtEntry",
+      2
+    ]
+  },
+  "portSecurityExtSecureSrcAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "portSecurityExtEntry",
+      3
+    ]
+  },
+  "portSecurityExtControlStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "valid",
+        "2": "invalid"
+      }
+    },
+    "index": null,
+    "value": [
+      "portSecurityExtEntry",
+      4
+    ]
+  },
+  "tokenRingPortTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF TokenRingPortEntry"
+    },
+    "index": null,
+    "value": [
+      "tokenRingGrp",
+      1
+    ]
+  },
+  "tokenRingPortEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TokenRingPortEntry"
+    },
+    "index": [
+      "tokenRingModuleIndex",
+      "tokenRingPortIndex"
+    ],
+    "value": [
+      "tokenRingPortTable",
+      1
+    ]
+  },
+  "TokenRingPortEntry": {
+    "tp": "SEQUENCE"
+  },
+  "tokenRingModuleIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "tokenRingPortEntry",
+      1
+    ]
+  },
+  "tokenRingPortIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "tokenRingPortEntry",
+      2
+    ]
+  },
+  "tokenRingPortSetACbits": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "tokenRingPortEntry",
+      3
+    ]
+  },
+  "tokenRingPortMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "auto",
+        "2": "fdxCport",
+        "3": "fdxStation",
+        "4": "hdxCport",
+        "5": "hdxStation",
+        "7": "riro"
+      }
+    },
+    "index": null,
+    "value": [
+      "tokenRingPortEntry",
+      4
+    ]
+  },
+  "tokenRingPortEarlyTokenRel": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "tokenRingPortEntry",
+      9
+    ]
+  },
+  "tokenRingPortPriorityThresh": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "tokenRingPortEntry",
+      10
+    ]
+  },
+  "tokenRingPortPriorityMinXmit": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "tokenRingPortEntry",
+      11
+    ]
+  },
+  "tokenRingPortCfgLossThresh": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "tokenRingPortEntry",
+      12
+    ]
+  },
+  "tokenRingPortCfgLossInterval": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "tokenRingPortEntry",
+      13
+    ]
+  },
+  "tokenRingDripDistCrfMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "tokenRingGrp",
+      2
+    ]
+  },
+  "tokenRingDripAreReductionMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "tokenRingGrp",
+      3
+    ]
+  },
+  "tokenRingDripLocalNodeID": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "tokenRingGrp",
+      4
+    ]
+  },
+  "tokenRingDripLastRevision": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "tokenRingGrp",
+      5
+    ]
+  },
+  "tokenRingDripLastChangedRevision": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "tokenRingGrp",
+      6
+    ]
+  },
+  "tokenRingDripAdvertsReceived": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "tokenRingGrp",
+      7
+    ]
+  },
+  "tokenRingDripAdvertsTransmitted": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "tokenRingGrp",
+      8
+    ]
+  },
+  "tokenRingDripAdvertsProcessed": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "tokenRingGrp",
+      9
+    ]
+  },
+  "tokenRingDripInputQueueDrops": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "tokenRingGrp",
+      10
+    ]
+  },
+  "tokenRingDripOutputQueueDrops": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "tokenRingGrp",
+      11
+    ]
+  },
+  "tokenRingDripLocalVlanStatusTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF TokenRingDripLocalVlanStatusEntry"
+    },
+    "index": null,
+    "value": [
+      "tokenRingGrp",
+      12
+    ]
+  },
+  "tokenRingDripLocalVlanStatusEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TokenRingDripLocalVlanStatusEntry"
+    },
+    "index": [
+      "tokenRingDripVlan"
+    ],
+    "value": [
+      "tokenRingDripLocalVlanStatusTable",
+      1
+    ]
+  },
+  "TokenRingDripLocalVlanStatusEntry": {
+    "tp": "SEQUENCE"
+  },
+  "tokenRingDripVlan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "index": null,
+    "value": [
+      "tokenRingDripLocalVlanStatusEntry",
+      1
+    ]
+  },
+  "tokenRingDripLocalPortStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "active",
+        "2": "inactive"
+      }
+    },
+    "index": null,
+    "value": [
+      "tokenRingDripLocalVlanStatusEntry",
+      2
+    ]
+  },
+  "tokenRingDripRemotePortStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "active",
+        "2": "inactive"
+      }
+    },
+    "index": null,
+    "value": [
+      "tokenRingDripLocalVlanStatusEntry",
+      3
+    ]
+  },
+  "tokenRingDripRemotePortConfigured": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "tokenRingDripLocalVlanStatusEntry",
+      4
+    ]
+  },
+  "tokenRingDripDistributedCrf": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "tokenRingDripLocalVlanStatusEntry",
+      5
+    ]
+  },
+  "tokenRingDripBackupCrf": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "true",
+        "2": "false"
+      }
+    },
+    "index": null,
+    "value": [
+      "tokenRingDripLocalVlanStatusEntry",
+      6
+    ]
+  },
+  "tokenRingDripOwnerNodeID": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "tokenRingDripLocalVlanStatusEntry",
+      7
+    ]
+  },
+  "tokenRingPortSoftErrTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF TokenRingPortSoftErrEntry"
+    },
+    "index": null,
+    "value": [
+      "tokenRingGrp",
+      14
+    ]
+  },
+  "tokenRingPortSoftErrEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TokenRingPortSoftErrEntry"
+    },
+    "index": "tokenRingPortEntry",
+    "value": [
+      "tokenRingPortSoftErrTable",
+      1
+    ]
+  },
+  "TokenRingPortSoftErrEntry": {
+    "tp": "SEQUENCE"
+  },
+  "tokenRingPortSoftErrThresh": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "tokenRingPortSoftErrEntry",
+      1
+    ]
+  },
+  "tokenRingPortSoftErrReportInterval": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "tokenRingPortSoftErrEntry",
+      2
+    ]
+  },
+  "tokenRingPortSoftErrResetCounters": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "noop",
+        "2": "reset"
+      }
+    },
+    "index": null,
+    "value": [
+      "tokenRingPortSoftErrEntry",
+      3
+    ]
+  },
+  "tokenRingPortSoftErrLastCounterReset": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeTicks"
+    },
+    "index": null,
+    "value": [
+      "tokenRingPortSoftErrEntry",
+      4
+    ]
+  },
+  "tokenRingPortSoftErrEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "tokenRingPortSoftErrEntry",
+      5
+    ]
+  },
+  "mcastRouterTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF McastRouterEntry"
+    },
+    "index": null,
+    "value": [
+      "multicastGrp",
+      1
+    ]
+  },
+  "mcastRouterEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "McastRouterEntry"
+    },
+    "index": [
+      "mcastRouterModuleIndex",
+      "mcastRouterPortIndex"
+    ],
+    "value": [
+      "mcastRouterTable",
+      1
+    ]
+  },
+  "McastRouterEntry": {
+    "tp": "SEQUENCE"
+  },
+  "mcastRouterModuleIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "mcastRouterEntry",
+      1
+    ]
+  },
+  "mcastRouterPortIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "mcastRouterEntry",
+      2
+    ]
+  },
+  "mcastRouterAdminStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "routerPresent",
+        "3": "dynamic"
+      }
+    },
+    "index": null,
+    "value": [
+      "mcastRouterEntry",
+      3
+    ]
+  },
+  "mcastRouterOperStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "routerPresent",
+        "2": "noRouter"
+      }
+    },
+    "index": null,
+    "value": [
+      "mcastRouterEntry",
+      4
+    ]
+  },
+  "mcastEnableCgmp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "multicastGrp",
+      2
+    ]
+  },
+  "mcastEnableIgmp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "multicastGrp",
+      3
+    ]
+  },
+  "mcastEnableRgmp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "multicastGrp",
+      4
+    ]
+  },
+  "dnsEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "dnsGrp",
+      1
+    ]
+  },
+  "dnsServerTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF DnsServerEntry"
+    },
+    "index": null,
+    "value": [
+      "dnsGrp",
+      2
+    ]
+  },
+  "dnsServerEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DnsServerEntry"
+    },
+    "index": [
+      "dnsServerAddr"
+    ],
+    "value": [
+      "dnsServerTable",
+      1
+    ]
+  },
+  "DnsServerEntry": {
+    "tp": "SEQUENCE"
+  },
+  "dnsServerAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "dnsServerEntry",
+      1
+    ]
+  },
+  "dnsServerType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "primary",
+        "3": "other"
+      }
+    },
+    "index": null,
+    "value": [
+      "dnsServerEntry",
+      2
+    ]
+  },
+  "dnsDomainName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "dnsGrp",
+      3
+    ]
+  },
+  "syslogServerTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SyslogServerEntry"
+    },
+    "index": null,
+    "value": [
+      "syslogGrp",
+      1
+    ]
+  },
+  "syslogServerEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SyslogServerEntry"
+    },
+    "index": [
+      "syslogServerAddr"
+    ],
+    "value": [
+      "syslogServerTable",
+      1
+    ]
+  },
+  "SyslogServerEntry": {
+    "tp": "SEQUENCE"
+  },
+  "syslogServerAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "syslogServerEntry",
+      1
+    ]
+  },
+  "syslogServerType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "valid",
+        "2": "invalid"
+      }
+    },
+    "index": null,
+    "value": [
+      "syslogServerEntry",
+      2
+    ]
+  },
+  "syslogConsoleEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "syslogGrp",
+      2
+    ]
+  },
+  "syslogHostEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "syslogGrp",
+      3
+    ]
+  },
+  "syslogMessageControlTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SyslogMessageControlEntry"
+    },
+    "index": null,
+    "value": [
+      "syslogGrp",
+      4
+    ]
+  },
+  "syslogMessageControlEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SyslogMessageControlEntry"
+    },
+    "index": [
+      "syslogMessageFacility"
+    ],
+    "value": [
+      "syslogMessageControlTable",
+      1
+    ]
+  },
+  "SyslogMessageControlEntry": {
+    "tp": "SEQUENCE"
+  },
+  "syslogMessageFacility": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "cdp",
+        "2": "mcast",
+        "3": "dtp",
+        "4": "dvlan",
+        "5": "earl",
+        "6": "fddi",
+        "7": "ip",
+        "8": "pruning",
+        "9": "snmp",
+        "10": "spantree",
+        "11": "system",
+        "12": "tac",
+        "13": "tcp",
+        "14": "telnet",
+        "15": "tftp",
+        "16": "vtp",
+        "17": "vmps",
+        "18": "kernel",
+        "19": "filesys",
+        "20": "drip",
+        "21": "pagp",
+        "22": "mgmt",
+        "23": "mls",
+        "24": "protfilt",
+        "25": "security",
+        "26": "radius",
+        "27": "udld",
+        "28": "gvrp",
+        "29": "cops",
+        "30": "qos",
+        "31": "acl",
+        "32": "rsvp",
+        "33": "ld",
+        "34": "privatevlan",
+        "35": "ethc",
+        "36": "gl2pt",
+        "37": "callhome",
+        "38": "dhcpsnooping",
+        "40": "diags",
+        "42": "eou",
+        "43": "backup",
+        "44": "eoam",
+        "45": "webauth",
+        "46": "dom",
+        "47": "mvrp"
+      }
+    },
+    "index": null,
+    "value": [
+      "syslogMessageControlEntry",
+      1
+    ]
+  },
+  "syslogMessageSeverity": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "emergencies",
+        "2": "alerts",
+        "3": "critical",
+        "4": "errors",
+        "5": "warnings",
+        "6": "notification",
+        "7": "informational",
+        "8": "debugging"
+      }
+    },
+    "index": null,
+    "value": [
+      "syslogMessageControlEntry",
+      2
+    ]
+  },
+  "syslogTimeStampOption": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "syslogGrp",
+      5
+    ]
+  },
+  "syslogTelnetEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "syslogGrp",
+      6
+    ]
+  },
+  "ntpBcastClient": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "ntpGrp",
+      1
+    ]
+  },
+  "ntpBcastDelay": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "ntpGrp",
+      2
+    ]
+  },
+  "ntpClient": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "ntpGrp",
+      3
+    ]
+  },
+  "ntpServerTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF NtpServerEntry"
+    },
+    "index": null,
+    "value": [
+      "ntpGrp",
+      4
+    ]
+  },
+  "ntpServerEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "NtpServerEntry"
+    },
+    "index": [
+      "ntpServerAddress"
+    ],
+    "value": [
+      "ntpServerTable",
+      1
+    ]
+  },
+  "NtpServerEntry": {
+    "tp": "SEQUENCE"
+  },
+  "ntpServerAddress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "ntpServerEntry",
+      1
+    ]
+  },
+  "ntpServerType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "valid",
+        "2": "invalid"
+      }
+    },
+    "index": null,
+    "value": [
+      "ntpServerEntry",
+      2
+    ]
+  },
+  "ntpServerPublicKey": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "ntpServerEntry",
+      3
+    ]
+  },
+  "ntpSummertimeStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "ntpGrp",
+      5
+    ]
+  },
+  "ntpSummerTimezoneName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "ntpGrp",
+      6
+    ]
+  },
+  "ntpTimezoneName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "ntpGrp",
+      7
+    ]
+  },
+  "ntpTimezoneOffsetHour": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "ntpGrp",
+      8
+    ]
+  },
+  "ntpTimezoneOffsetMinute": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "ntpGrp",
+      9
+    ]
+  },
+  "ntpAuthenticationEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "ntpGrp",
+      10
+    ]
+  },
+  "ntpAuthenticationTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF NtpAuthenticationEntry"
+    },
+    "index": null,
+    "value": [
+      "ntpGrp",
+      11
+    ]
+  },
+  "ntpAuthenticationEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "NtpAuthenticationEntry"
+    },
+    "index": [
+      "ntpAuthenticationPublicKey"
+    ],
+    "value": [
+      "ntpAuthenticationTable",
+      1
+    ]
+  },
+  "NtpAuthenticationEntry": {
+    "tp": "SEQUENCE"
+  },
+  "ntpAuthenticationPublicKey": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "ntpAuthenticationEntry",
+      1
+    ]
+  },
+  "ntpAuthenticationSecretKey": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "ntpAuthenticationEntry",
+      2
+    ]
+  },
+  "ntpAuthenticationTrustedMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "trusted",
+        "2": "untrusted"
+      }
+    },
+    "index": null,
+    "value": [
+      "ntpAuthenticationEntry",
+      3
+    ]
+  },
+  "ntpAuthenticationType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "valid",
+        "2": "invalid"
+      }
+    },
+    "index": null,
+    "value": [
+      "ntpAuthenticationEntry",
+      4
+    ]
+  },
+  "tacacsLoginAuthentication": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled",
+        "3": "enabledForTelnetOnly",
+        "4": "enabledForConsoleOnly"
+      }
+    },
+    "index": null,
+    "value": [
+      "tacacsGrp",
+      1
+    ]
+  },
+  "tacacsEnableAuthentication": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled",
+        "3": "enabledForTelnetOnly",
+        "4": "enabledForConsoleOnly"
+      }
+    },
+    "index": null,
+    "value": [
+      "tacacsGrp",
+      2
+    ]
+  },
+  "tacacsLocalLoginAuthentication": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled",
+        "3": "enabledForTelnetOnly",
+        "4": "enabledForConsoleOnly"
+      }
+    },
+    "index": null,
+    "value": [
+      "tacacsGrp",
+      3
+    ]
+  },
+  "tacacsLocalEnableAuthentication": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled",
+        "3": "enabledForTelnetOnly",
+        "4": "enabledForConsoleOnly"
+      }
+    },
+    "index": null,
+    "value": [
+      "tacacsGrp",
+      4
+    ]
+  },
+  "tacacsNumLoginAttempts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "tacacsGrp",
+      5
+    ]
+  },
+  "tacacsDirectedRequest": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "tacacsGrp",
+      6
+    ]
+  },
+  "tacacsTimeout": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "tacacsGrp",
+      7
+    ]
+  },
+  "tacacsAuthKey": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "tacacsGrp",
+      8
+    ]
+  },
+  "tacacsServerTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF TacacsServerEntry"
+    },
+    "index": null,
+    "value": [
+      "tacacsGrp",
+      9
+    ]
+  },
+  "tacacsServerEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TacacsServerEntry"
+    },
+    "index": [
+      "tacacsServerAddr"
+    ],
+    "value": [
+      "tacacsServerTable",
+      1
+    ]
+  },
+  "TacacsServerEntry": {
+    "tp": "SEQUENCE"
+  },
+  "tacacsServerAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "tacacsServerEntry",
+      1
+    ]
+  },
+  "tacacsServerType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "primary",
+        "3": "other"
+      }
+    },
+    "index": null,
+    "value": [
+      "tacacsServerEntry",
+      2
+    ]
+  },
+  "ipPermitEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled",
+        "3": "enabledForTelnetOnly",
+        "4": "enabledForSnmpOnly"
+      }
+    },
+    "index": null,
+    "value": [
+      "ipPermitListGrp",
+      1
+    ]
+  },
+  "ipPermitListTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF IpPermitListEntry"
+    },
+    "index": null,
+    "value": [
+      "ipPermitListGrp",
+      2
+    ]
+  },
+  "ipPermitListEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpPermitListEntry"
+    },
+    "index": [
+      "ipPermitAddress",
+      "ipPermitMask"
+    ],
+    "value": [
+      "ipPermitListTable",
+      1
+    ]
+  },
+  "IpPermitListEntry": {
+    "tp": "SEQUENCE"
+  },
+  "ipPermitAddress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "ipPermitListEntry",
+      1
+    ]
+  },
+  "ipPermitMask": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "ipPermitListEntry",
+      2
+    ]
+  },
+  "ipPermitType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "valid",
+        "2": "invalid"
+      }
+    },
+    "index": null,
+    "value": [
+      "ipPermitListEntry",
+      3
+    ]
+  },
+  "ipPermitAccessType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "telnet",
+        "1": "snmp",
+        "2": "ssh",
+        "3": "http"
+      }
+    },
+    "index": null,
+    "value": [
+      "ipPermitListEntry",
+      4
+    ]
+  },
+  "ipPermitTelnetConnectLimit": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "ipPermitListEntry",
+      5
+    ]
+  },
+  "ipPermitSshConnectLimit": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "ipPermitListEntry",
+      6
+    ]
+  },
+  "ipPermitDeniedListTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF IpPermitDeniedListEntry"
+    },
+    "index": null,
+    "value": [
+      "ipPermitListGrp",
+      3
+    ]
+  },
+  "ipPermitDeniedListEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpPermitDeniedListEntry"
+    },
+    "index": [
+      "ipPermitDeniedAddress"
+    ],
+    "value": [
+      "ipPermitDeniedListTable",
+      1
+    ]
+  },
+  "IpPermitDeniedListEntry": {
+    "tp": "SEQUENCE"
+  },
+  "ipPermitDeniedAddress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "ipPermitDeniedListEntry",
+      1
+    ]
+  },
+  "ipPermitDeniedAccess": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "telnet",
+        "2": "snmp",
+        "3": "ssh",
+        "4": "http"
+      }
+    },
+    "index": null,
+    "value": [
+      "ipPermitDeniedListEntry",
+      2
+    ]
+  },
+  "ipPermitDeniedTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeTicks"
+    },
+    "index": null,
+    "value": [
+      "ipPermitDeniedListEntry",
+      3
+    ]
+  },
+  "ipPermitAccessTypeEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "telnet",
+        "1": "snmp",
+        "2": "ssh",
+        "3": "http"
+      }
+    },
+    "index": null,
+    "value": [
+      "ipPermitListGrp",
+      4
+    ]
+  },
+  "portChannelTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF PortChannelEntry"
+    },
+    "index": null,
+    "value": [
+      "portChannelGrp",
+      1
+    ]
+  },
+  "portChannelEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "PortChannelEntry"
+    },
+    "index": [
+      "portChannelModuleIndex",
+      "portChannelPortIndex"
+    ],
+    "value": [
+      "portChannelTable",
+      1
+    ]
+  },
+  "PortChannelEntry": {
+    "tp": "SEQUENCE"
+  },
+  "portChannelModuleIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portChannelEntry",
+      1
+    ]
+  },
+  "portChannelPortIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portChannelEntry",
+      2
+    ]
+  },
+  "portChannelPorts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "portChannelEntry",
+      3
+    ]
+  },
+  "portChannelAdminStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "on",
+        "2": "off",
+        "3": "desirable",
+        "4": "auto",
+        "5": "desirableSilent",
+        "6": "autoSilent"
+      }
+    },
+    "index": null,
+    "value": [
+      "portChannelEntry",
+      4
+    ]
+  },
+  "portChannelOperStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "channelling",
+        "2": "notChannelling"
+      }
+    },
+    "index": null,
+    "value": [
+      "portChannelEntry",
+      5
+    ]
+  },
+  "portChannelNeighbourDeviceId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "portChannelEntry",
+      6
+    ]
+  },
+  "portChannelNeighbourPortId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portChannelEntry",
+      7
+    ]
+  },
+  "portChannelProtInPackets": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "portChannelEntry",
+      8
+    ]
+  },
+  "portChannelProtOutPackets": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "portChannelEntry",
+      9
+    ]
+  },
+  "portChannelIfIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portChannelEntry",
+      10
+    ]
+  },
+  "portCpbTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF PortCpbEntry"
+    },
+    "index": null,
+    "value": [
+      "portCpbGrp",
+      1
+    ]
+  },
+  "portCpbEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "PortCpbEntry"
+    },
+    "index": [
+      "portCpbModuleIndex",
+      "portCpbPortIndex"
+    ],
+    "value": [
+      "portCpbTable",
+      1
+    ]
+  },
+  "PortCpbEntry": {
+    "tp": "SEQUENCE"
+  },
+  "portCpbModuleIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      1
+    ]
+  },
+  "portCpbPortIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      2
+    ]
+  },
+  "portCpbSpeed": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "auto",
+        "1": "mbps4",
+        "2": "mbps10",
+        "3": "mbps16",
+        "4": "mbps45",
+        "5": "mbps100",
+        "6": "mbps155",
+        "7": "mbps400",
+        "8": "mbps622",
+        "9": "mbps1000",
+        "10": "mbps1dot544",
+        "11": "mbps2",
+        "12": "mbps2dot048",
+        "13": "kps64",
+        "14": "mbps10000"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      3
+    ]
+  },
+  "portCpbDuplex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "half",
+        "1": "full",
+        "2": "auto",
+        "3": "hdx",
+        "4": "fdx"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      4
+    ]
+  },
+  "portCpbTrunkEncapsulationType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "lane",
+        "1": "dot10",
+        "2": "dot1Q",
+        "3": "isl",
+        "4": "negotiate"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      5
+    ]
+  },
+  "portCpbTrunkMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "on",
+        "1": "off",
+        "2": "desirable",
+        "3": "auto",
+        "4": "onNoNegotiate"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      6
+    ]
+  },
+  "portCpbChannel": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      7
+    ]
+  },
+  "portCpbBroadcastSuppression": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "pps",
+        "1": "percentage"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      8
+    ]
+  },
+  "portCpbFlowControl": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "receiveOff",
+        "1": "receiveOn",
+        "2": "receiveDesired",
+        "3": "sendOff",
+        "4": "sendOn",
+        "5": "sendDesired"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      9
+    ]
+  },
+  "portCpbSecurity": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "yes",
+        "2": "no"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      10
+    ]
+  },
+  "portCpbVlanMembership": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "static",
+        "1": "dynamic"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      11
+    ]
+  },
+  "portCpbPortfast": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "yes",
+        "2": "no"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      12
+    ]
+  },
+  "portCpbUdld": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "yes",
+        "2": "no"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      13
+    ]
+  },
+  "portCpbInlinePower": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "auto",
+        "1": "on",
+        "2": "off",
+        "3": "static"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      14
+    ]
+  },
+  "portCpbAuxiliaryVlan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "vlanNo",
+        "1": "untagged",
+        "2": "dot1p",
+        "3": "none"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      15
+    ]
+  },
+  "portCpbSpan": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "source",
+        "1": "destination",
+        "2": "reflector"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      16
+    ]
+  },
+  "portCpbCosRewrite": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "yes",
+        "2": "no"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      17
+    ]
+  },
+  "portCpbTosRewrite": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "dscp",
+        "1": "ipPrecedence"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      18
+    ]
+  },
+  "portCpbCopsGrouping": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      19
+    ]
+  },
+  "portCpbDot1x": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "yes",
+        "2": "no"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      20
+    ]
+  },
+  "portCpbIgmpFilter": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "yes",
+        "2": "no"
+      }
+    },
+    "index": null,
+    "value": [
+      "portCpbEntry",
+      21
+    ]
+  },
+  "portTopNControlTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF PortTopNControlEntry"
+    },
+    "index": null,
+    "value": [
+      "portTopNGrp",
+      1
+    ]
+  },
+  "portTopNControlEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "PortTopNControlEntry"
+    },
+    "index": [
+      "portTopNControlIndex"
+    ],
+    "value": [
+      "portTopNControlTable",
+      1
+    ]
+  },
+  "PortTopNControlEntry": {
+    "tp": "SEQUENCE"
+  },
+  "portTopNControlIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portTopNControlEntry",
+      1
+    ]
+  },
+  "portTopNRateBase": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "portTopNUtilization",
+        "2": "portTopNIOOctets",
+        "3": "portTopNIOPkts",
+        "4": "portTopNIOBroadcastPkts",
+        "5": "portTopNIOMulticastPkts",
+        "6": "portTopNInErrors",
+        "7": "portTopNBufferOverflow"
+      }
+    },
+    "index": null,
+    "value": [
+      "portTopNControlEntry",
+      2
+    ]
+  },
+  "portTopNType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "portTopNAllPorts",
+        "2": "portTopNEthernet",
+        "3": "portTopNFastEthernet",
+        "4": "portTopNGigaEthernet",
+        "5": "portTopNTokenRing",
+        "6": "portTopNFDDI",
+        "7": "portTopNAllEthernetPorts",
+        "8": "portTopN10GigaEthernet"
+      }
+    },
+    "index": null,
+    "value": [
+      "portTopNControlEntry",
+      3
+    ]
+  },
+  "portTopNMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "portTopNForeground",
+        "2": "portTopNBackground"
+      }
+    },
+    "index": null,
+    "value": [
+      "portTopNControlEntry",
+      4
+    ]
+  },
+  "portTopNReportStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "progressing",
+        "2": "ready"
+      }
+    },
+    "index": null,
+    "value": [
+      "portTopNControlEntry",
+      5
+    ]
+  },
+  "portTopNDuration": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portTopNControlEntry",
+      6
+    ]
+  },
+  "portTopNTimeRemaining": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portTopNControlEntry",
+      7
+    ]
+  },
+  "portTopNStartTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeTicks"
+    },
+    "index": null,
+    "value": [
+      "portTopNControlEntry",
+      8
+    ]
+  },
+  "portTopNRequestedSize": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portTopNControlEntry",
+      9
+    ]
+  },
+  "portTopNGrantedSize": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portTopNControlEntry",
+      10
+    ]
+  },
+  "portTopNOwner": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OwnerString"
+    },
+    "index": null,
+    "value": [
+      "portTopNControlEntry",
+      11
+    ]
+  },
+  "portTopNStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "RowStatus"
+    },
+    "index": null,
+    "value": [
+      "portTopNControlEntry",
+      12
+    ]
+  },
+  "portTopNTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF PortTopNEntry"
+    },
+    "index": null,
+    "value": [
+      "portTopNGrp",
+      2
+    ]
+  },
+  "portTopNEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "PortTopNEntry"
+    },
+    "index": [
+      "portTopNControlIndex",
+      "portTopNIndex"
+    ],
+    "value": [
+      "portTopNTable",
+      1
+    ]
+  },
+  "PortTopNEntry": {
+    "tp": "SEQUENCE"
+  },
+  "portTopNIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portTopNEntry",
+      1
+    ]
+  },
+  "portTopNModuleNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portTopNEntry",
+      2
+    ]
+  },
+  "portTopNPortNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portTopNEntry",
+      3
+    ]
+  },
+  "portTopNUtilization": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portTopNEntry",
+      4
+    ]
+  },
+  "portTopNIOOctets": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "portTopNEntry",
+      5
+    ]
+  },
+  "portTopNIOPkts": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "portTopNEntry",
+      6
+    ]
+  },
+  "portTopNIOBroadcast": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "portTopNEntry",
+      7
+    ]
+  },
+  "portTopNIOMulticast": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter64"
+    },
+    "index": null,
+    "value": [
+      "portTopNEntry",
+      8
+    ]
+  },
+  "portTopNInErrors": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "portTopNEntry",
+      9
+    ]
+  },
+  "portTopNBufferOverFlow": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Counter32"
+    },
+    "index": null,
+    "value": [
+      "portTopNEntry",
+      10
+    ]
+  },
+  "mdgGatewayTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF MdgGatewayEntry"
+    },
+    "index": null,
+    "value": [
+      "mdgGrp",
+      1
+    ]
+  },
+  "mdgGatewayEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "MdgGatewayEntry"
+    },
+    "index": [
+      "mdgGatewayAddr"
+    ],
+    "value": [
+      "mdgGatewayTable",
+      1
+    ]
+  },
+  "MdgGatewayEntry": {
+    "tp": "SEQUENCE"
+  },
+  "mdgGatewayAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "mdgGatewayEntry",
+      1
+    ]
+  },
+  "mdgGatewayType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "primary",
+        "3": "other"
+      }
+    },
+    "index": null,
+    "value": [
+      "mdgGatewayEntry",
+      2
+    ]
+  },
+  "radiusLoginAuthentication": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled",
+        "3": "enabledForTelnetOnly",
+        "4": "enabledForConsoleOnly"
+      }
+    },
+    "index": null,
+    "value": [
+      "radiusGrp",
+      1
+    ]
+  },
+  "radiusEnableAuthentication": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled",
+        "3": "enabledForTelnetOnly",
+        "4": "enabledForConsoleOnly"
+      }
+    },
+    "index": null,
+    "value": [
+      "radiusGrp",
+      2
+    ]
+  },
+  "radiusDeadtime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "radiusGrp",
+      3
+    ]
+  },
+  "radiusAuthKey": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "radiusGrp",
+      4
+    ]
+  },
+  "radiusTimeout": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "radiusGrp",
+      5
+    ]
+  },
+  "radiusRetransmits": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "radiusGrp",
+      6
+    ]
+  },
+  "radiusServerTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF RadiusServerEntry"
+    },
+    "index": null,
+    "value": [
+      "radiusGrp",
+      7
+    ]
+  },
+  "radiusServerEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "RadiusServerEntry"
+    },
+    "index": [
+      "radiusServerAddr"
+    ],
+    "value": [
+      "radiusServerTable",
+      1
+    ]
+  },
+  "RadiusServerEntry": {
+    "tp": "SEQUENCE"
+  },
+  "radiusServerAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "radiusServerEntry",
+      1
+    ]
+  },
+  "radiusServerAuthPort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "radiusServerEntry",
+      2
+    ]
+  },
+  "radiusServerType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "invalid",
+        "2": "primary",
+        "3": "other"
+      }
+    },
+    "index": null,
+    "value": [
+      "radiusServerEntry",
+      3
+    ]
+  },
+  "traceRouteMaxQueries": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "traceRouteGrp",
+      1
+    ]
+  },
+  "traceRouteQueryTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF TraceRouteQueryEntry"
+    },
+    "index": null,
+    "value": [
+      "traceRouteGrp",
+      2
+    ]
+  },
+  "traceRouteQueryEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TraceRouteQueryEntry"
+    },
+    "index": [
+      "traceRouteQueryIndex"
+    ],
+    "value": [
+      "traceRouteQueryTable",
+      1
+    ]
+  },
+  "TraceRouteQueryEntry": {
+    "tp": "SEQUENCE"
+  },
+  "traceRouteQueryIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "traceRouteQueryEntry",
+      1
+    ]
+  },
+  "traceRouteHost": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "traceRouteQueryEntry",
+      2
+    ]
+  },
+  "traceRouteQueryDNSEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "traceRouteQueryEntry",
+      3
+    ]
+  },
+  "traceRouteQueryWaitingTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "traceRouteQueryEntry",
+      4
+    ]
+  },
+  "traceRouteQueryInitTTL": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "traceRouteQueryEntry",
+      5
+    ]
+  },
+  "traceRouteQueryMaxTTL": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "traceRouteQueryEntry",
+      6
+    ]
+  },
+  "traceRouteQueryUDPPort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "traceRouteQueryEntry",
+      7
+    ]
+  },
+  "traceRouteQueryPacketCount": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "traceRouteQueryEntry",
+      8
+    ]
+  },
+  "traceRouteQueryPacketSize": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "traceRouteQueryEntry",
+      9
+    ]
+  },
+  "traceRouteQueryTOS": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "traceRouteQueryEntry",
+      10
+    ]
+  },
+  "traceRouteQueryResult": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "traceRouteQueryEntry",
+      21
+    ]
+  },
+  "traceRouteQueryTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeTicks"
+    },
+    "index": null,
+    "value": [
+      "traceRouteQueryEntry",
+      22
+    ]
+  },
+  "traceRouteQueryOwner": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "traceRouteQueryEntry",
+      23
+    ]
+  },
+  "traceRouteQueryStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "valid",
+        "2": "invalid"
+      }
+    },
+    "index": null,
+    "value": [
+      "traceRouteQueryEntry",
+      24
+    ]
+  },
+  "traceRouteDataTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF TraceRouteDataEntry"
+    },
+    "index": null,
+    "value": [
+      "traceRouteGrp",
+      3
+    ]
+  },
+  "traceRouteDataEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TraceRouteDataEntry"
+    },
+    "index": [
+      "traceRouteQueryIndex",
+      "traceRouteDataIndex"
+    ],
+    "value": [
+      "traceRouteDataTable",
+      1
+    ]
+  },
+  "TraceRouteDataEntry": {
+    "tp": "SEQUENCE"
+  },
+  "traceRouteDataIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "traceRouteDataEntry",
+      1
+    ]
+  },
+  "traceRouteDataGatewayName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "traceRouteDataEntry",
+      2
+    ]
+  },
+  "traceRouteDataGatewayIp": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "traceRouteDataEntry",
+      3
+    ]
+  },
+  "traceRouteDataRtt": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "traceRouteDataEntry",
+      4
+    ]
+  },
+  "traceRouteDataHopCount": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "traceRouteDataEntry",
+      5
+    ]
+  },
+  "traceRouteDataErrors": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "icmpUnreachNet",
+        "2": "icmpUnreachHost",
+        "3": "icmpUnreachProtocol",
+        "4": "icmpUnreachPort",
+        "5": "icmpUnreachNeedFrag",
+        "6": "icmpUnreachSrcFail",
+        "7": "icmpUnreachNoNet",
+        "8": "icmpUnreachNoHost",
+        "9": "icmpUnreachHostIsolated",
+        "10": "icmpUnreachNetProhib",
+        "11": "icmpUnreachProhib",
+        "12": "icmpUnreachNetTos",
+        "13": "icmpUnreachHostTos",
+        "14": "icmpUnreachAdmin",
+        "15": "icmpUnreachHostPrec",
+        "16": "icmpUnreachPrecedence",
+        "17": "icmpUnknown",
+        "18": "icmpTimeOut",
+        "19": "icmpTTLExpired"
+      }
+    },
+    "index": null,
+    "value": [
+      "traceRouteDataEntry",
+      6
+    ]
+  },
+  "fileCopyProtocol": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "tftp",
+        "2": "rcp"
+      }
+    },
+    "index": null,
+    "value": [
+      "fileCopyGrp",
+      1
+    ]
+  },
+  "fileCopyRemoteServer": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "fileCopyGrp",
+      2
+    ]
+  },
+  "fileCopySrcFileName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "fileCopyGrp",
+      3
+    ]
+  },
+  "fileCopyDstFileName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "fileCopyGrp",
+      4
+    ]
+  },
+  "fileCopyModuleNumber": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "fileCopyGrp",
+      5
+    ]
+  },
+  "fileCopyUserName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "fileCopyGrp",
+      6
+    ]
+  },
+  "fileCopyAction": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "other",
+        "2": "copyConfigFromHostToRuntime",
+        "3": "copyConfigFromRuntimeToHost",
+        "4": "copyImageFromHostToFlash",
+        "5": "copyImageFromFlashToHost",
+        "8": "copyConfigFromFlashToRuntime",
+        "9": "copyConfigFromRuntimeToFlash",
+        "10": "copyConfigFileFromHostToFlash",
+        "11": "copyConfigFileFromFlashToHost",
+        "12": "copyTechReportFromRuntimeToHost"
+      }
+    },
+    "index": null,
+    "value": [
+      "fileCopyGrp",
+      7
+    ]
+  },
+  "fileCopyResult": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "inProgress",
+        "2": "success",
+        "3": "noResponse",
+        "4": "tooManyRetries",
+        "5": "noBuffers",
+        "6": "noProcesses",
+        "7": "badChecksum",
+        "8": "badLength",
+        "9": "badFlash",
+        "10": "serverError",
+        "11": "userCanceled",
+        "12": "wrongCode",
+        "13": "fileNotFound",
+        "14": "invalidHost",
+        "15": "invalidModule",
+        "16": "accessViolation",
+        "17": "unknownStatus",
+        "18": "invalidStorageDevice",
+        "19": "insufficientSpaceOnStorageDevice",
+        "20": "insufficientDramSize",
+        "21": "incompatibleImage",
+        "22": "rcpError"
+      }
+    },
+    "index": null,
+    "value": [
+      "fileCopyGrp",
+      8
+    ]
+  },
+  "fileCopyResultRcpErrorMessage": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "fileCopyGrp",
+      9
+    ]
+  },
+  "fileCopyRuntimeConfigPart": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "all",
+        "2": "nonDefault"
+      }
+    },
+    "index": null,
+    "value": [
+      "fileCopyGrp",
+      10
+    ]
+  },
+  "voicePortIfConfigTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VoicePortIfConfigEntry"
+    },
+    "index": null,
+    "value": [
+      "voiceGrp",
+      1
+    ]
+  },
+  "voicePortIfConfigEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VoicePortIfConfigEntry"
+    },
+    "index": [
+      "voicePortIfConfigModuleIndex",
+      "voicePortIfConfigPortIndex"
+    ],
+    "value": [
+      "voicePortIfConfigTable",
+      1
+    ]
+  },
+  "VoicePortIfConfigEntry": {
+    "tp": "SEQUENCE"
+  },
+  "voicePortIfConfigModuleIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "voicePortIfConfigEntry",
+      1
+    ]
+  },
+  "voicePortIfConfigPortIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "voicePortIfConfigEntry",
+      2
+    ]
+  },
+  "voicePortIfDHCPEnabled": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "voicePortIfConfigEntry",
+      3
+    ]
+  },
+  "voicePortIfIpAddress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "voicePortIfConfigEntry",
+      4
+    ]
+  },
+  "voicePortIfIpNetMask": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "voicePortIfConfigEntry",
+      5
+    ]
+  },
+  "voicePortIfTftpServerAddress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "voicePortIfConfigEntry",
+      6
+    ]
+  },
+  "voicePortIfGatewayAddress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "voicePortIfConfigEntry",
+      7
+    ]
+  },
+  "voicePortIfDnsServerAddress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "voicePortIfConfigEntry",
+      8
+    ]
+  },
+  "voicePortIfDnsDomain": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "voicePortIfConfigEntry",
+      9
+    ]
+  },
+  "voicePortIfOperDnsDomain": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "voicePortIfConfigEntry",
+      10
+    ]
+  },
+  "voicePortCallManagerTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VoicePortCallManagerEntry"
+    },
+    "index": null,
+    "value": [
+      "voiceGrp",
+      2
+    ]
+  },
+  "voicePortCallManagerEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VoicePortCallManagerEntry"
+    },
+    "index": [
+      "voicePortModuleIndex",
+      "voicePortIndex",
+      "voicePortCallManagerIndex"
+    ],
+    "value": [
+      "voicePortCallManagerTable",
+      1
+    ]
+  },
+  "VoicePortCallManagerEntry": {
+    "tp": "SEQUENCE"
+  },
+  "voicePortModuleIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "voicePortCallManagerEntry",
+      1
+    ]
+  },
+  "voicePortIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "voicePortCallManagerEntry",
+      2
+    ]
+  },
+  "voicePortCallManagerIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "voicePortCallManagerEntry",
+      3
+    ]
+  },
+  "voicePortCallManagerIpAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "voicePortCallManagerEntry",
+      4
+    ]
+  },
+  "voicePortOperDnsServerTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF VoicePortOperDnsServerEntry"
+    },
+    "index": null,
+    "value": [
+      "voiceGrp",
+      3
+    ]
+  },
+  "voicePortOperDnsServerEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VoicePortOperDnsServerEntry"
+    },
+    "index": [
+      "voicePortDnsModuleIndex",
+      "voicePortDnsPortIndex",
+      "voicePortOperDnsServerIndex"
+    ],
+    "value": [
+      "voicePortOperDnsServerTable",
+      1
+    ]
+  },
+  "VoicePortOperDnsServerEntry": {
+    "tp": "SEQUENCE"
+  },
+  "voicePortDnsModuleIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "voicePortOperDnsServerEntry",
+      1
+    ]
+  },
+  "voicePortDnsPortIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "voicePortOperDnsServerEntry",
+      2
+    ]
+  },
+  "voicePortOperDnsServerIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "index": null,
+    "value": [
+      "voicePortOperDnsServerEntry",
+      3
+    ]
+  },
+  "voicePortOperDnsServerIpAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "IpAddress"
+    },
+    "index": null,
+    "value": [
+      "voicePortOperDnsServerEntry",
+      4
+    ]
+  },
+  "voicePortOperDnsServerSource": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "fromDhcp",
+        "2": "fromPortConfig",
+        "3": "fromSystemConfig"
+      }
+    },
+    "index": null,
+    "value": [
+      "voicePortOperDnsServerEntry",
+      5
+    ]
+  },
+  "portJumboFrameTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF PortJumboFrameEntry"
+    },
+    "index": null,
+    "value": [
+      "portJumboFrameGrp",
+      1
+    ]
+  },
+  "portJumboFrameEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "PortJumboFrameEntry"
+    },
+    "index": [
+      "portJumboFrameModuleIndex",
+      "portJumboFramePortIndex"
+    ],
+    "value": [
+      "portJumboFrameTable",
+      1
+    ]
+  },
+  "PortJumboFrameEntry": {
+    "tp": "SEQUENCE"
+  },
+  "portJumboFrameModuleIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portJumboFrameEntry",
+      1
+    ]
+  },
+  "portJumboFramePortIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "portJumboFrameEntry",
+      2
+    ]
+  },
+  "portJumboFrameEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "enabled",
+        "2": "disabled"
+      }
+    },
+    "index": null,
+    "value": [
+      "portJumboFrameEntry",
+      3
+    ]
+  },
+  "switchAccelerationModuleTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF SwitchAccelerationModuleEntry"
+    },
+    "index": null,
+    "value": [
+      "switchAccelerationGrp",
+      1
+    ]
+  },
+  "switchAccelerationModuleEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SwitchAccelerationModuleEntry"
+    },
+    "index": [
+      "switchAccelerationModuleIndex"
+    ],
+    "value": [
+      "switchAccelerationModuleTable",
+      1
+    ]
+  },
+  "SwitchAccelerationModuleEntry": {
+    "tp": "SEQUENCE"
+  },
+  "switchAccelerationModuleIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "index": null,
+    "value": [
+      "switchAccelerationModuleEntry",
+      1
+    ]
+  },
+  "switchAccelerationModuleEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "switchAccelerationModuleEntry",
+      2
+    ]
+  },
+  "configMode": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "binary",
+        "2": "text"
+      }
+    },
+    "index": null,
+    "value": [
+      "configGrp",
+      1
+    ]
+  },
+  "configTextFileLocation": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "index": null,
+    "value": [
+      "configGrp",
+      2
+    ]
+  },
+  "configWriteMem": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "index": null,
+    "value": [
+      "configGrp",
+      3
+    ]
+  },
+  "configWriteMemStatus": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "inProgress",
+        "2": "succeeded",
+        "3": "resourceUnavailable",
+        "4": "badFileName",
+        "5": "someOtherError"
+      }
+    },
+    "index": null,
+    "value": [
+      "configGrp",
+      4
+    ]
+  },
+  "ciscoStackNotificationsPrefix": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "workgroup",
+      0
+    ]
+  },
+  "ciscoStackMIBConformance": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIB",
+      31
+    ]
+  },
+  "ciscoStackMIBCompliances": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIBConformance",
+      1
+    ]
+  },
+  "ciscoStackMIBGroups": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoStackMIBConformance",
+      2
+    ]
+  },
+  "systemMiscGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      1
+    ]
+  },
+  "systemTrapGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      2
+    ]
+  },
+  "chassisGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      3
+    ]
+  },
+  "moduleGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      4
+    ]
+  },
+  "portGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      5
+    ]
+  },
+  "optionalSystemMiscGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      6
+    ]
+  },
+  "optionalSystemTrapGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      7
+    ]
+  },
+  "optionalChassisGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      8
+    ]
+  },
+  "optionalModuleGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      9
+    ]
+  },
+  "optionalPortGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      10
+    ]
+  },
+  "systemTrafficGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      11
+    ]
+  },
+  "systemFddiGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      12
+    ]
+  },
+  "systemRmonGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      13
+    ]
+  },
+  "authenticationGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      14
+    ]
+  },
+  "tftpGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      15
+    ]
+  },
+  "brouteEnableGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      16
+    ]
+  },
+  "filterGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      17
+    ]
+  },
+  "monitorGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      18
+    ]
+  },
+  "vlanGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      19
+    ]
+  },
+  "vmpsGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      20
+    ]
+  },
+  "tokenRingGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      21
+    ]
+  },
+  "mcastGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      22
+    ]
+  },
+  "dnsGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      23
+    ]
+  },
+  "syslogGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      24
+    ]
+  },
+  "ntpGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      25
+    ]
+  },
+  "ipPermitGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      26
+    ]
+  },
+  "mdgGatewayGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      27
+    ]
+  },
+  "traceRouteGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      28
+    ]
+  },
+  "deprecatedObjectGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      29
+    ]
+  },
+  "ntpAuthenticationGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      30
+    ]
+  },
+  "tokenRingSoftErrorMonitorGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      31
+    ]
+  },
+  "portCpbGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      32
+    ]
+  },
+  "portSecurityGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      33
+    ]
+  },
+  "fileCopyGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      34
+    ]
+  },
+  "optionalSystemMiscGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      35
+    ]
+  },
+  "ipPermitGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      36
+    ]
+  },
+  "optionalSystemMiscGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      37
+    ]
+  },
+  "filterGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      38
+    ]
+  },
+  "mcastGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      39
+    ]
+  },
+  "portGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      40
+    ]
+  },
+  "chassisGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      41
+    ]
+  },
+  "moduleGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      42
+    ]
+  },
+  "portCpbGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      43
+    ]
+  },
+  "voiceGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      44
+    ]
+  },
+  "portGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      45
+    ]
+  },
+  "vlanGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      46
+    ]
+  },
+  "portCpbGroup3": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      47
+    ]
+  },
+  "moduleGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      48
+    ]
+  },
+  "switchAccelerationModuleGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      49
+    ]
+  },
+  "optionalSystemMiscGroup3": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      50
+    ]
+  },
+  "optionalSystemMiscGroup4": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      51
+    ]
+  },
+  "vlanTrunkMappingGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      52
+    ]
+  },
+  "portJumboFrameGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      53
+    ]
+  },
+  "portCpbGroup4": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      54
+    ]
+  },
+  "fileCopyGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      55
+    ]
+  },
+  "systemRmonGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      56
+    ]
+  },
+  "filterGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      57
+    ]
+  },
+  "optionalSystemMiscGroup5": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      58
+    ]
+  },
+  "syslogGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      59
+    ]
+  },
+  "systemStatusGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      60
+    ]
+  },
+  "configurationGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      61
+    ]
+  },
+  "filterGroup3": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      62
+    ]
+  },
+  "portGroup3": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      63
+    ]
+  },
+  "portCpbGroup5": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      64
+    ]
+  },
+  "authenticationGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      65
+    ]
+  },
+  "systemMiscGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      66
+    ]
+  },
+  "systemTrapGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      67
+    ]
+  },
+  "optionalSystemMiscGroup6": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      68
+    ]
+  },
+  "optionalChassisGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      69
+    ]
+  },
+  "portGroup4": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      70
+    ]
+  },
+  "vlanGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      71
+    ]
+  },
+  "ipPermitGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      72
+    ]
+  },
+  "optionalPortGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      73
+    ]
+  },
+  "optionalSystemTrapGroup1": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      74
+    ]
+  },
+  "authenticationGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      75
+    ]
+  },
+  "systemTrapGroup2": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      76
+    ]
+  },
+  "ipPermitGroup3": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoStackMIBGroups",
+      78
+    ]
+  }
+}
