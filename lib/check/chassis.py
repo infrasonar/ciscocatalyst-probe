@@ -6,14 +6,12 @@ from ..snmpquery import snmpquery
 
 QUERIES = (
     (MIB_INDEX['CISCO-STACK-MIB']['chassisGrp'], False),
-    (MIB_INDEX['CISCO-ENTITY-SENSOR-MIB']['entSensorValueEntry'], True),
-    (MIB_INDEX['CISCO-IF-EXTENSION-MIB']['cieIfPacketStatsEntry'], True),
 )
 
 
-class CheckCatalyst(Check):
-    key = 'catalyst'
-    unchanged_eol = 0
+class CheckChassis(Check):
+    key = 'chassis'
+    unchanged_eol = 14400
 
     @staticmethod
     async def run(asset: Asset, local_config: dict, config: dict) -> dict:

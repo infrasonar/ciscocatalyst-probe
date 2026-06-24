@@ -32,14 +32,16 @@ See the [SNMP probe](https://github.com/infrasonar/snmp-probe#config).
 ## Dry run
 
 Available checks:
-- `catalyst`
+- `chassis`
+- `packet`
+- `sensor`
 
 Create a yaml file, for example _(test.yaml)_:
 
 ```yaml
 asset:
   name: "foo.local"
-  check: "catalyst"
+  check: "chassis"
   config:
     address: "192.168.1.2"
 ```
