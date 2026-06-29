@@ -5,13 +5,13 @@ from ..snmpclient import get_snmp_client
 from ..snmpquery import snmpquery
 
 QUERIES = (
-    (MIB_INDEX['CISCO-STACK-MIB']['chassisGrp'], False),
+    (MIB_INDEX['CISCO-MEMORY-POOL-MIB']['ciscoMemoryPoolEntry'], True),
 )
 
 
-class CheckChassis(Check):
-    key = 'chassis'
-    unchanged_eol = 14400
+class CheckMemory(Check):
+    key = 'memory'
+    unchanged_eol = 0
 
     @staticmethod
     async def run(asset: Asset, local_config: dict, config: dict) -> dict:

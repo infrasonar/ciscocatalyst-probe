@@ -5,12 +5,12 @@ from ..snmpclient import get_snmp_client
 from ..snmpquery import snmpquery
 
 QUERIES = (
-    (MIB_INDEX['CISCO-IF-EXTENSION-MIB']['cieIfPacketStatsEntry'], True),
+    (MIB_INDEX['CISCO-PROCESS-MIB']['cpmCPUTotalEntry'], True),
 )
 
 
-class CheckPacket(Check):
-    key = 'packet'
+class CheckCpu(Check):
+    key = 'cpu'
     unchanged_eol = 0
 
     @staticmethod
