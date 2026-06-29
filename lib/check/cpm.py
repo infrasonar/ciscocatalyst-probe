@@ -10,8 +10,8 @@ QUERIES = (
 
 
 def on_item(item: dict, interval: int) -> dict:
-    cpu_load_key = ['cpmCPULoadAvg1Min', 'cpmCPULoadAvg5Min'][interval >= 300]
-    cpu_total_key = ['cpmCPUTotal1Min', 'cpmCPUTotal5Min'][interval >= 300]
+    cpu_load_key = ['cpmCPULoadAvg1min', 'cpmCPULoadAvg5min'][interval >= 300]
+    cpu_total_key = ['cpmCPUTotal1min', 'cpmCPUTotal5min'][interval >= 300]
     cpu_load = item.get(cpu_load_key)
     cpu_total = item.get(cpu_total_key)
     mem_committed = item.get('cpmCPUMemoryCommittedHC',
