@@ -9,8 +9,17 @@ QUERIES = (
 )
 
 
-class CheckMemory(Check):
-    key = 'memory'
+def on_item(item: dict) -> dict:
+    free = item['ciscoMemoryPoolFree']
+    used = item['ciscoMemoryPoolUsed']
+    total = free + used
+    if total > 0:
+        item['memoryUsedPercent'] = used / total
+    return item
+
+
+class CheckMemoryPool(Check):
+    key = 'memoryPool'
     unchanged_eol = 0
 
     @staticmethod
@@ -19,4 +28,11 @@ class CheckMemory(Check):
         snmp = get_snmp_client(asset, local_config, config)
         state = await snmpquery(snmp, QUERIES)
 
-        return state
+        items = [
+            on_item(item)
+            for item in state.get('ciscoMemoryPoolEntry', [])
+        ]
+
+        return {
+            'memoryPool': items
+        }
