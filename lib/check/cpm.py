@@ -10,12 +10,12 @@ QUERIES = (
 
 
 def on_item(item: dict, interval: int) -> dict:
-    cpu_load_key = ['cpmCPULoadAv1Min', 'cpmCPULoadAv5Min'][interval >= 300]
+    cpu_load_key = ['cpmCPULoadAvg1Min', 'cpmCPULoadAvg5Min'][interval >= 300]
     cpu_total_key = ['cpmCPUTotal1Min', 'cpmCPUTotal5Min'][interval >= 300]
     cpu_load = item.get(cpu_load_key)
     cpu_total = item.get(cpu_total_key)
-    mem_comitted = item.get('cpmCPUMemoryCommittedHC',
-                            item.get('cpmCPUMemoryCommitted'))
+    mem_committed = item.get('cpmCPUMemoryCommittedHC',
+                             item.get('cpmCPUMemoryCommitted'))
     mem_free = item.get('cpmCPUMemoryFreeHC', item.get('cpmCPUMemoryFree'))
     mem_used = item.get('cpmCPUMemoryFreeHC', item.get('cpmCPUMemoryFree'))
     mem_kernel_reserved = item.get('cpmCPUMemoryKernelReservedHC',
@@ -24,7 +24,7 @@ def on_item(item: dict, interval: int) -> dict:
         'name': item['name'],
         'cpuLoad': cpu_load,
         'cpuTotal': cpu_total,
-        'memoryComitted': mem_comitted,
+        'memoryCommitted': mem_committed,
         'memoryFree': mem_free,
         'memoryKernelReserved': mem_kernel_reserved,
         'memoryUsed': mem_used,
