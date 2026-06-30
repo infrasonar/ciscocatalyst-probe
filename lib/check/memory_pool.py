@@ -14,7 +14,7 @@ def on_item(item: dict) -> dict:
     used = item['ciscoMemoryPoolUsed']
     total = free + used
     if total > 0:
-        item['ciscoMemoryPoolUsedPercent'] = used / total
+        item['ciscoMemoryPoolUsedPercent'] = used / total * 100
     return item
 
 

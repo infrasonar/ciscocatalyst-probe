@@ -9,9 +9,9 @@ QUERIES = (
 )
 
 
-def on_item(item: dict, interval: int) -> dict:
-    cpu_load_key = ['cpmCPULoadAvg1min', 'cpmCPULoadAvg5min'][interval >= 300]
-    cpu_total_key = ['cpmCPUTotal1min', 'cpmCPUTotal5min'][interval >= 300]
+def on_item(item: dict, interval5: bool) -> dict:
+    cpu_load_key = ['cpmCPULoadAvg1minRev', 'cpmCPULoadAvg5minRev'][interval5]
+    cpu_total_key = ['cpmCPUTotal1minRev', 'cpmCPUTotal5minRev'][interval5]
     cpu_load = item.get(cpu_load_key)
     cpu_total = item.get(cpu_total_key)
     mem_committed = item.get('cpmCPUMemoryCommittedHC',
@@ -41,9 +41,9 @@ class CheckCpm(Check):
         snmp = get_snmp_client(asset, local_config, config)
         state = await snmpquery(snmp, QUERIES)
 
-        interval = config.get('_interval', 300)
+        interval5 = config.get('_interval', 300) >= 300
         items = [
-            on_item(item, interval)
+            on_item(item, interval5)
             for item in state.get('cpmCPUTotalEntry', [])
         ]
 
