@@ -32,9 +32,15 @@ See the [SNMP probe](https://github.com/infrasonar/snmp-probe#config).
 ## Dry run
 
 Available checks:
+- `base`
 - `cpm`
+- `interface`
+- `ip`
+- `ipAddress`
+- `lldp`
 - `memoryPool`
 - `system`
+- `tcp`
 
 Create a yaml file, for example _(test.yaml)_:
 
