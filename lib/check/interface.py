@@ -11,6 +11,8 @@ from ..utils import InterfaceLookup
 QUERIES = (
     (MIB_INDEX['IF-MIB']['ifEntry'], True),
     (MIB_INDEX['IF-MIB']['ifXEntry'], True),
+    (MIB_INDEX['CISCO-IF-EXTENSION-MIB']['cieIfInterfaceEntry'], True),
+    (MIB_INDEX['CISCO-IF-EXTENSION-MIB']['cieIfPacketStatsEntry'], True),
 )
 
 
@@ -151,6 +153,31 @@ ReservedAddresses = (
     '02:0f:00:0b:98',      # Sophos virutal HA MAC
 )
 
+_CISCO_IF_METRICS = (
+    'cieIfResetCount',
+    'cieIfKeepAliveEnabled',
+    'cieIfStateChangeReason',
+    'cieIfCarrierTransitionCount',
+    'cieIfInterfaceDiscontinuityTime',
+    'cieIfSpeedReceive',
+    'cieIfHighSpeedReceive',
+)
+
+_CISCO_IF_PKT_METRICS = (
+    'cieIfLastInTime',
+    'cieIfLastOutTime',
+    'cieIfLastOutHangTime',
+    'cieIfInRuntsErrs',
+    'cieIfInGiantsErrs',
+    'cieIfInFramingErrs',
+    'cieIfInOverrunErrs',
+    'cieIfInIgnored',
+    'cieIfInAbortErrs',
+    'cieIfInputQueueDrops',
+    'cieIfOutputQueueDrops',
+    'cieIfPacketDiscontinuityTime',
+)
+
 
 def should_exclude_name(name: str) -> bool:
     return (
@@ -178,6 +205,10 @@ class CheckInterface(Check):
 
         items = []
         if_x_entry = {i.pop('name'): i for i in state_data.pop('ifX', [])}
+        cie_if_entry = {i.pop('name'): i
+                        for i in state_data.pop('cieIfInterface', [])}
+        cie_if_pkt_entry = {i.pop('name'): i
+                            for i in state_data.pop('cieIfPacketStats', [])}
         for item in itms:
             key = item['name']
             if not include_all and item.get('Type') in ExcludedIfTypes:
@@ -217,6 +248,21 @@ class CheckInterface(Check):
 
             items.append(item)
 
+            # join cieIfInterface metrics
+            cie_if_item = cie_if_entry.get(key, {})
+            for name in _CISCO_IF_METRICS:
+                if name in cie_if_item:
+                    shortname = name[5:]  # strip "cieIf" prefix
+                    item[shortname] = cie_if_item[name]
+
+            # join cieIfPacketStats metrics
+            cie_if_pkt_item = cie_if_pkt_entry.get(key, {})
+            for name in _CISCO_IF_PKT_METRICS:
+                if name in item:
+                    shortname = name[5:]  # strip "cieIf" prefix
+                    item[shortname] = cie_if_pkt_item[name]
+
+            # join ifX metrics
             try:
                 item.update(if_x_entry[key])
             except KeyError:
