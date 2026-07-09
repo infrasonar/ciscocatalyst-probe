@@ -249,18 +249,31 @@ class CheckInterface(Check):
             items.append(item)
 
             # join cieIfInterface metrics
-            cie_if_item = cie_if_entry.get(key, {})
-            for name in _CISCO_IF_METRICS:
-                if name in cie_if_item:
-                    shortname = name[5:]  # strip "cieIf" prefix
-                    item[shortname] = cie_if_item[name]
+            cie_if_item = cie_if_entry.get(key)
+            if cie_if_item:
+                for name in _CISCO_IF_METRICS:
+                    if name in cie_if_item:
+                        shortname = name[5:]  # strip "cieIf" prefix
+                        item[shortname] = cie_if_item[name]
+
+                if 'SpeedReceive' in item and 'HighSpeedReceive' in item:
+                    # max value for this metric, shown if value is overloading
+                    if (item['SpeedReceive'] == 4294967295 and
+                            item['HighSpeedReceive'] != 4294):
+                        # ifspeed is in bits, ifHighSpeed in MBits.
+                        item['SpeedReceive'] = \
+                            item['HighSpeedReceive'] * 1000000
 
             # join cieIfPacketStats metrics
-            cie_if_pkt_item = cie_if_pkt_entry.get(key, {})
-            for name in _CISCO_IF_PKT_METRICS:
-                if name in item:
-                    shortname = name[5:]  # strip "cieIf" prefix
-                    item[shortname] = cie_if_pkt_item[name]
+            cie_if_pkt_item = cie_if_pkt_entry.get(key)
+            if cie_if_pkt_item:
+                for name in _CISCO_IF_PKT_METRICS:
+                    if name in cie_if_pkt_item:
+                        shortname = name[5:]  # strip "cieIf" prefix
+                        value = cie_if_pkt_item[name]
+                        # omit metrics with max value
+                        if value != 4294967295:
+                            item[shortname] = value
 
             # join ifX metrics
             try:
