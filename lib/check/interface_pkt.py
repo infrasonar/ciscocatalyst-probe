@@ -5,7 +5,7 @@ from ..snmpclient import get_snmp_client
 from ..snmpquery import snmpquery
 
 QUERIES = (
-    (MIB_INDEX['CISCO-IF-EXTENSION-MIB']['cieIfPacketStatsTable'], True),
+    (MIB_INDEX['CISCO-IF-EXTENSION-MIB']['cieIfPacketStatsEntry'], True),
 )
 
 
