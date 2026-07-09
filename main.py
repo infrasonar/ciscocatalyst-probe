@@ -2,6 +2,7 @@ from libprobe.probe import Probe
 from lib.check.base import CheckBase
 from lib.check.cpm import CheckCpm
 from lib.check.interface import CheckInterface
+from lib.check.interface_ext import CheckInterfaceExt
 from lib.check.ip import CheckIp
 from lib.check.ip_address import CheckIpAddress
 from lib.check.lldp import CheckLldp
@@ -17,6 +18,7 @@ if __name__ == '__main__':
         CheckBase,
         CheckCpm,
         CheckInterface,
+        CheckInterfaceExt,
         CheckIp,
         CheckIpAddress,
         CheckLldp,
