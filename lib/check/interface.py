@@ -1,4 +1,3 @@
-import re
 from asyncsnmplib.mib.mib_index import MIB_INDEX
 from collections import Counter
 from libprobe.asset import Asset
@@ -86,6 +85,11 @@ _CISCO_IF_PKT_METRICS = (
     'cieIfPacketDiscontinuityTime',
 )
 
+# Interfaces where the type is one ot the following will be excluded
+ExcludedIfTypes = (
+    'l2vlan',
+)
+
 
 class CheckInterface(Check):
     key = 'interface'
@@ -110,6 +114,8 @@ class CheckInterface(Check):
                             for i in state_data.pop('cieIfPacketStats', [])}
         for item in itms:
             key = item['name']
+            if item.get('Type') in ExcludedIfTypes:
+                continue
 
             name = item.get('Descr')
             if not isinstance(name, str):
@@ -119,9 +125,7 @@ class CheckInterface(Check):
 
             mtu = item.get('Mtu')
             if mtu is None:
-                raise CheckException(
-                    'Incomplete ifEntry missing ifMtu OID'
-                )
+                continue  # exclude item without a ifMtu OID
 
             idx = counts[name]
             counts[name] += 1
