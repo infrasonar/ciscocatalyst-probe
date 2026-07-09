@@ -1,0 +1,807 @@
+{
+  "IMPORTS": [
+    [
+      "SNMPv2-SMI",
+      [
+        "MODULE-IDENTITY",
+        "OBJECT-TYPE",
+        "Integer32",
+        "Unsigned32"
+      ]
+    ],
+    [
+      "SNMPv2-CONF",
+      [
+        "MODULE-COMPLIANCE",
+        "OBJECT-GROUP"
+      ]
+    ],
+    [
+      "SNMPv2-TC",
+      [
+        "TruthValue",
+        "DisplayString",
+        "TimeStamp"
+      ]
+    ],
+    [
+      "CISCO-SMI",
+      [
+        "ciscoMgmt"
+      ]
+    ],
+    [
+      "CISCO-TC",
+      [
+        "CiscoNetworkProtocol",
+        "CiscoNetworkAddress"
+      ]
+    ],
+    [
+      "CISCO-VTP-MIB",
+      [
+        "VlanIndex"
+      ]
+    ],
+    [
+      "IF-MIB",
+      [
+        "ifIndex"
+      ]
+    ]
+  ],
+  "ciscoCdpMIB": {
+    "tp": "MODULE-IDENTITY",
+    "value": [
+      "ciscoMgmt",
+      23
+    ]
+  },
+  "ciscoCdpMIBObjects": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoCdpMIB",
+      1
+    ]
+  },
+  "cdpInterface": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoCdpMIBObjects",
+      1
+    ]
+  },
+  "cdpCache": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoCdpMIBObjects",
+      2
+    ]
+  },
+  "cdpGlobal": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoCdpMIBObjects",
+      3
+    ]
+  },
+  "cdpInterfaceTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF CdpInterfaceEntry"
+    },
+    "access": "not-accessible",
+    "index": null,
+    "value": [
+      "cdpInterface",
+      1
+    ]
+  },
+  "cdpInterfaceEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CdpInterfaceEntry"
+    },
+    "access": "not-accessible",
+    "index": [
+      "cdpInterfaceIfIndex"
+    ],
+    "value": [
+      "cdpInterfaceTable",
+      1
+    ]
+  },
+  "CdpInterfaceEntry": {
+    "tp": "SEQUENCE"
+  },
+  "cdpInterfaceIfIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "access": "not-accessible",
+    "index": null,
+    "value": [
+      "cdpInterfaceEntry",
+      1
+    ]
+  },
+  "cdpInterfaceEnable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "access": "read-write",
+    "index": null,
+    "value": [
+      "cdpInterfaceEntry",
+      2
+    ]
+  },
+  "cdpInterfaceMessageInterval": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "access": "read-write",
+    "index": null,
+    "value": [
+      "cdpInterfaceEntry",
+      3
+    ]
+  },
+  "cdpInterfaceGroup": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpInterfaceEntry",
+      4
+    ]
+  },
+  "cdpInterfacePort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpInterfaceEntry",
+      5
+    ]
+  },
+  "cdpInterfaceName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpInterfaceEntry",
+      6
+    ]
+  },
+  "cdpInterfaceExtTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF CdpInterfaceExtEntry"
+    },
+    "access": "not-accessible",
+    "index": null,
+    "value": [
+      "cdpInterface",
+      2
+    ]
+  },
+  "cdpInterfaceExtEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CdpInterfaceExtEntry"
+    },
+    "access": "not-accessible",
+    "index": [
+      "ifIndex"
+    ],
+    "value": [
+      "cdpInterfaceExtTable",
+      1
+    ]
+  },
+  "CdpInterfaceExtEntry": {
+    "tp": "SEQUENCE"
+  },
+  "cdpInterfaceExtendedTrust": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "trusted",
+        "2": "noTrust"
+      }
+    },
+    "access": "read-write",
+    "index": null,
+    "value": [
+      "cdpInterfaceExtEntry",
+      1
+    ]
+  },
+  "cdpInterfaceCosForUntrustedPort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "access": "read-write",
+    "index": null,
+    "value": [
+      "cdpInterfaceExtEntry",
+      2
+    ]
+  },
+  "cdpCacheTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF CdpCacheEntry"
+    },
+    "access": "not-accessible",
+    "index": null,
+    "value": [
+      "cdpCache",
+      1
+    ]
+  },
+  "cdpCacheEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CdpCacheEntry"
+    },
+    "access": "not-accessible",
+    "index": [
+      "cdpCacheIfIndex",
+      "cdpCacheDeviceIndex"
+    ],
+    "value": [
+      "cdpCacheTable",
+      1
+    ]
+  },
+  "CdpCacheEntry": {
+    "tp": "SEQUENCE"
+  },
+  "cdpCacheIfIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "access": "not-accessible",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      1
+    ]
+  },
+  "cdpCacheDeviceIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "access": "not-accessible",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      2
+    ]
+  },
+  "cdpCacheAddressType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CiscoNetworkProtocol"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      3
+    ]
+  },
+  "cdpCacheAddress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CiscoNetworkAddress"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      4
+    ]
+  },
+  "cdpCacheVersion": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      5
+    ]
+  },
+  "cdpCacheDeviceId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      6
+    ]
+  },
+  "cdpCacheDevicePort": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      7
+    ]
+  },
+  "cdpCachePlatform": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      8
+    ]
+  },
+  "cdpCacheCapabilities": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OCTET STRING"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      9
+    ]
+  },
+  "cdpCacheVTPMgmtDomain": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      10
+    ]
+  },
+  "cdpCacheNativeVLAN": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "VlanIndex"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      11
+    ]
+  },
+  "cdpCacheDuplex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "unknown",
+        "2": "halfduplex",
+        "3": "fullduplex"
+      }
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      12
+    ]
+  },
+  "cdpCacheApplianceID": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      13
+    ]
+  },
+  "cdpCacheVlanID": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      14
+    ]
+  },
+  "cdpCachePowerConsumption": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      15
+    ]
+  },
+  "cdpCacheMTU": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Unsigned32"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      16
+    ]
+  },
+  "cdpCacheSysName": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      17
+    ]
+  },
+  "cdpCacheSysObjectID": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "OBJECT IDENTIFIER"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      18
+    ]
+  },
+  "cdpCachePrimaryMgmtAddrType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CiscoNetworkProtocol"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      19
+    ]
+  },
+  "cdpCachePrimaryMgmtAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CiscoNetworkAddress"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      20
+    ]
+  },
+  "cdpCacheSecondaryMgmtAddrType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CiscoNetworkProtocol"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      21
+    ]
+  },
+  "cdpCacheSecondaryMgmtAddr": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CiscoNetworkAddress"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      22
+    ]
+  },
+  "cdpCachePhysLocation": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      23
+    ]
+  },
+  "cdpCacheLastChange": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeStamp"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCacheEntry",
+      24
+    ]
+  },
+  "cdpCtAddressTable": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "SEQUENCE OF CdpCtAddressEntry"
+    },
+    "access": "not-accessible",
+    "index": null,
+    "value": [
+      "cdpCache",
+      2
+    ]
+  },
+  "cdpCtAddressEntry": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CdpCtAddressEntry"
+    },
+    "access": "not-accessible",
+    "index": [
+      "cdpCacheIfIndex",
+      "cdpCacheDeviceIndex",
+      "cdpCtAddressIndex"
+    ],
+    "value": [
+      "cdpCtAddressTable",
+      1
+    ]
+  },
+  "CdpCtAddressEntry": {
+    "tp": "SEQUENCE"
+  },
+  "cdpCtAddressIndex": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "Integer32"
+    },
+    "access": "not-accessible",
+    "index": null,
+    "value": [
+      "cdpCtAddressEntry",
+      3
+    ]
+  },
+  "cdpCtAddressType": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CiscoNetworkProtocol"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCtAddressEntry",
+      4
+    ]
+  },
+  "cdpCtAddress": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "CiscoNetworkAddress"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpCtAddressEntry",
+      5
+    ]
+  },
+  "cdpGlobalRun": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TruthValue"
+    },
+    "access": "read-write",
+    "index": null,
+    "value": [
+      "cdpGlobal",
+      1
+    ]
+  },
+  "cdpGlobalMessageInterval": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "access": "read-write",
+    "index": null,
+    "value": [
+      "cdpGlobal",
+      2
+    ]
+  },
+  "cdpGlobalHoldTime": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER"
+    },
+    "access": "read-write",
+    "index": null,
+    "value": [
+      "cdpGlobal",
+      3
+    ]
+  },
+  "cdpGlobalDeviceId": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "DisplayString"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpGlobal",
+      4
+    ]
+  },
+  "cdpGlobalLastChange": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "TimeStamp"
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpGlobal",
+      5
+    ]
+  },
+  "cdpGlobalDeviceIdFormatCpb": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "BITS",
+      "values": {
+        "0": "serialNumber",
+        "1": "macAddress",
+        "2": "other"
+      }
+    },
+    "access": "read-only",
+    "index": null,
+    "value": [
+      "cdpGlobal",
+      6
+    ]
+  },
+  "cdpGlobalDeviceIdFormat": {
+    "tp": "OBJECT-TYPE",
+    "syntax": {
+      "tp": "INTEGER",
+      "values": {
+        "1": "serialNumber",
+        "2": "macAddress",
+        "3": "other"
+      }
+    },
+    "access": "read-write",
+    "index": null,
+    "value": [
+      "cdpGlobal",
+      7
+    ]
+  },
+  "ciscoCdpMIBConformance": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoCdpMIB",
+      2
+    ]
+  },
+  "ciscoCdpMIBCompliances": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoCdpMIBConformance",
+      1
+    ]
+  },
+  "ciscoCdpMIBGroups": {
+    "tp": "OBJECT IDENTIFIER",
+    "value": [
+      "ciscoCdpMIBConformance",
+      2
+    ]
+  },
+  "ciscoCdpMIBGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoCdpMIBGroups",
+      1
+    ]
+  },
+  "ciscoCdpMIBGroupV11R01": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoCdpMIBGroups",
+      2
+    ]
+  },
+  "ciscoCdpMIBGroupV11R02": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoCdpMIBGroups",
+      3
+    ]
+  },
+  "ciscoCdpMIBGroupV12R02": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoCdpMIBGroups",
+      5
+    ]
+  },
+  "ciscoCdpV2MIBGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoCdpMIBGroups",
+      6
+    ]
+  },
+  "ciscoCdpV2IfExtGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoCdpMIBGroups",
+      7
+    ]
+  },
+  "ciscoCdpCtAddressGroup": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoCdpMIBGroups",
+      8
+    ]
+  },
+  "ciscoCdpMIBGroupV12R03": {
+    "tp": "OBJECT-GROUP",
+    "value": [
+      "ciscoCdpMIBGroups",
+      9
+    ]
+  }
+}
