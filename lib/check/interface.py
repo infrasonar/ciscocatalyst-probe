@@ -87,6 +87,12 @@ _CISCO_IF_PKT_METRICS = (
     'cieIfPacketDiscontinuityTime',
 )
 
+# Interfaces where the type is one ot the following will be excluded unless
+# "include all".
+ExcludedIfTypes = (
+    'l2vlan',
+)
+
 
 class CheckInterface(Check):
     key = 'interface'
@@ -111,6 +117,8 @@ class CheckInterface(Check):
                             for i in state_data.pop('cieIfPacketStats', [])}
         for item in itms:
             key = item['name']
+            if item.get('Type') in ExcludedIfTypes:
+                continue
 
             name = item.get('Descr')
             if not isinstance(name, str):
