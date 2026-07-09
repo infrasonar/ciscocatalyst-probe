@@ -1,3 +1,4 @@
+import logging
 import re
 from asyncsnmplib.mib.mib_index import MIB_INDEX
 from collections import Counter
@@ -119,9 +120,11 @@ class CheckInterface(Check):
 
             mtu = item.get('Mtu')
             if mtu is None:
-                raise CheckException(
-                    'Incomplete ifEntry missing ifMtu OID'
-                )
+                logging.debug(name)
+                continue
+                # raise CheckException(
+                #     'Incomplete ifEntry missing ifMtu OID'
+                # )
 
             idx = counts[name]
             counts[name] += 1
