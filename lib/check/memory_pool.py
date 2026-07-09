@@ -10,11 +10,11 @@ QUERIES = (
 
 
 def on_item(item: dict) -> dict:
-    free = item['ciscoMemoryPoolFree']
-    used = item['ciscoMemoryPoolUsed']
+    free = item['Free']
+    used = item['Used']
     total = free + used
     if total > 0:
-        item['ciscoMemoryPoolUsedPercent'] = used / total * 100
+        item['UsedPercent'] = used / total * 100
     return item
 
 
@@ -26,11 +26,11 @@ class CheckMemoryPool(Check):
     async def run(asset: Asset, local_config: dict, config: dict) -> dict:
 
         snmp = get_snmp_client(asset, local_config, config)
-        state = await snmpquery(snmp, QUERIES)
+        state = await snmpquery(snmp, QUERIES, True)
 
         items = [
             on_item(item)
-            for item in state.get('ciscoMemoryPoolEntry', [])
+            for item in state.get('ciscoMemoryPool', [])
         ]
 
         return {

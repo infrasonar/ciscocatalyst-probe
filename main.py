@@ -6,7 +6,6 @@ from lib.check.ip import CheckIp
 from lib.check.ip_address import CheckIpAddress
 from lib.check.lldp import CheckLldp
 from lib.check.memory_pool import CheckMemoryPool
-from lib.check.system import CheckSystem
 from lib.check.tcp import CheckTcp
 
 from lib.version import __version__ as version
@@ -21,7 +20,6 @@ if __name__ == '__main__':
         CheckIpAddress,
         CheckLldp,
         CheckMemoryPool,
-        CheckSystem,
         CheckTcp,
     )
 

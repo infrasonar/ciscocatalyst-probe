@@ -27,13 +27,13 @@ def on_item(item: dict, interval5: bool, entity_lk: dict) -> dict:
                                    item.get('cpmCPUMemoryKernelReserved'))
     return {
         'name': item['name'],
-        'cpuLoad': cpu_load,
-        'cpuTotal': cpu_total,
-        'entityDescr': entity_descr,
-        'memoryCommitted': mem_committed,
-        'memoryFree': mem_free,
-        'memoryKernelReserved': mem_kernel_reserved,
-        'memoryUsed': mem_used,
+        'CPULoad': cpu_load,
+        'CPUTotal': cpu_total,
+        'EntityDescr': entity_descr,
+        'MemoryCommitted': mem_committed,
+        'MemoryFree': mem_free,
+        'MemoryKernelReserved': mem_kernel_reserved,
+        'MemoryUsed': mem_used,
     }
 
 
