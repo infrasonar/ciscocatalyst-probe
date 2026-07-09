@@ -22,10 +22,4 @@ class CheckCdp(Check):
         snmp = get_snmp_client(asset, local_config, config)
         state = await snmpquery(snmp, QUERIES, True)
 
-        return {
-            'base': [{
-                (name[3:] if name.startswith('sys') else name): value
-                for item in state.get('system', [])
-                for name, value in item.items()
-            }]
-        }
+        return state
