@@ -10,12 +10,21 @@ QUERIES = (
 
 
 def on_item(item: dict) -> dict:
+    name = item['Name']
     free = item['Free']
+    largest_free = item['LargestFree']
     used = item['Used']
     total = free + used
-    if total > 0:
-        item['UsedPercent'] = used / total * 100
-    return item
+    used_percent = used / total * 100 if total > 0 else None
+    valid = item['Valid']
+    return {
+        'name': name,
+        'Free': free,
+        'LargestFree': largest_free,
+        'Used': used,
+        'UsedPercent': used_percent,
+        'Valid': valid,
+    }
 
 
 class CheckMemoryPool(Check):
