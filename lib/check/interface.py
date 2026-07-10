@@ -133,6 +133,9 @@ class CheckInterface(Check):
 
             items.append(item)
 
+            # remove unused metric
+            item.pop('LastChange', None)
+
             # join cieIfInterface metrics
             cie_if_item = cie_if_entry.get(key)
             if cie_if_item:

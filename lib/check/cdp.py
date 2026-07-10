@@ -32,6 +32,9 @@ class CheckCdp(Check):
         for item in cdp_if:
             if_index = item['name']
 
+            # remove unused metric
+            item.pop('MessageInterval', None)
+
             try:
                 if_item = if_entry[if_index]
                 item['Interface'] = if_item['Descr']
@@ -43,6 +46,10 @@ class CheckCdp(Check):
             # split key (ifIndex.deviceIndex)
             if_index = item['name'].split('.', 1)[0]
 
+            # remove unused metric
+            item.pop('Capabilities', None)
+            item.pop('LastChange', None)
+
             try:
                 if_item = if_entry[if_index]
                 item['Interface'] = if_item['Descr']
@@ -50,6 +57,9 @@ class CheckCdp(Check):
                 continue
 
         cdp_global = state_data.get('cdpGlobal', [])
+        for item in cdp_global:
+            # remove unused metric
+            item.pop('LastChange', None)
 
         return {
             'cdpInterface': cdp_if,
