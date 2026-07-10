@@ -33,6 +33,7 @@ See the [SNMP probe](https://github.com/infrasonar/snmp-probe#config).
 
 Available checks:
 - `base`
+- `cdp`
 - `cpm`
 - `interface`
 - `ip`
