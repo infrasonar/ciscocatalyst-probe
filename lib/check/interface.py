@@ -131,10 +131,10 @@ class CheckInterface(Check):
             counts[name] += 1
             item['name'] = f'{name}_{idx}' if idx else name
 
-            items.append(item)
-
             # remove unused metric
             item.pop('LastChange', None)
+
+            items.append(item)
 
             # join cieIfInterface metrics
             cie_if_item = cie_if_entry.get(key)
