@@ -65,5 +65,7 @@ class CheckCpm(Check):
         ]
 
         return {
+            # TODO return all state for debugging
+            **state,
             'cpm': items
         }
