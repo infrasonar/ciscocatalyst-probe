@@ -13,7 +13,7 @@ ENTITY_CACHE = {}
 
 
 def on_item(item: dict, interval5: bool, entity_lk: dict) -> dict:
-    cpu_load_key = ['cpmCPULoadAvg1minRev', 'cpmCPULoadAvg5minRev'][interval5]
+    cpu_load_key = ['cpmCPULoadAvg1min', 'cpmCPULoadAvg5min'][interval5]
     cpu_total_key = ['cpmCPUTotal1minRev', 'cpmCPUTotal5minRev'][interval5]
     cpu_load = item.get(cpu_load_key)
     cpu_total = item.get(cpu_total_key)
@@ -27,7 +27,7 @@ def on_item(item: dict, interval5: bool, entity_lk: dict) -> dict:
                                    item.get('cpmCPUMemoryKernelReserved'))
     return {
         'name': item['name'],
-        'CPULoad': cpu_load,  # optional
+        'CPULoad': cpu_load,
         'CPUTotal': cpu_total,
         'EntityDescr': entity_descr,
         'MemoryCommitted': mem_committed,
